@@ -1,0 +1,12 @@
+<!-- FILEPATH: /home/benjamin/code/Benyoumen/MYWELCOME/app/views/experiences/show.html.erb -->
+
+<h1>Show Experience</h1>
+
+  <div>
+    <h2><%= @experience.category %></h2>
+    <h3><%= @experience.specialty %></h3>
+    <p><%= @experience.local %></p>
+    <p><%= l @experience.date, format: "%d/%m/%y" %></p>
+    <p><%= @experience.price %></p>
+    <p><%= @experience.description %></p>
+  </div>
