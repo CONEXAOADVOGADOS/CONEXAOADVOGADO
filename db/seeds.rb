@@ -19,6 +19,8 @@ end
 
 puts "Created #{User.count} users"
 
+# Experiences seed data
+
 experiences = [{
     specialty: "Thai Food",
     category: "gastronomy",
@@ -88,3 +90,15 @@ experiences = [{
   end
 
 puts "Created #{Experience.count} experiences"
+
+# Appointments seed data
+
+7.times do
+  appointment = Appointment.create(
+    experience: Experience.all.sample,
+    user: User.all.sample
+  )
+end
+
+puts "Created #{Appointment.count} appointments"
+puts "Seed data for Users, Events and Appointments created successfully."
