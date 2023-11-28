@@ -79,5 +79,6 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "dotenv-rails"
+# gem "dotenv-rails"
 gem "cloudinary"
+gem 'geocoder'
