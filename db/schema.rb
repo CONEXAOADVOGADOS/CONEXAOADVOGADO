@@ -10,23 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_27_144251) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
-  create_table "experiences", force: :cascade do |t|
-    t.string "category"
-    t.string "specialty"
-    t.string "description"
-    t.string "local"
-    t.date "date"
-    t.integer "price"
-    t.bigint "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_experiences_on_user_id"
-
-ActiveRecord::Schema[7.1].define(version: 2023_11_27_211415) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_28_153243) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -56,7 +40,28 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_27_211415) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
 
+  create_table "appointments", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "experience_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["experience_id"], name: "index_appointments_on_experience_id"
+    t.index ["user_id"], name: "index_appointments_on_user_id"
+  end
+
+  create_table "experiences", force: :cascade do |t|
+    t.string "category"
+    t.string "specialty"
+    t.string "description"
+    t.string "local"
+    t.date "date"
+    t.integer "price"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_experiences_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -74,9 +79,9 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_27_211415) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "experiences", "users"
-
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-
+  add_foreign_key "appointments", "experiences"
+  add_foreign_key "appointments", "users"
+  add_foreign_key "experiences", "users"
 end

@@ -1,0 +1,14 @@
+<!-- FILEPATH: /home/benjamin/code/Benyoumen/MYWELCOME/app/views/appointments/show.html.erb -->
+
+<h1>Appointment Details</h1>
+
+<p><strong>ID:</strong> <%= @appointment.id %></p>
+<p><strong>Title:</strong> <%= @appointment.category %></p>
+<p><strong>Description:</strong> <%= @appointment.specialty %></p>
+<p><strong>Description:</strong> <%= @appointment.description %></p>
+<p><strong>Date:</strong> <%= @appointment.date %></p>
+<p><strong>Time:</strong> <%= @appointment.local %></p>
+<p><strong>Description:</strong> <%= @appointment.price %></p>
+
+<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
+<%= link_to 'Back', appointments_path %>
