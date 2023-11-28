@@ -81,3 +81,4 @@ end
 
 # gem "dotenv-rails"
 gem "cloudinary"
+gem 'geocoder'
