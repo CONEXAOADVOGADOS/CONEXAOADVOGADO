@@ -1,14 +1,18 @@
-<!-- FILEPATH: /home/benjamin/code/Benyoumen/MYWELCOME/app/views/appointments/show.html.erb -->
+<!-- app/views/appointments/show.html.erb -->
 
-<h1>Appointment Details</h1>
+<h1 class="mb-4">Appointment Details</h1>
 
-<p><strong>ID:</strong> <%= @appointment.id %></p>
-<p><strong>Title:</strong> <%= @appointment.category %></p>
-<p><strong>Description:</strong> <%= @appointment.specialty %></p>
-<p><strong>Description:</strong> <%= @appointment.description %></p>
-<p><strong>Date:</strong> <%= @appointment.date %></p>
-<p><strong>Time:</strong> <%= @appointment.local %></p>
-<p><strong>Description:</strong> <%= @appointment.price %></p>
-
-<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
-<%= link_to 'Back', appointments_path %>
+<div class="card">
+  <div class="card-body">
+    <p class="card-text"><strong>ID:</strong> <%= @appointment.id %></p>
+    <p class="card-text"><strong>Category:</strong> <%= @appointment.experience.category %></p>
+    <p class="card-text"><strong>Description:</strong> <%= @appointment.experience.specialty %></p>
+    <p class="card-text"><strong>Date:</strong> <%= @appointment.experience.date %></p>
+    <p class="card-text"><strong>Local:</strong> <%= @appointment.experience.local %></p>
+    <p class="card-text"><strong>Price:</strong> <%= @appointment.experience.price %></p>
+  </div>
+  <div class="card-footer">
+    <%= link_to 'Edit', edit_appointment_path(@appointment), class: 'btn btn-primary' %> |
+    <%= link_to 'Back', experience_path(@appointment.experience), class: 'btn btn-secondary' %>
+  </div>
+</div>

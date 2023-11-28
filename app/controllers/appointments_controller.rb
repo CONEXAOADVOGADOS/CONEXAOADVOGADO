@@ -4,23 +4,23 @@ class AppointmentsController < ApplicationController
     @appointments = Appointment.all
   end
 
-def show
-  @appointment = Appointment.find(params[:id])
-end
-
-def new
-  @appointment = Appointment.new
-end
-
-def create
-  @appointment = Appointment.new(appointment_params)
-  @appointment.user = current_user
-  if @appointment.save
-    redirect_to appointment_path(@appointment)
-  else
-    render :new
+  def show
+    @appointment = Appointment.find(params[:id])
   end
-end
+
+  def new
+    @appointment = Appointment.new
+  end
+
+  def create
+    @appointment = Appointment.new(appointment_params)
+    @appointment.user = current_user
+    if @appointment.save
+      redirect_to appointment_path(@appointment)
+    else
+      render :new
+    end
+  end
 
   def edit
     @appointment = Appointment.find(params[:id])
