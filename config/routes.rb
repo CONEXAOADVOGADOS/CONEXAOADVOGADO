@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   # get "up" => "rails/health#show", as: :rails_health_check
   resources :experiences do
-  resources :users
-    # resources :appointments
+    resources :appointments, only: [:new, :index, :create]
   end
+
+  resources :appointments, except: [:new, :index, :create]
 end

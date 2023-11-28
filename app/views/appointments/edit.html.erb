@@ -1,0 +1,15 @@
+<!-- FILEPATH: /home/benjamin/code/Benyoumen/MYWELCOME/app/views/appointments/edit.html.erb -->
+
+<h1>Edit Appointment</h1>
+
+<%= form_for @appointment do |f| %>
+
+  <div class="field">
+    <%= f.label :user_id.name %>
+    <%= f.text_field :user_id.name %>
+
+  <div class="field">
+    <%= f.label :experience_id %>
+    <%= f.text_field :experience_id %>
+
+<% end %>
