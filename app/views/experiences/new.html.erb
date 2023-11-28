@@ -1,46 +1,26 @@
-<!-- FILEPATH: /home/benjamin/code/Benyoumen/MYWELCOME/app/views/experiences/new.html.erb -->
 
-<h1>New Experience</h1>
 
-<%= form_with(model: @experience, url: experiences_path, local: true) do |form| %>
-  <% if @experience.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@experience.errors.count, "error") %> prohibited this experience from being saved:</h2>
+<div class="new-event-container">
+  <h1 class="new-event-title">New Event</h1>
 
-      <ul>
-        <% @experience.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
+  <%= simple_form_for( @experience, html: { class: 'new-event-form' } ) do |f| %>
+
+    <%= f.input :specialty, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
+
+    <%= f.input :category, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
+
+    <%= f.input :description, as: :text, label_html: { class: 'form-label' }, input_html: { class: 'form-textarea' } %>
+
+    <%= f.input :local, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
+
+    <%= f.input :date, as: :date, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
+
+    <%= f.input :price, as: :string, label_html: { class: 'form-label' }, input_html: { class: 'form-input', placeholder: 'R$' } %>
+
+    <%= f.input :photo, as: :file %>
+
+    <%= f.button :submit, "Create Event", class: 'btn-submit' %>
+
   <% end %>
+</div>
 
-  <div class="field">
-    <%= form.label :category %>
-    <%= form.text_field :category %>
-  </div>
-
-    <div class="field">
-    <%= form.label :specialty %>
-    <%= form.text_area :specialty %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.text_field :date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :local %>
-    <%= form.text_area :local %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
