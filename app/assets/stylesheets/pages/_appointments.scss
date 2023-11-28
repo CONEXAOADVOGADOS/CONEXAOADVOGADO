@@ -1,0 +1,26 @@
+
+$card-background-color: #f8f9fa; // Example color
+
+.card {
+  background-color: $card-background-color;
+  border: 0; // Remove border
+  border-radius: 0; // Remove border radius
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2); // Remove box shadow
+  margin-bottom: 30px; // Spacing between cards
+
+  .card-footer {
+    background-color: $card-background-color;
+    border-top: 0; // Remove top border
+    border-bottom-left-radius: 0; // Remove bottom left border radius
+    border-bottom-right-radius: 0; // Remove bottom right border radius
+    padding: 1.25rem;
+  }
+
+    // Styling for card footer
+
+
+    .btn {
+      // Style for buttons
+            margin-right: 10px; // Spacing between buttons
+    }
+  }

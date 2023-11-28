@@ -1,0 +1,27 @@
+<!-- FILEPATH: /home/benjamin/code/Benyoumen/MYWELCOME/app/views/experiences/index.html.erb -->
+<h1>Experiences</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Specialty</th>
+      <th>Description</th>
+      <th>Local</th>
+      <th>Date</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @experiences.each do |experience| %>
+      <tr>
+        <td><%= experience.category %></td>
+        <td><%= experience.specialty %></td>
+        <td><%= experience.description %></td>
+        <td><%= experience.local %></td>
+        <td><%= experience.date %></td>
+        <td><%= experience.price %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

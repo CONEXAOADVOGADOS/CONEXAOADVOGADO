@@ -1,0 +1,31 @@
+<%# app/views/appointments/index.html.erb %>
+
+<!-- app/views/appointments/index.html.erb -->
+
+<h1 class="mb-4">Appointments</h1>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Location</th>
+        <!-- Add more columns if needed -->
+      </tr>
+    </thead>
+    <tbody>
+      <% @appointments.each do |appointment| %>
+        <% if appointment.user == current_user && appointment.experience == @experience %>
+          <tr>
+            <td><%= appointment.date.strftime('%Y-%m-%d') %></td>
+            <td><%= appointment.time.strftime('%H:%M') %></td>
+            <td><%= appointment.location %></td>
+            <!-- Add more columns if needed -->
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
