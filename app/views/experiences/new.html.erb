@@ -1,5 +1,6 @@
+
 <div class="new-event-container">
-  <h1 class="new-event-title">Edit Event</h1>
+  <h1 class="new-event-title">New Event</h1>
 
   <%= simple_form_for( @experience, html: { class: 'new-event-form' } ) do |f| %>
 
@@ -17,7 +18,7 @@
 
     <%= f.input :photo, as: :file %>
 
-    <%= f.button :submit, "Edit Event", class: 'btn-submit' %>
+    <%= f.button :submit, "Create Event", class: 'btn-submit' %>
 
   <% end %>
 </div>
