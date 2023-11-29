@@ -1,11 +1,12 @@
 require 'faker'
 
+Appointment.destroy_all
 Experience.destroy_all
 User.destroy_all
 
 User.create!(email: "admin@admin.com", password: "admin123", name: "Admin", cpf: "123.123.123-12", phone: "(12)32123-1231")
 
-6.times do
+7.times do
   name = Faker::Name.name
 
   User.create!(
@@ -58,6 +59,15 @@ experiences = [{
     user: User.all.sample
   },
   {
+    specialty: "Wine",
+    category: "workshop",
+    description: "Wine tasting",
+    date: Date.today + 2.weeks,
+    price: 30,
+    local: "São Paulo",
+    user: User.all.sample
+  },
+  {
     specialty: "Churros",
     category: "gastronomy",
     description: "Churros and chocolate festival",
@@ -93,7 +103,7 @@ puts "Created #{Experience.count} experiences"
 
 # Appointments seed data
 
-7.times do
+8.times do
   appointment = Appointment.create(
     experience: Experience.all.sample,
     user: User.all.sample

@@ -3,6 +3,14 @@
   background: #ddd;
 }
 
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+
 .navbar-mw .navbar-collapse {
   flex-grow: 0;
 }
@@ -23,7 +31,6 @@
   color: #000000A6;
   text-decoration: none;
 }
-
 
 .links-navbar a:nth-child(1) {
   margin-right: 20px;

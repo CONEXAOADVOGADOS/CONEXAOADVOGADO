@@ -1,0 +1,65 @@
+body {
+  background-color: rgb(192, 192, 199);
+  text-align: center;
+}
+h1 {
+  color: white;
+  text-align: center;
+}
+h2 {
+  margin-bottom: 20px;
+}
+// .navbar-fixed  h2 {
+//   margin-top: 60px;
+// }
+
+.div-excur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.card {
+  border-radius: 1%;
+}
+div.row {
+  margin: 40px 20px;
+}
+// .cards-group {
+//   height: 22%;
+//   width:22%;
+// }
+.div-gastro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.div-work {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-card {
+  border-radius: 2%;
+}
+
+// cards
+// .event-title {
+//   height: 100px;
+//   text-align: center;
+// }
+// .event-info {
+//   height: 500px;
+// }
+// .margin-top-200 {
+//   padding-top: 150px;
+//   padding-bottom: 50px;
+//   background-color: #ddd;
+// }
+// .event-detail-container  {
+
+//   border:1px solid #dbd8d8;
+
+//   .card-img-top {
+//     height: 212px;
+//   }
+//   }
