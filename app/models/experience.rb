@@ -1,6 +1,6 @@
 class Experience < ApplicationRecord
   belongs_to :user
-  # has_many :appointments
+  has_many :appointments
   validates :category, presence: true
   validates :specialty, presence: true
   validates :description, presence: true
