@@ -1,5 +1,14 @@
 // Specific CSS for your home-page
 
+// .b-example-divider {
+//   width: 100%;
+//   height: 3rem;
+//   background-color: rgb(238, 141, 61);
+//   border: solid rgba(0, 0, 0, .15);
+//   border-width: 10px 0;
+//   box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+// }
+
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
@@ -14,14 +23,6 @@
   }
 }
 
-.b-example-divider {
-  width: 100%;
-  height: 3rem;
-  background-color: rgb(238, 141, 61);
-  border: solid rgba(0, 0, 0, .15);
-  border-width: 1px 0;
-  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-}
 
 .b-example-vr {
   flex-shrink: 0;
@@ -69,6 +70,16 @@
   --bs-btn-active-border-color: #5a23c8;
 }
 
+.btn-secondary {
+  color: #fff;
+  background-color: #763fe2;
+  border-radius: 4px;
+
+}
+
+
+
+
 .bd-mode-toggle {
   z-index: 1500;
 }
@@ -84,24 +95,39 @@
   margin-top: 22px;
 }
 .carousel-item {
-  border-bottom: 1px solid black;
-  border-top: 1px solid black ;
+  border-bottom: 1px solid #763fe2;
+  border-top: 1px solid #763fe2 ;
 }
 .rounded-circle {
-  border: 1px solid black;
+  border: 1px solid #763fe2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+
+.img-fluid {
+  width: 4;
+  border-radius: 4px;
+  border:1px solid #763fe2;
+}
+
 .footer-container {
   text-align: center;
-
+}
 
 body {
   background-color: rgb(224, 235, 235);
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
 }
+
  h1 {
   color: red;
 }
 p {
-  color: blue;
+  color: #763fe2;
 }
 
 .card-category {

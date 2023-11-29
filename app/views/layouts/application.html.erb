@@ -1,28 +1,25 @@
 <%# @import 'variables'
-<%# @import 'pages/appointments'; %>
-<%# @import 'bootstrap/scss/bootstrap';
-<%# @import 'pages/appointments'; %>
+@import 'pages/appointments'; %>
+<%# <% @import 'bootstrap/scss/bootstrap'; %>
+<%# <% @import 'pages/appointments'; %>
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Mywelcome</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%# problema nesta linha abaixo %>
-    <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload"
-    <%= javascript_importmap_tags %>
-  </head>
-
-  <body><%= render "shared/navbar" %>
-<%= render "shared/flashes" %>
-
-    <%= yield %>
-
-     <footer class="footer-container">
+<head>
+  <title>My welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
+<body>
+  <%= render "shared/navbar" %>
+  <%= render "shared/flashes" %>
+  <%= yield %>
+  <footer class="footer-container">
     <p class="float-end"><a href="#">Back to top</a></p>
-    <p>&copy; 2023      My Welcome Company, Inc. &middot;</p>
+    <p>&copy; 2023 My Welcome Company, Inc. &middot;</p>
   </footer>
-  </body>
+</body>
 </html>
