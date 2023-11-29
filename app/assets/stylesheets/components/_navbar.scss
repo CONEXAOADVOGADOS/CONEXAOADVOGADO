@@ -12,7 +12,29 @@
   height: 80px;
   border-radius: 50%;
 }
+.links-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 200px;
+  margin-left: 400px;
+}
+.links-navbar  a {
+  color: #000000A6;
+  text-decoration: none;
+}
+
+
+.links-navbar a:nth-child(1) {
+  margin-right: 20px;
+}
+
+.links-navbar a:nth-child(2) {
+  margin-right: 20px;
+}
+
 a .avatar {
+  border: 1px solid  #763fe2;
   height: 60px;
   width: 60px;
 }
