@@ -1,30 +1,23 @@
-<%= form_with(model: @experience, url: experience_path(@experience), method: :patch) do |form| %>
-  <div class="field">
-    <%= form.label :category %>
-    <%= form.text_field :category %>
-  </div>
+<div class="new-event-container">
+  <h1 class="new-event-title">Edit Event</h1>
 
-  <div class="field">
-    <%= form.label :specialty %>
-    <%= form.text_area :specialty %>
-  </div>
+  <%= simple_form_for( @experience, html: { class: 'new-event-form' } ) do |f| %>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
+    <%= f.input :specialty, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
 
-  <div class="field">
-    <%= form.label :local %>
-    <%= form.text_area :local %>
-  </div>
+    <%= f.input :category, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
 
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price, step: '0.01' %>
-  </div>
+    <%= f.input :description, as: :text, label_html: { class: 'form-label' }, input_html: { class: 'form-textarea' } %>
 
-  <div class="actions">
-    <%= form.submit "Update Experience" %>
-  </div>
-<% end %>
+    <%= f.input :local, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
+
+    <%= f.input :date, as: :date, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
+
+    <%= f.input :price, as: :string, label_html: { class: 'form-label' }, input_html: { class: 'form-input', placeholder: 'R$' } %>
+
+    <%= f.input :photo, as: :file %>
+
+    <%= f.button :submit, "Edit Event", class: 'btn-submit' %>
+
+  <% end %>
+</div>
