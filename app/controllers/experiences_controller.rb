@@ -1,7 +1,6 @@
 class ExperiencesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
 
-
   include Pundit::Authorization
   after_action :verify_authorized, except: :index, unless: :skip_pundit?
   after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
@@ -63,32 +62,18 @@ class ExperiencesController < ApplicationController
   #   @appointments = Appointment.where(user: current_user)}
   # end
 
+  private
 
-  
-end
+  def skip_pundit?
+    devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
+  end
 
+  def experience_params
+    params.require(:experience).permit(:specialty, :category, :description, :date, :price, :local)
+  end
 
-
-  # def my_experiences
-  #   @experiences = Experience.where(user: current_user)
-  # end
-
-  # def my_appointments
-  #   @appointments = Appointment.where(user: current_user)
-  # end
-
-    private
-
-    def skip_pundit?
-      devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
-    end
-
-    def experience_params
-      params.require(:experience).permit(:specialty, :category, :description, :date, :price, :local)
-    end
-
-    def search
-      @experiences = Experience.where("category LIKE ?", "%#{params[:q]}%")
+  def search
+    @experiences = Experience.where("category LIKE ?", "%#{params[:q]}%")
     render :index
   end
-  end
+end
