@@ -23,6 +23,11 @@
   }
 }
 
+.text-white {
+  text-wrap: balance;
+  font-size: 70;
+}
+
 .b-example-vr {
   flex-shrink: 0;
   width: 1.5rem;
@@ -142,7 +147,7 @@ p {
 }
 
 .bg-home{
-  background-image: asset-url("bg/02.png");
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), asset-url("bg/02.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
