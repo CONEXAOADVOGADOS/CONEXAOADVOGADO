@@ -4,15 +4,15 @@
 
 <div class="card">
   <div class="card-body">
-    <p class="card-text"><strong>ID:</strong> <%= @appointment.id %></p>
+    <p class="card-text"><strong>Experience:</strong> <%= @appointment.experience.specialty %></p>
+    <p class="card-text"><strong>Description:</strong> <%= @appointment.experience.description %></p>
     <p class="card-text"><strong>Category:</strong> <%= @appointment.experience.category %></p>
-    <p class="card-text"><strong>Description:</strong> <%= @appointment.experience.specialty %></p>
     <p class="card-text"><strong>Date:</strong> <%= @appointment.experience.date %></p>
     <p class="card-text"><strong>Local:</strong> <%= @appointment.experience.local %></p>
     <p class="card-text"><strong>Price:</strong> <%= @appointment.experience.price %></p>
   </div>
   <div class="card-footer">
-    <%= link_to 'Edit', edit_appointment_path(@appointment), class: 'btn btn-primary' %> |
-    <%= link_to 'Back', experience_path(@appointment.experience), class: 'btn btn-secondary' %>
+    <%# <%= link_to 'Edit', edit_appointment_path(@appointment), class: 'btn btn-primary' %>
+    <%= link_to 'Delete', appointment_path, class: "btn btn-danger rounded", data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
   </div>
 </div>

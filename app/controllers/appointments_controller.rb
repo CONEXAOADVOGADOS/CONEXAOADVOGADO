@@ -1,5 +1,5 @@
 class AppointmentsController < ApplicationController
-
+  before_action :set_event, only: %i[new create]
   def index
     @appointments = Appointment.all
   end
@@ -9,17 +9,12 @@ class AppointmentsController < ApplicationController
   end
 
   def new
-    @appointment = Appointment.new
+    @appointment = @experience.appointments.new
   end
 
   def create
-    @appointment = Appointment.new(appointment_params)
-    @appointment.user = current_user
-    if @appointment.save
-      redirect_to appointment_path(@appointment)
-    else
-      render :new
-    end
+    @appointment = Appointment.create!(experience: @experience, user: current_user)
+    redirect_to user_path(current_user), notice: 'Appointment created successfully.'
   end
 
   def edit
@@ -35,7 +30,7 @@ class AppointmentsController < ApplicationController
   def destroy
     @appointment = Appointment.find(params[:id])
     @appointment.destroy
-    redirect_to appointments_path
+    redirect_to experience_appointment_path, notice: 'Appointment deleted successfully.'
   end
 
   def search
@@ -43,7 +38,11 @@ class AppointmentsController < ApplicationController
     render :index
   end
 
-  def appointment_params
-    params.require(:appointment).permit(:date, :time, :user_id, :experience_id)
+  private
+
+  def set_event
+    @experience = Experience.find(params[:experience_id])
   end
+
+
 end
