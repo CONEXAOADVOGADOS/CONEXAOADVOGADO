@@ -1,6 +1,6 @@
 class Experience < ApplicationRecord
   belongs_to :user
-  # has_many :appointments
+  has_many :appointments
   validates :category, presence: true
   validates :specialty, presence: true
   validates :description, presence: true
@@ -8,4 +8,7 @@ class Experience < ApplicationRecord
   validates :date, presence: true
   validates :price, presence: true
   validates :price, numericality: { greater_than: 0 }
+
+  has_one_attached :photo
+  has_many :users, through: :appointments
 end

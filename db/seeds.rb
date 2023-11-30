@@ -1,5 +1,6 @@
 require 'faker'
 
+Appointment.destroy_all
 Experience.destroy_all
 User.destroy_all
 
