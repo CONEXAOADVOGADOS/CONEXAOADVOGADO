@@ -5,9 +5,10 @@
 
   <%= simple_form_for( @experience, html: { class: 'new-event-form' } ) do |f| %>
 
+    <%= f.input :category, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
+
     <%= f.input :specialty, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
 
-    <%= f.input :category, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
 
     <%= f.input :description, as: :text, label_html: { class: 'form-label' }, input_html: { class: 'form-textarea' } %>
 

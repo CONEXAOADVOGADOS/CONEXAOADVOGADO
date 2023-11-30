@@ -1,0 +1,175 @@
+// 
+// dark-mode.scss
+// Theme Component
+// Dark mode related CSS
+
+[data-bs-theme="dark"] {
+
+  //Dark mode styles
+    --bs-light: #2a2c31;
+    --bs-gray-200: #464950;
+    --bs-gray-300: #5f5f68;
+    --bs-gray-400: #a1a1a8;
+    --bs-gray-500: #bfc0c9;
+    --bs-gray-600: #c5c6cc;
+    --bs-gray-700: #ffffffb3;
+    --bs-gray-800: #ffffffd9;
+    --bs-gray-900: #fff;
+    --bs-body-bg: #222529;
+    --bs-body-bg-rgb: #222529;
+    --bs-body-color: #b0b0b8; //a1a1a8
+    --bs-primary: #8e85e6 !important; // To change dark mode primary color go to user.scss file and follow the instruction
+    --bs-primary-rgb: 142, 133, 230;
+    --bs-mode:#191b1d;
+    --bs-heading-color: var(--bs-gray-900);
+    --bs-border-color: rgba(255, 255, 255, 0.07);
+    --bs-link-color:#8e85e6;
+    --bs-link-color-rgb: 142, 133, 230 !important;
+    --bs-link-hover-color-rgb: 122, 109, 235;
+    --bs-link-hover-color:#7a6deb;
+    --bs-nav-pills-link-active-bg: #8e85e6 !important;
+
+    body, p, ul, ol {
+      color: var(--#{$prefix}body-color);
+    }
+
+    .navbar {
+    --bs-navbar-color: var(--#{$prefix}gray-600);
+    --bs-navbar-hover-color: var(--#{$prefix}primary);
+    --bs-navbar-disabled-color: var(--#{$prefix}gray-400);
+    --bs-navbar-active-color: var(--#{$prefix}primary);
+    }
+    .navbar-dark {
+      --bs-navbar-color: var(--#{$prefix}gray-900);
+      --bs-navbar-hover-color: var(--#{$prefix}primary) !important;
+      --bs-navbar-active-color: var(--#{$prefix}primary) !important;
+    }
+    .navbar-light-static .theme-icon-active svg{
+      fill: var(--#{$prefix}gray-900);
+    }
+    .navbar-light-static .theme-icon-active .nav-link.active svg{
+      fill: var(--#{$prefix}primary);
+    }
+    .nav{
+      --bs-nav-link-color: var(--#{$prefix}gray-600);
+      --bs-nav-link-hover-color: var(--#{$prefix}primary);
+    }
+    .dropdown-menu {
+      --bs-dropdown-bg: var(--bs-mode);
+      --bs-dropdown-link-hover-color: var(--#{$prefix}primary);
+      --bs-dropdown-link-active-color: var(--#{$prefix}primary);
+      --bs-dropdown-link-active-bg: rgba(var(--#{$prefix}primary-rgb), 0.1);
+      --bs-dropdown-link-disabled-color: var(--#{$prefix}gray-200);
+      box-shadow:none;
+      border: 1px solid var(--#{$prefix}border-color);
+    }
+
+    // Alert
+    @each $color, $value in $theme-colors {
+      .alert-#{$color} {
+        --#{$prefix}alert-bg: rgba(#{to-rgb($value)}, .05);
+        --#{$prefix}alert-border-color: rgba(#{to-rgb($value)}, .25);
+        --#{$prefix}alert-color: rgba(#{to-rgb($value)}, 0.8);
+      }
+    }
+
+    .btn-primary {
+      --bs-btn-bg: var(--#{$prefix}primary);
+      --bs-btn-border-color: var(--#{$prefix}primary);
+      --bs-btn-hover-bg: var(--#{$prefix}link-hover-color);
+      --bs-btn-hover-border-color: var(--#{$prefix}link-hover-color);
+      --bs-btn-active-bg: var(--#{$prefix}link-hover-color);
+      --bs-btn-active-border-color: var(--#{$prefix}link-hover-color);
+      --bs-btn-disabled-bg: var(--#{$prefix}primary);
+    }
+    .btn-link {
+      --bs-link-color: var(--#{$prefix}primary);
+      --bs-btn-hover-color: var(--#{$prefix}link-hover-color);
+      --bs-btn-active-color: var(--#{$prefix}link-hover-color);
+    }
+    .btn-outline-primary {
+      --bs-btn-color: var(--#{$prefix}primary);
+      --bs-btn-border-color: var(--#{$prefix}primary);
+      --bs-btn-hover-bg: var(--#{$prefix}primary);
+      --bs-btn-hover-border-color: var(--#{$prefix}primary);
+      --bs-btn-active-bg: var(--#{$prefix}primary);
+      --bs-btn-active-border-color: var(--#{$prefix}primary);
+      --bs-btn-disabled-color: var(--#{$prefix}primary);
+      --bs-btn-disabled-border-color: var(--#{$prefix}primary);
+    }
+    .modal {
+      --bs-modal-bg: var(--#{$prefix}body-bg);
+      --bs-modal-border-color: var(--#{$prefix}border-color-translucent);
+      --bs-modal-footer-border-color: var(--#{$prefix}border-color);
+    }
+    .table-light {
+      --bs-table-bg: var(--#{$prefix}light);
+      --bs-table-color: var(--#{$prefix}gray-900);
+    }
+    .offcanvas, .offcanvas-xxl, .offcanvas-xl, .offcanvas-lg, .offcanvas-md, .offcanvas-sm {
+      --bs-offcanvas-bg: var(--#{$prefix}body-bg);
+    }
+    .nav-pills {
+      --bs-nav-pills-link-active-bg: var(--#{$prefix}primary);
+   }
+    .btn-primary-soft{
+      color: var(--#{$prefix}primary);
+      background-color: rgba(var(--#{$prefix}primary-rgb), 0.1);
+      &:hover, &:focus{
+        color: $white;
+        background-color: var(--#{$prefix}primary);
+        border-color: var(--#{$prefix}primary);
+      }
+    }
+    .fill-primary{
+      fill: var(--#{$prefix}primary) !important;
+    }
+    .bg-light{
+      background-color: var(--#{$prefix}light) !important;
+    }
+    .border-light{
+      border-color: var(--#{$prefix}light) !important
+    }
+    .bg-body{
+      background-color: var(--#{$prefix}body-bg) !important;
+    }
+    .shadow, .shadow-lg, .shadow-sm{
+      box-shadow: none !important;
+    }
+    .navbar-nav .dropdown .dropdown-submenu:hover>.dropdown-menu {
+      box-shadow: none;
+    }
+    .btn-close {
+      filter: invert(1) grayscale(100%) brightness(300%);
+    }
+    .form-check-input:checked {
+      background-color: var(--#{$prefix}primary);
+      border-color: var(--#{$prefix}primary);
+    }
+
+    .text-primary-hover {
+      a {
+        color: var(--#{$prefix}gray-600);
+      }
+    }
+    
+    .text-primary-hover {
+      li {
+      color: var(--#{$prefix}gray-600) !important;
+    }
+  }
+}
+
+// Dark mode item hide and show
+.dark-mode-item{
+  display: none !important;
+}
+
+[data-bs-theme="dark"]{
+  .dark-mode-item{
+    display: inline-block !important;
+  }
+  .light-mode-item{
+    display: none !important;
+  }
+}

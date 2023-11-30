@@ -1,12 +1,10 @@
 .navbar-mw{
   justify-content: space-between;
-  background: #ddd;
+  background:#31404B;
 }
-
 .navbar-mw .navbar-collapse {
   flex-grow: 0;
 }
-
 .navbar-mw .navbar-brand img {
   width: 80px;
   height: 80px;
@@ -20,21 +18,17 @@
   margin-left: 400px;
 }
 .links-navbar  a {
-  color: #000000A6;
+  color: white;
   text-decoration: none;
 }
-
-
 .links-navbar a:nth-child(1) {
   margin-right: 20px;
 }
-
 .links-navbar a:nth-child(2) {
   margin-right: 20px;
 }
-
 a .avatar {
-  border: 1px solid  #763fe2;
+  border: 1px solid  #763FE2;
   height: 60px;
   width: 60px;
 }
