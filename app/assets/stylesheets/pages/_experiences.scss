@@ -9,25 +9,12 @@ h1 {
 h2 {
   margin-bottom: 20px;
 }
-// .navbar-fixed  h2 {
-//   margin-top: 60px;
-// }
-
 .div-excur {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-div.card {
-  border-radius: 1%;
-}
-div.row {
-  margin: 40px 20px;
-}
-// .cards-group {
-//   height: 22%;
-//   width:22%;
-// }
+
 .div-gastro {
   display: flex;
   justify-content: center;
@@ -39,8 +26,21 @@ div.row {
   align-items: center;
 }
 .img-card {
+  height: 250px;
+  object-fit: cover;
   border-radius: 2%;
 }
+
+#gastronomy, #workshops {
+  padding-top: 10%;
+}
+
+
+
+// .cards-group {
+//   height: 22%;
+//   width:22%;
+// }
 
 // cards
 // .event-title {
