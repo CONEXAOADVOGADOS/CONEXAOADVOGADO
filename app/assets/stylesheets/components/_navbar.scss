@@ -2,6 +2,14 @@
   justify-content: space-between;
   background:#31404B;
 }
+
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
 .navbar-mw .navbar-collapse {
   flex-grow: 0;
 }
@@ -21,6 +29,7 @@
   color: white;
   text-decoration: none;
 }
+
 .links-navbar a:nth-child(1) {
   margin-right: 20px;
 }
