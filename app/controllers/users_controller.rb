@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   include Pundit::Authorization
 
   def show
+    @experiences = Experience.where(user: current_user)
     @appointments = Appointment.all
   end
 

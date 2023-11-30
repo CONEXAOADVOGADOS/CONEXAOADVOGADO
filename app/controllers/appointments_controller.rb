@@ -1,7 +1,12 @@
 class AppointmentsController < ApplicationController
   before_action :set_event, only: %i[new create]
+
+  # include Pundit::Authorization
+  # after_action :verify_authorized, except: :index, unless: :skip_pundit?
+  # after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
+
   def index
-    @appointments = Appointment.all
+    @appointments = Appointment.where(user: current_user)
   end
 
   def show
@@ -14,7 +19,7 @@ class AppointmentsController < ApplicationController
 
   def create
     @appointment = Appointment.create!(experience: @experience, user: current_user)
-    redirect_to user_path(current_user), notice: 'Appointment created successfully.'
+    redirect_to appointments_path, notice: 'Appointment created successfully.'
   end
 
   def edit
@@ -30,7 +35,7 @@ class AppointmentsController < ApplicationController
   def destroy
     @appointment = Appointment.find(params[:id])
     @appointment.destroy
-    redirect_to experience_appointment_path, notice: 'Appointment deleted successfully.'
+    redirect_to appointments_path, notice: 'Appointment deleted successfully.'
   end
 
   def search
