@@ -1,6 +1,7 @@
 .navbar-mw{
   justify-content: space-between;
   background:#31404B;
+  height: 90px;
 }
 
 .fixed-navbar {
@@ -16,14 +17,21 @@
 .navbar-mw .navbar-brand img {
   width: 80px;
   height: 80px;
-  border-radius: 50%;
+  // border-radius: 50%;
 }
 .links-navbar {
   display: flex;
+  display: -ms-flexbox;
   justify-content: space-between;
   align-items: center;
-  gap: 200px;
-  margin-left: 400px;
+  gap: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.links-navbar a:hover,
+.links-navbar a:focus {
+  /* Add hover and focus styles here */
 }
 .links-navbar  a {
   color: white;
