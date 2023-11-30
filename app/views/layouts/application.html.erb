@@ -13,13 +13,14 @@
   <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
   <%= javascript_importmap_tags %>
 </head>
+  
 <body>
-  <%= render "shared/navbar" %>
-  <%= render "shared/flashes" %>
-  <%= yield %>
-  <footer class="footer-container">
-    <p class="float-end"><a href="#">Back to top</a></p>
-    <p>&copy; 2023 My Welcome Company, Inc. &middot;</p>
-  </footer>
+    <%= render "shared/navbar" %>
+    <%= render "shared/flashes" %>
+    <%= yield %>
+    <footer class="footer-container">
+      <p class="float-end"><a href="#">Back to top</a></p>
+      <p>&copy; 2023 My Welcome Company, Inc. &middot;</p>
+    </footer>
 </body>
 </html>

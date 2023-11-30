@@ -1,27 +1,62 @@
-<!-- FILEPATH: /home/benjamin/code/Benyoumen/MYWELCOME/app/views/experiences/index.html.erb -->
-<h1>Experiences</h1>
+<!-- app/views/experiences/index.html.erb -->
+<div class="container">
+  <h1>Experiences</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Category</th>
-      <th>Specialty</th>
-      <th>Description</th>
-      <th>Local</th>
-      <th>Date</th>
-      <th>Price</th>
-    </tr>
-  </thead>
-  <tbody>
+  <h2 id="excursions">Excursions</h2>
+
+  <div class="row">
     <% @experiences.each do |experience| %>
-      <tr>
-        <td><%= experience.category %></td>
-        <td><%= experience.specialty %></td>
-        <td><%= experience.description %></td>
-        <td><%= experience.local %></td>
-        <td><%= experience.date %></td>
-        <td><%= experience.price %></td>
-      </tr>
+      <div class="col-3">
+        <div class="card">
+          <%= experience.category %>
+          <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
+          <p><%= experience.description %></p>
+          <p><%= experience.local %></p>
+          <p><%= experience.specialty %></p>
+          <p><%= experience.date %></p>
+          <p><%= experience.price %></p>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
+
+
+
+
+  <h2 id="gastronomy" >Gastronomy</h2>
+  <div class="row">
+    <% @experiences.each do |experience| %>
+      <div class="col-3">
+        <div class="card">
+          <%= experience.category %>
+          <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
+          <p><%= experience.description %></p>
+          <p><%= experience.local %></p>
+          <p><%= experience.specialty %></p>
+          <p><%= experience.date %></p>
+          <p><%= experience.price %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+
+  <h2 id="workshops">Workshops</h2>
+
+  <div class="row">
+    <% @experiences.each do |experience| %>
+      <div class="col-3">
+        <div class="card">
+          <%= experience.category %>
+          <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
+          <p><%= experience.description %></p>
+          <p><%= experience.local %></p>
+          <p><%= experience.specialty %></p>
+          <p><%= experience.date %></p>
+          <p><%= experience.price %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</div>
