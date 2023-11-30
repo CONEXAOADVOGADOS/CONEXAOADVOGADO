@@ -2,20 +2,19 @@ class ExperiencesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
 
   include Pundit::Authorization
-  # after_action :verify_authorized, except: :index, unless: :skip_pundit?
-  # after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
+  after_action :verify_authorized, except: :index, unless: :skip_pundit?
+  after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
 
   def index
-    # @experiences = policy_scope(Experience)
-    @experiences = Experience.all
-
-    if params[:category].present?
-      @experiences = @experiences.where("category ILIKE ?", "%#{params[:category]}%")
-    end
-
-    if params[:date].present?
-      @experiences =  @experiences.where(date: Date.parse(params[:date]))
-    end
+    @experiences = policy_scope(Experience)
+    # @experiences = Experience.all
+    # params[:category].present?
+    #   @experiences = @experiences.where("category ILIKE ?", "%#{params[:category]}%")
+    # end
+    # params[:date].present?
+    #   @experiences = @experiences.where(date: Date.parse(params[:date]))
+    @experiences = @experiences.where("category ILIKE ?", "%#{params[:category]}%") if params[:category].present?
+    @experiences = @experiences.where(date: Date.parse(params[:date])) if params[:date].present?
   end
 
   def show

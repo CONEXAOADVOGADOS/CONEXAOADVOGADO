@@ -9,9 +9,10 @@ class User < ApplicationRecord
   validates :phone, presence: true
   validates :email, presence: true
   validates :password, presence: true
+  validates_uniqueness_of :email
   # validates: password_confirmation, presence: true
   validates :password, length: { minimum: 6 }
-  has_many :experiences, through: :appointments
+  # has_many :experiences, through: :appointments
 end
 
 #  format: { with:  /\A\(\d{2}\)\d{5}\-\d{4}\z/ }

@@ -3,4 +3,3 @@ class CarouselsController < ApplicationController
     @carousel_items = CarouselItem.all
   end
 end
-
