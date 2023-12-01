@@ -26,7 +26,7 @@
           <i class="bi bi-geo-alt"></i>Location
         <% end %>
         <div class="form-border-bottom form-control-transparent form-fs-lg mt-2">
-          <%= form.select :location, ['São Paulo, Brazil', 'Rio de Janeiro, Brazil', 'Fortaleza, Brazil'], { prompt: 'Select location' }, { class: 'form-select js-choice', data: { search_enabled: 'true' } } %>
+          <%= form.select :location, ['São Paulo', 'Rio de Janeiro', 'Fortaleza'], { prompt: 'Select location' }, { class: 'form-select js-choice', data: { search_enabled: 'true' } } %>
         </div>
       </div>
 
@@ -198,7 +198,7 @@ About END -->
           </div>
           <h2 class="fw-normal">Excursions</h2>
           <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-          <p><a class="btn btn-secondary" link_to "#">More info &raquo;</a></p>
+          <p><%= link_to 'More info »', experiences_path(anchor: 'excursions'), class: 'btn btn-secondary' %></p>
         </div><!-- /.col-lg-4 -->
 
 
@@ -206,14 +206,14 @@ About END -->
             <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF9FnooKdnD3MvfxG49a0fzkLjexl9s0uwM4JUyX4uQ6KdahXn28yJEpKqksJ7r80h3G4&usqp=CAU", class: "bd-placeholder-img rounded-circle", width: 170, height: 170, alt: "Placeholder" %>
             <h2 class="fw-normal">Gastronomy</h2>
             <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-            <p><a class="btn btn-secondary" link_to "#">More info &raquo;</a></p>
+            <p><%= link_to 'More info »', experiences_path(anchor: 'gastronomy'), class: 'btn btn-secondary' %></p>
         </div><!-- /.col-lg-4 -->
 
         <div class="col-lg-4">
           <%= image_tag "https://img.freepik.com/fotos-premium/conceito-de-negocios-e-empreendedorismo-palestrante-dando-uma-palestra-na-sala-de-conferencias-em-evento-de-negocios-publico-na-sala-de-conferencias-concentre-se-em-pessoas-irreconheciveis_386094-61.jpg", class: "bd-placeholder-img rounded-circle", width: 170, height: 170, alt: "Placeholder" %>
           <h2 class="fw-normal">Workshops</h2>
           <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-          <p><a class="btn btn-secondary" link_to "#">More info &raquo;</a></p>
+          <p><%= link_to 'More info »', experiences_path(anchor: 'workshops'), class: 'btn btn-secondary' %></p>
         </div><!-- /.col-lg-4 -->
 
     </div><!-- /.container -->

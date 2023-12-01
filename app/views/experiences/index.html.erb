@@ -1,9 +1,8 @@
-<!-- app/views/experiences/index.html.erb -->
+
 <div class="container">
   <h1>Experiences</h1>
-<hr>
+  <hr>
   <h2 id="excursions">Excursions</h2>
-
   <div class="row">
     <% @experiences.where(category: "excursion").each do |experience| %>
       <div class="col-3">
@@ -14,6 +13,7 @@
           <p><%= experience.specialty %></p>
           <p><%= experience.date %></p>
           <p><%= experience.price %></p>
+          <!-- ... (unchanged code for Gastronomy) ... -->
         </div>
       </div>
     <% end %>
@@ -49,8 +49,7 @@
           <p><%= experience.specialty %></p>
           <p><%= experience.date %></p>
           <p><%= experience.price %></p>
+          <!-- ... (unchanged code for Workshops) ... -->
         </div>
       </div>
     <% end %>
-  </div>
-</div>

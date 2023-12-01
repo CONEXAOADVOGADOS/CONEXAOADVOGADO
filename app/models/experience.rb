@@ -11,4 +11,12 @@ class Experience < ApplicationRecord
 
   has_one_attached :photo
   has_many :users, through: :appointments
+
+
+  include PgSearch::Model
+  pg_search_scope :search_by_category_and_local_and_date,
+    against: [ :category, :local, :date ],
+    using: {
+      tsearch: { prefix: true }
+    }
 end

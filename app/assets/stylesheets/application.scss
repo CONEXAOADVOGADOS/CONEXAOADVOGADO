@@ -11,29 +11,24 @@
 @import "components/index";
 @import "pages/index";
 
-// body {
-//   margin-top: 90px;
-//   background-color: rgb(238, 90, 22);
-// }
-// .form-inputs {
-//   display: flex;
-//   justify-content: center;
 
-//   margin: 20px;
-//   padding: 10px;
-
-// }
 body {
-  margin-top: calc(33vh - 50px); /* Ajusta a margem superior para centralizar */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   background-color: rgb(238, 90, 22);
 }
 
+.form-control {
+  border: 0.5px solid black;
+  border-radius: 4px;
+}
 
 .form-inputs {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 15px 600px 40px;
+  margin: 5px 600px 20px;
   padding: 10px;
   border: 1px solid black;
   border-radius: 4px;
@@ -45,41 +40,71 @@ body {
 }
 .custom-button {
   background-color: green;
-  color: white;
+  color:black;
   border: 1px solid black;
   border-radius: 4px;
-  padding: 8px 16px; /* Ajuste conforme necessário */
+  padding: 8px 16px;
   cursor: pointer;
 }
 .sign-up-div {
-  margin:100px;
+  margin-top:50px;
 }
 .sign-up {
-  color: red;
+  color: black;
+  background-color: rgb(0, 81, 255);
   text-decoration: none;
   border: 1px solid black;
-  padding:20px 30px;
-  margin-bottom: 20px;
+  padding:20px 40px;
+  margin-bottom: 4px;
   border-radius: 4px;
 
 }
 .forgot-password {
-  color: red;
+  color: black;
+  background-color: rgb(233, 167, 45);
   text-decoration: none;
   border: 1px solid black;
-  padding:20px 30px;
-  margin-bottom: 20px;
+  padding:20px 40px;
+  margin-bottom: 30px;
   border-radius: 4px;
 }
 .forgot-pass-div {
-  margin:100px;
+  margin:60px;
 }
 
 .custom-button:hover {
   background-color: darkgreen; /* Cor ao passar o mouse */
 }
-.form-control {
 
+
+.login-form {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+}
+
+.form-wrapper {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px #ddd;
+}
+
+.form-control {
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #6d5dfc;
+  border: none;
+  font-weight: 600;
+
+  &:hover {
+    background-color: darken(#6d5dfc, 5%);
+  }
 }
 
 // .custom-label {
