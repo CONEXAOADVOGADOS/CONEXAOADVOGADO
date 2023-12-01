@@ -9,7 +9,11 @@
       <div class="col-3">
         <div class="card">
           <%= experience.category %>
-          <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
+          <%# <% if @experience.photo.attached? %>
+            <%# <%= cl_image_tag @experience.photo.key, class: "event-detail-image" %>
+          <%# <% else %>
+            <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
+          <%# <% end %>
           <p class="card-desc"><%= experience.description %></p>
           <p class="card-desc"><%= experience.local %></p>
           <p class="card-desc"><%= experience.specialty %></p>
