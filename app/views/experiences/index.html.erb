@@ -10,11 +10,11 @@
         <div class="card">
           <%= experience.category %>
           <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
-          <p><%= experience.description %></p>
-          <p><%= experience.local %></p>
-          <p><%= experience.specialty %></p>
-          <p><%= experience.date %></p>
-          <p><%= experience.price %></p>
+          <p class="card-desc"><%= experience.description %></p>
+          <p class="card-desc"><%= experience.local %></p>
+          <p class="card-desc"><%= experience.specialty %></p>
+          <p class="card-desc"><%= experience.date %></p>
+          <p class="card-desc"><%= experience.price %></p>
         </div>
       </div>
     <% end %>
@@ -36,7 +36,6 @@
       </div>
     <% end %>
   </div>
-
 <hr>
   <h2 id="workshops">Workshops</h2>
 
@@ -55,5 +54,4 @@
       </div>
     <% end %>
   </div>
-
 </div>
