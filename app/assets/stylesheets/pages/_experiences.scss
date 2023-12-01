@@ -6,6 +6,9 @@ h1 {
 h2 {
   margin-bottom: 20px;
 }
+body {
+  background-color: blue;
+}
 .div-excur {
   display: flex;
   justify-content: center;
@@ -31,12 +34,15 @@ h2 {
 #gastronomy, #workshops {
   padding-top: 10%;
 }
-
-.card, p.card-desc{
-  color: red;
-  font-size: 22px;
+div .card {
+  margin-bottom: 4px;
 }
 
+.card, p.card-desc{
+  text-align: center;
+  color: rgb(121, 121, 121);
+  font-size: 22px;
+}
 
 .form-heading {
   margin-bottom: 30px;
@@ -91,29 +97,33 @@ label {
   }
 }
 
-// .cards-group {
-//   height: 22%;
-//   width:22%;
-// }
+.back-to-top-link {
+  display: inline-block;
+  text-decoration: none;
+  margin-left: 10px; /* Adjust the margin as needed */
+  font-size: 50%; /* Decrease the font size by 50% */
+  color: black; /* Set the text color to black */
+}
 
-// cards
-// .event-title {
-//   height: 100px;
-//   text-align: center;
-// }
-// .event-info {
-//   height: 500px;
-// }
-// .margin-top-200 {
-//   padding-top: 150px;
-//   padding-bottom: 50px;
-//   background-color: #ddd;
-// }
-// .event-detail-container  {
+#excursions, #gastronomy, #workshops {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 0%;
+}
+/* Add this CSS to your stylesheet (e.g., app/assets/stylesheets/application.css) */
 
-//   border:1px solid #dbd8d8;
+.footer-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f9fa; /* Adjust the background color as needed */
+  padding: 8px;
+  text-align: center;
+  border-top: 1px solid #dee2e6; /* Add a border to separate the footer from the content */
+}
 
-//   .card-img-top {
-//     height: 212px;
-//   }
-//   }
+.float-end {
+  float: right;
+}
+
+/* Add any additional styling for the footer as needed */
