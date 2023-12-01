@@ -82,6 +82,36 @@ body {
 
 }
 
+.login-form {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+}
+
+.form-wrapper {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px #ddd;
+}
+
+.form-control {
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #6d5dfc;
+  border: none;
+  font-weight: 600;
+
+  &:hover {
+    background-color: darken(#6d5dfc, 5%);
+  }
+}
+
 // .custom-label {
 //   font-size: 16px; /* Tamanho da fonte para o rótulo */
 //   color: #333; /* Cor do texto do rótulo */
