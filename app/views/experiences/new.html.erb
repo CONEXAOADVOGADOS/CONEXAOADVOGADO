@@ -1,26 +1,29 @@
-<div class="new-event-container">
-  <h1 class="new-event-title">New Event</h1>
+<div class="form-container container">
 
-  <%= simple_form_for( @experience, html: { class: 'new-event-form' } ) do |f| %>
+  <h1>Create New Experience</h1>
 
-   <%= f.input :specialty, label: 'Name', input_html: { class: 'form-input' } %>
+  <%= simple_form_for @experience do |f| %>
 
-    <%= f.input :category, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
+    <div class="row">
 
-    <%= f.input :description, as: :text, label_html: { class: 'form-label' }, input_html: { class: 'form-textarea' } %>
+      <div class="col-md-6">
+        <%= f.input :specialty, laberl: "Experience Name"%>
+        <%= f.input :category %>
+        <%= f.input :local %>
+      </div>
 
-    <%= f.input :local, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
+      <div class="col-md-6">
+        <%= f.input :date, as: :date %>
+        <%= f.input :price %>
+        <%= f.input :photo, as: :file %>
+      </div>
 
-    <%= f.input :date, as: :date, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
+    </div>
 
-    <%= f.input :price, as: :string, label_html: { class: 'form-label' }, input_html: { class: 'form-input', placeholder: 'R$' } %>
+    <%= f.input :description, as: :text %>
 
-    <%= f.input :photo, as: :file %>
-
-    <%= f.button :submit, "Create Experience", class: 'btn-submit' %>
+    <%= f.button :submit, "Create Experience", class:"btn-primary" %>
 
   <% end %>
+
 </div>
-
-
-

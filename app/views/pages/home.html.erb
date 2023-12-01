@@ -32,13 +32,14 @@
 
       <!-- Check in -->
       <div class="col-3">
-        <%= form.label :date, class: 'h6 fw-normal mb-0' do %>
-          <i class="bi bi-calendar"></i>Date
-        <% end %>
-        <div class="form-border-bottom form-control-transparent form-fs-lg mt-2">
-          <%= form.text_field :date, class: 'form-control flatpickr py-2', data: { date_format: 'd M Y' }, placeholder: 'Choose a date' %>
-        </div>
-      </div>
+  <%= form.label :date, class: 'h6 fw-normal mb-0' do %>
+    <i class="bi bi-calendar"></i>Date
+  <% end %>
+  <div class="form-border-bottom form-control-transparent form-fs-lg mt-2">
+    <%= form.text_field :date, id: 'datepicker', class: 'form-control py-2', placeholder: 'Choose a date' %>
+  </div>
+</div>
+
 
       <!-- Guest -->
       <div class="col-3">
@@ -240,7 +241,15 @@ About END -->
       </div>
     </div>
 
-
-
     <!-- /END THE FEATURETTES -->
 </main>
+
+<script>
+  $(document).ready(function(){
+    $('#datepicker').datepicker({
+      format: 'dd/mm/yyyy',
+      autoclose: true,
+      todayHighlight: true
+    });
+  });
+</script>
