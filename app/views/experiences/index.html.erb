@@ -42,14 +42,32 @@
         </div>
       </div>
     <% end %>
-  <hr>
-  <h2 id="workshops">Workshops <a href="#experiences" class="back-to-top-link">Back to Top</a></h2>
+  </div>
+<hr>
+  <h2 id="gastronomy" >Gastronomy</h2>
 
   <div class="row">
-    <% @experiences.each do |experience| %>
+    <% @experiences.where(category: "gastronomy").each do |experience| %>
       <div class="col-3">
-          <div class="card">
-          <%= experience.category %>
+        <div class="card">
+          <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
+          <p><%= experience.description %></p>
+          <p><%= experience.local %></p>
+          <p><%= experience.specialty %></p>
+          <p><%= experience.date %></p>
+          <p><%= experience.price %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<hr>
+  <a href="/experiences#excursions"></a>
+  <h2 id="workshops">Workshops</h2>
+
+  <div class="row">
+    <% @experiences.where(category: "workshop").each do |experience| %>
+      <div class="col-3">
+        <div class="card">
           <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
           <p><%= experience.description %></p>
           <p><%= experience.local %></p>
