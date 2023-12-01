@@ -4,7 +4,7 @@
 
   <div class="event-detail-container">
     <%# <h1 class="event-detail-title">Event Details</h1> %>
-    <h1 class="event-detail-title"><%= @experience.specialty %></h1>
+    <h2> <%= @experience.specialty %></h2>
 
     <div class="event-detail-card">
 
@@ -13,6 +13,11 @@
       <p class="event-detail"><strong>Location:</strong> <%= @experience.local %></p>
       <p class="event-detail"><strong>Date:</strong> <%= @experience.date %></p>
       <p class="event-detail"><strong>Price:</strong> <%= number_to_currency(@experience.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
+      <% if @experience.photo.key %>
+        <%= cl_image_tag @xperience.photo.key, class: "card-img-top" %>
+      <% else %>
+        <%= image_tag "https://images.unsplash.com/photo-1604177052603-c2b4cff228db?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvd3xlbnwwfHwwfHx8MA%3D%3D",class: "card-img-top" %>
+      <% end %>
 
     <% if policy(@experience).edit? %>
       <%= link_to "Edit", edit_experience_path, class: "btn btn-success rounded" %>

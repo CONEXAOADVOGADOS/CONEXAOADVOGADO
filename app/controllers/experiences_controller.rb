@@ -76,7 +76,7 @@ class ExperiencesController < ApplicationController
   end
 
   def experience_params
-    params.require(:experience).permit(:specialty, :category, :description, :date, :price, :local)
+    params.require(:experience).permit(:specialty, :category, :description, :date, :price, :local, :photo)
   end
 
   def search

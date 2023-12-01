@@ -1,14 +1,11 @@
-
-
 <div class="new-event-container">
   <h1 class="new-event-title">New Event</h1>
 
   <%= simple_form_for( @experience, html: { class: 'new-event-form' } ) do |f| %>
 
+   <%= f.input :specialty, label: 'Name', input_html: { class: 'form-input' } %>
+
     <%= f.input :category, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
-
-    <%= f.input :specialty, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
-
 
     <%= f.input :description, as: :text, label_html: { class: 'form-label' }, input_html: { class: 'form-textarea' } %>
 
@@ -20,7 +17,7 @@
 
     <%= f.input :photo, as: :file %>
 
-    <%= f.button :submit, "Create Event", class: 'btn-submit' %>
+    <%= f.button :submit, "Create Experience", class: 'btn-submit' %>
 
   <% end %>
 </div>
