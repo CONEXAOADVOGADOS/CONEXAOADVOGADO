@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+<div class="form-container container">
+=======
 <div class="form-container">
 
   <h1>Create New Experience</h1>
@@ -5,8 +8,35 @@
   <div class="form-wrapper">
 
     <%= simple_form_for @experience do |f| %>
+>>>>>>> master
 
+  <h1>Create New Experience</h1>
 
+<<<<<<< HEAD
+  <%= simple_form_for @experience do |f| %>
+
+    <div class="row">
+
+      <div class="col-md-6">
+        <%= f.input :category %>
+        <%= f.input :specialty %>
+        <%= f.input :local %>
+      </div>
+
+      <div class="col-md-6">
+        <%= f.input :date, as: :date %>
+        <%= f.input :price %>
+        <%= f.input :photo, as: :file %>
+      </div>
+
+    </div>
+
+    <%= f.input :description, as: :text %>
+
+    <%= f.button :submit, "Create Experience", class:"btn-primary" %>
+
+  <% end %>
+=======
     <div class="row">
 
       <div class="col-md-6">
@@ -33,5 +63,6 @@
     <% end %>
 
   </div>
+>>>>>>> master
 
 </div>

@@ -15,6 +15,18 @@
       <p class="event-detail"><strong>Date:</strong> <%= @experience.date %></p>
       <p class="event-detail"><strong>Price:</strong> <%= number_to_currency(@experience.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
 
+<<<<<<< HEAD
+    <%# <% if policy(@experience).edit? %>
+      <%# <%= link_to "Edit", edit_experience_path, class: "btn btn-success rounded" %>
+    <%# <% end %>
+    <%# <% if policy(@experience).edit? %>
+      <%# <%= link_to 'Delete', experience_path, class: "btn btn-danger rounded", data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
+    <%# <% end %>
+    <%# </div> %>
+  <%# </div> %>
+<%# <div class="margin-top-200"> %>
+
+=======
     <% if policy(@experience).edit? %>
       <%= link_to "Edit", edit_experience_path, class: "btn btn-success rounded"
     <%# <% end %>
@@ -24,6 +36,7 @@
     <%# </div> %>
   </div>
 <%# <%# <div class="margin-top-200"> %>
+>>>>>>> master
 
 <!-- =======================
 Main banner START -->

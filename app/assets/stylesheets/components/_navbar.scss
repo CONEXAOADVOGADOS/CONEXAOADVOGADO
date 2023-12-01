@@ -5,7 +5,7 @@
 }
 
 .fixed-navbar {
-  position: fixed;
+
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -29,10 +29,7 @@
   margin-right: auto;
 }
 
-.links-navbar a:hover,
-.links-navbar a:focus {
-  /* Add hover and focus styles here */
-}
+
 .links-navbar  a {
   color: white;
   text-decoration: none;
