@@ -7,13 +7,13 @@
     <%# <h1 class="event-detail-title">Event Details</h1> %>
     <%# <h1 class="event-detail-title"><%= @experience.specialty</h1>' %>
 
-    <%# <div class="event-detail-card"> %>
-
-      <%# <p class="event-detail"><strong>Category:</strong> <%= @experience.category</p> %>
-      <%# <p class="event-detail"><strong>Description:</strong> <%= @experience.description</p> %>
-      <%# <p class="event-detail"><strong>Location:</strong> <%= @experience.local</p> %>
-      <%# <p class="event-detail"><strong>Date:</strong> <%= @experience.date</p> %>
-      <%# <p class="event-detail"><strong>Price:</strong> <%= number_to_currency(@experience.price, unit: "R$ ", separator: ",", delimiter: ".")</p> %>
+    <div class="event-detail-card">
+      <%= cl_image_tag @experience.photo.key, class: "event-detail-image" %>
+      <p class="event-detail"><strong>Category:</strong> <%= @experience.category %></p>
+      <p class="event-detail"><strong>Description:</strong> <%= @experience.description %></p>
+      <p class="event-detail"><strong>Location:</strong> <%= @experience.local %></p>
+      <p class="event-detail"><strong>Date:</strong> <%= @experience.date %></p>
+      <p class="event-detail"><strong>Price:</strong> <%= number_to_currency(@experience.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
 
     <%# <% if policy(@experience).edit? %>
       <%# <%= link_to "Edit", edit_experience_path, class: "btn btn-success rounded" %>
