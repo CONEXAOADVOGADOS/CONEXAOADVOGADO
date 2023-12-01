@@ -1,9 +1,9 @@
 class ExperiencesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
 
-  # include Pundit::Authorization
-  # after_action :verify_authorized, except: :index, unless: :skip_pundit?
-  # after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
+  include Pundit::Authorization
+  after_action :verify_authorized, except: :index, unless: :skip_pundit?
+  after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
 
   def index
     @experiences = policy_scope(Experience)
@@ -20,8 +20,8 @@ class ExperiencesController < ApplicationController
   end
 
   def show
-    # @experience = Experience.find(params[:id])
-    # authorize @experience
+    @experience = Experience.find(params[:id])
+    authorize @experience
   end
 
   def new
@@ -32,7 +32,7 @@ class ExperiencesController < ApplicationController
   def create
     @experience = Experience.new(experience_params)
     @experience.user = current_user
-    # authorize @experience
+    authorize @experience
     if @experience.save
       redirect_to experience_path(@experience)
     else
@@ -58,10 +58,6 @@ class ExperiencesController < ApplicationController
     @experience.destroy
     redirect_to experiences_path
   end
-
-  # def experience_params
-  #   params.require(:experience).permit(:specialty, :category, :description, :date, :price, :local)
-  # end
 
   # def my_experiences
   # @experiences = Experience.where(user: current_user)
