@@ -5,7 +5,7 @@
   <h2 id="excursions">Excursions</h2>
 
   <div class="row">
-    <% @experiences.each do |experience| %>
+    <% @experiences.where(category: "excursion").each do |experience| %>
       <div class="col-3">
         <div class="card">
           <%= experience.category %>
@@ -26,7 +26,7 @@
 <hr>
   <h2 id="gastronomy" >Gastronomy</h2>
   <div class="row">
-    <% @experiences.each do |experience| %>
+  <% @experiences.where(category: "gastronomy").each do |experience| %>
       <div class="col-3">
         <div class="card">
           <%= experience.category %>
@@ -44,7 +44,7 @@
   <h2 id="workshops">Workshops</h2>
 
   <div class="row">
-    <% @experiences.each do |experience| %>
+  <% @experiences.where(category: "workshop").each do |experience| %>
       <div class="col-3">
         <div class="card">
           <%= experience.category %>
