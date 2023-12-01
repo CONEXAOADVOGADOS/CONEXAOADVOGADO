@@ -7,6 +7,31 @@
     <% @experiences.where(category: "excursion").each do |experience| %>
       <div class="col-3">
         <div class="card">
+          <%= experience.category %>
+          <%# <% if @experience.photo.attached? %>
+            <%# <%= cl_image_tag @experience.photo.key, class: "event-detail-image" %>
+          <%# <% else %>
+            <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
+          <%# <% end %>
+          <p class="card-desc"><%= experience.description %></p>
+          <p class="card-desc"><%= experience.local %></p>
+          <p class="card-desc"><%= experience.specialty %></p>
+          <p class="card-desc"><%= experience.date %></p>
+          <p class="card-desc"><%= experience.price %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <hr>
+
+  <h2 id="gastronomy">Gastronomy</h2>
+
+  <hr>
+  <div class="row">
+    <% @experiences.each do |experience| %>
+      <div class="col-3">
+        <div class="card">
+          <%= experience.category %>
           <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
           <p><%= experience.description %></p>
           <p><%= experience.local %></p>
@@ -17,9 +42,8 @@
         </div>
       </div>
     <% end %>
-  </div>
-<hr>
-  <h2 id="gastronomy" >Gastronomy</h2>
+  <hr>
+  <h2 id="workshops">Workshops</h2>
 
   <div class="row">
 
