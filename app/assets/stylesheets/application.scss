@@ -11,18 +11,6 @@
 @import "components/index";
 @import "pages/index";
 
-// body {
-//   margin-top: 90px;
-//   background-color: rgb(238, 90, 22);
-// }
-// .form-inputs {
-//   display: flex;
-//   justify-content: center;
-
-//   margin: 20px;
-//   padding: 10px;
-
-// }
 body {
   margin-top: calc(33vh - 50px); /* Ajusta a margem superior para centralizar */
   background-color: rgb(238, 90, 22);
@@ -56,7 +44,7 @@ body {
   cursor: pointer;
 }
 .sign-up-div {
-  margin:50px;
+  margin-top:530px;
 }
 .sign-up {
   color: black;

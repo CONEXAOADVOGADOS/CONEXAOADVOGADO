@@ -13,8 +13,10 @@ class ExperiencesController < ApplicationController
     # end
     # params[:date].present?
     #   @experiences = @experiences.where(date: Date.parse(params[:date]))
+    # @experiences = Experience.joins(:category, :date, :local)
     @experiences = @experiences.where("category ILIKE ?", "%#{params[:category]}%") if params[:category].present?
     @experiences = @experiences.where(date: Date.parse(params[:date])) if params[:date].present?
+    @experiences = @experiences.where("local ILIKE ?", "%#{params[:location]}%")
   end
 
   def show
@@ -57,10 +59,6 @@ class ExperiencesController < ApplicationController
     redirect_to experiences_path
   end
 
-  # def experience_params
-  #   params.require(:experience).permit(:specialty, :category, :description, :date, :price, :local)
-  # end
-
   # def my_experiences
   # @experiences = Experience.where(user: current_user)
   # end
@@ -76,7 +74,7 @@ class ExperiencesController < ApplicationController
   end
 
   def experience_params
-    params.require(:experience).permit(:specialty, :category, :description, :date, :price, :local)
+    params.require(:experience).permit(:specialty, :category, :description, :date, :price, :photo, :local)
   end
 
   def search
