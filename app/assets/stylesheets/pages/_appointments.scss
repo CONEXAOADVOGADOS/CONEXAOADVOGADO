@@ -24,3 +24,87 @@ $card-background-color: #f8f9fa; // Example color
             margin-right: 10px; // Spacing between buttons
     }
   }
+
+  .appointments-index {
+    .appointment-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease-in-out;
+
+      &:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .card-body {
+        padding: 2rem;
+
+        .card-title {
+          font-size: 1.25rem;
+          color: lightgray; // Adjust as per your color scheme
+        }
+
+        .card-text {
+          margin-bottom: 1rem;
+          color: gray; // Adjust as per your color scheme
+          strong {
+            color: lightgray; // Adjust as per your color scheme
+          }
+        }
+
+        .text-end {
+          .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+
+            &.btn-outline-primary {
+              border-color: $primary;
+              color: $primary;
+
+              &:hover {
+                background: $primary;
+                color: #fff;
+              }
+            }
+
+            &.btn-outline-danger {
+              border-color: $danger;
+              color: $danger;
+
+              &:hover {
+                background: $danger;
+                color: #fff
+              }
+            }
+            .appointments-index {
+              .card {
+                border-radius: 10px;
+
+                &-header {
+                  font-weight: bold;
+                }
+
+                &-body {
+                  background-color: $light-gray; // Use a variable for light gray color
+                  p {
+                    margin-bottom: 0.5rem;
+                    strong {
+                      color: $primary; // Use a variable for primary color
+                    }
+                  }
+                }
+
+                &-footer {
+                  .btn {
+                    border-radius: 5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
