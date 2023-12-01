@@ -1,28 +1,32 @@
-<!-- app/views/experiences/index.html.erb -->
+
 <div class="container">
   <h1>Experiences</h1>
-<hr>
+  <hr>
   <h2 id="excursions">Excursions</h2>
-
   <div class="row">
-      <% while @experience == "Excursion" do %>
-      <% @experiences.each do |experience| %>
-        <div class="col-3">
-          <div class="card">
-            <%= experience.category %>
+    <% @experiences.each do |experience| %>
+      <div class="col-3">
+        <div class="card">
+          <%= experience.category %>
+          <%# <% if @experience.photo.attached? %>
+            <%# <%= cl_image_tag @experience.photo.key, class: "event-detail-image" %>
+          <%# <% else %>
             <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
-            <p><%= experience.description %></p>
-            <p><%= experience.local %></p>
-            <p><%= experience.specialty %></p>
-            <p><%= experience.date %></p>
-            <p><%= experience.price %></p>
-          </div>
+          <%# <% end %>
+          <p class="card-desc"><%= experience.description %></p>
+          <p class="card-desc"><%= experience.local %></p>
+          <p class="card-desc"><%= experience.specialty %></p>
+          <p class="card-desc"><%= experience.date %></p>
+          <p class="card-desc"><%= experience.price %></p>
         </div>
       <% end %>
     <% end %>
   </div>
-<hr>
-  <h2 id="gastronomy" >Gastronomy</h2>
+  <hr>
+
+  <h2 id="gastronomy">Gastronomy<a href="#experiences" class="back-to-top-link">Back to Top</a></h2>
+
+  <hr>
   <div class="row">
     <% @experiences.each do |experience| %>
       <div class="col-3">
@@ -34,17 +38,17 @@
           <p><%= experience.specialty %></p>
           <p><%= experience.date %></p>
           <p><%= experience.price %></p>
+          <!-- ... (unchanged code for Gastronomy) ... -->
         </div>
       </div>
     <% end %>
-  </div>
-<hr>
-  <h2 id="workshops">Workshops</h2>
+  <hr>
+  <h2 id="workshops">Workshops <a href="#experiences" class="back-to-top-link">Back to Top</a></h2>
 
   <div class="row">
     <% @experiences.each do |experience| %>
       <div class="col-3">
-        <div class="card">
+          <div class="card">
           <%= experience.category %>
           <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
           <p><%= experience.description %></p>
@@ -52,8 +56,7 @@
           <p><%= experience.specialty %></p>
           <p><%= experience.date %></p>
           <p><%= experience.price %></p>
+          <!-- ... (unchanged code for Workshops) ... -->
         </div>
       </div>
     <% end %>
-  </div>
-</div>

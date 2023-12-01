@@ -83,4 +83,4 @@ gem "cloudinary"
 gem 'rubocop', require: false
 gem "pundit"
 gem "geocoder"
-
+gem "pg_search"
