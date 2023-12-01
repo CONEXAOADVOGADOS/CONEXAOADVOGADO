@@ -10,6 +10,11 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+// application.scss
+@import 'variables'; // Assuming the file is named _variables.scss
+
+// ...other imports
+
 
 
 body {
