@@ -4,11 +4,10 @@
 
   <h2 id="excursions">Excursions</h2>
   <div class="row">
-    <% @experiences each do |experience| %>
+    <% @experiences.where(category: "excursion").each do |experience| %>
       <div class="col-3">
         <div class="card">
           <!-- Display content for Excursions -->
-          <%= experience.category %>
           <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
           <p><%= experience.description %></p>
           <p><%= experience.local %></p>
@@ -23,17 +22,10 @@
 
   <h2 id="gastronomy">Gastronomy<a href="#experiences" class="back-to-top-link"></a></h2>
   <div class="row">
-<<<<<<< HEAD
-    <% @experiences.each do |experience| %>
-=======
-
     <% @experiences.where(category: "gastronomy").each do |experience| %>
-
->>>>>>> 3ba49b2b5e78a2d3be61dceea78e30748da42373
       <div class="col-3">
         <div class="card">
           <!-- Display content for Gastronomy -->
-          <%= experience.category %>
           <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
           <p><%= experience.description %></p>
           <p><%= experience.local %></p>
@@ -48,23 +40,7 @@
 
   <h2 id="workshops">Workshops</h2>
   <div class="row">
-<<<<<<< HEAD
-    <% @experiences.each do |experience| %>
-      <% if experience.category == "workshop" %>
-        <div class="col-3">
-          <div class="card">
-            <!-- Display content for Workshops -->
-            <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
-            <p><%= experience.description %></p>
-            <p><%= experience.local %></p>
-            <p><%= experience.specialty %></p>
-            <p><%= experience.date %></p>
-            <p><%= experience.price %></p>
-          </div>
-=======
-
     <% @experiences.where(category: "workshop").each do |experience| %>
-
       <div class="col-3">
         <div class="card">
           <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
@@ -74,9 +50,8 @@
           <p><%= experience.date %></p>
           <p><%= experience.price %></p>
           <!-- ... (unchanged code for Workshops) ... -->
->>>>>>> 3ba49b2b5e78a2d3be61dceea78e30748da42373
         </div>
-      <% end %>
+      </div>
     <% end %>
   </div>
   <hr>

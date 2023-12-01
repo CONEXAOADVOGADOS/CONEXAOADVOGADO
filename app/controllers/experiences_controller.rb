@@ -12,17 +12,6 @@ class ExperiencesController < ApplicationController
     filters[:date] = Date.parse(params[:date]) if params[:date].present?
     filters[:local] = "%#{params[:location]}%" if params[:location].present?
   end
-    # @experiences = Experience.all
-    # params[:category].present?
-    #   @experiences = @experiences.where("category ILIKE ?", "%#{params[:category]}%")
-    # end
-    # params[:date].present?
-    #   @experiences = @experiences.where(date: Date.parse(params[:date]))
-    # @experiences = Experience.joins(:category, :date, :local)
-
-    # @experiences = @experiences.where("category ILIKE ?", "%#{params[:category]}%") if params[:category].present?
-    # @experiences = @experiences.where(date: Date.parse(params[:date])) if params[:date].present?
-    # @experiences = @experiences.where("local ILIKE ?", "%#{params[:location]}%")
 
   def show
     @experience = Experience.find(params[:id])
