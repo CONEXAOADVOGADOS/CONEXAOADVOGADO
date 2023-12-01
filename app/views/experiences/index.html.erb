@@ -22,7 +22,9 @@
   <h2 id="gastronomy" >Gastronomy</h2>
 
   <div class="row">
+
     <% @experiences.where(category: "gastronomy").each do |experience| %>
+
       <div class="col-3">
         <div class="card">
           <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
@@ -40,7 +42,9 @@
   <h2 id="workshops">Workshops</h2>
 
   <div class="row">
+
     <% @experiences.where(category: "workshop").each do |experience| %>
+
       <div class="col-3">
         <div class="card">
           <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
