@@ -4,11 +4,19 @@
     <%= simple_form_for @experience do |f| %>
       <div class="row">
         <div class="col-md-6">
-          <%= f.input :category, collection: ['Excursions', 'Gastronomy', 'Workshops'], prompt: "Select Category" %>
-          <%= f.input :specialty %>
-          <%= f.input :local, collection: ['São Paulo', 'Rio de Janeiro', 'Fortaleza'], prompt: "Select City" %>
+          <%= f.input :category, collection: ['Category 1', 'Category 2', 'Category 3'], prompt: "Select Category" %>
+          <%= f.input :specialty, collection: ['Specialty 1', 'Specialty 2', 'Specialty 3'], prompt: "Select Specialty" %>
+          <%= f.input :local %>
         </div>
         <div class="col-md-6">
           <%= f.input :price %>
           <%= f.input :photo, as: :file %>
         </div>
+      </div>
+      <%= f.input :description %>
+      <div class="actions">
+        <%= f.submit "Create", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
