@@ -59,6 +59,41 @@ label {
   padding: 10px 30px;
 }
 
+.form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+}
+
+.form-wrapper {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px #ddd;
+}
+
+.form-control {
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: none;
+}
+
+.actions {
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #6d5dfc;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 30px;
+
+  &:hover {
+     background-color: darken(#6d5dfc, 5%);
+  }
+}
+
 // .cards-group {
 //   height: 22%;
 //   width:22%;
