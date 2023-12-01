@@ -7,7 +7,7 @@
     <h1 class="event-detail-title"><%= @experience.specialty %></h1>
 
     <div class="event-detail-card">
-
+      <%= cl_image_tag @experience.photo.key, class: "event-detail-image" %>
       <p class="event-detail"><strong>Category:</strong> <%= @experience.category %></p>
       <p class="event-detail"><strong>Description:</strong> <%= @experience.description %></p>
       <p class="event-detail"><strong>Location:</strong> <%= @experience.local %></p>
