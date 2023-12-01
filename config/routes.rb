@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
   resources :appointments, except: [:new, :create]
 
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:edit, :update]
 
   # resources :experiences
   # resources :appointments
