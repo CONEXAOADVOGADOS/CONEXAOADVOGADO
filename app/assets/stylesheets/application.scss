@@ -28,12 +28,16 @@ body {
   background-color: rgb(238, 90, 22);
 }
 
+.form-control {
+  border: 0.5px solid black;
+  border-radius: 4px;
+}
 
 .form-inputs {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 15px 600px 40px;
+  margin: 5px 600px 20px;
   padding: 10px;
   border: 1px solid black;
   border-radius: 4px;
@@ -45,42 +49,42 @@ body {
 }
 .custom-button {
   background-color: green;
-  color: white;
+  color:black;
   border: 1px solid black;
   border-radius: 4px;
   padding: 8px 16px; /* Ajuste conforme necessário */
   cursor: pointer;
 }
 .sign-up-div {
-  margin:100px;
+  margin:50px;
 }
 .sign-up {
-  color: red;
+  color: black;
+  background-color: rgb(0, 81, 255);
   text-decoration: none;
   border: 1px solid black;
-  padding:20px 30px;
-  margin-bottom: 20px;
+  padding:20px 40px;
+  margin-bottom: 4px;
   border-radius: 4px;
 
 }
 .forgot-password {
-  color: red;
+  color: black;
+  background-color: rgb(233, 167, 45);
   text-decoration: none;
   border: 1px solid black;
-  padding:20px 30px;
-  margin-bottom: 20px;
+  padding:20px 40px;
+  margin-bottom: 30px;
   border-radius: 4px;
 }
 .forgot-pass-div {
-  margin:100px;
+  margin:60px;
 }
 
 .custom-button:hover {
   background-color: darkgreen; /* Cor ao passar o mouse */
 }
-.form-control {
 
-}
 
 // .custom-label {
 //   font-size: 16px; /* Tamanho da fonte para o rótulo */
