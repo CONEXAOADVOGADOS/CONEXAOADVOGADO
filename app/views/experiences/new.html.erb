@@ -1,29 +1,19 @@
-<div class="form-container container">
-
-  <h1>Create New Experience</h1>
-
-  <%= simple_form_for @experience do |f| %>
-
-    <div class="row">
-
-      <div class="col-md-6">
-        <%= f.input :specialty, laberl: "Experience Name"%>
-        <%= f.input :category %>
-        <%= f.input :local %>
+<div class="form-container">
+  <h1 style="color: black;">Create an Experience</h1>
+  <div class="form-wrapper">
+    <%= simple_form_for @experience do |f| %>
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.input :specialty, label: "Experience Name" %>
+          <%= f.input :category, collection: ['Excursions', 'Gastronomy', 'Workshops'], prompt: "Select Category" %>
+          <%= f.input :local, collection: ['São Paulo', 'Rio de Janeiro', 'Fortaleza'], prompt: "Select City" %>
+          <>
+        </div>
+        <div class="col-md-6">
+          <%= f.input :price %>
+          <%= f.input :photo, as: :file %>
+        </div>
       </div>
-
-      <div class="col-md-6">
-        <%= f.input :date, as: :date %>
-        <%= f.input :price %>
-        <%= f.input :photo, as: :file %>
-      </div>
-
-    </div>
-
-    <%= f.input :description, as: :text %>
-
-    <%= f.button :submit, "Create Experience", class:"btn-primary" %>
-
-  <% end %>
-
+    <% end %> <!-- Adicionei o fechamento correto da tag form -->
+  </div>
 </div>
