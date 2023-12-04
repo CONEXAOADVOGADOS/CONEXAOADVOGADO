@@ -65,7 +65,7 @@ label {
 
 .form-container {
   background-color: rgba(224, 228, 231, 0.8); /* O último valor (0.8) controla a opacidade (0 totalmente transparente, 1 totalmente opaco) */
-  max-width: 100%;
+  max-width: 300px;
   margin: 150px 400px;
   padding: 30px;
   border: 1px solid #000000;
@@ -117,7 +117,7 @@ label {
 /* Add this CSS to your stylesheet (e.g., app/assets/stylesheets/application.css) */
 
 .footer-container {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   background-color: #f8f9fa; /* Adjust the background color as needed */

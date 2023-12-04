@@ -96,6 +96,10 @@ h2.login{
   margin-bottom: 4px;
   border-radius: 4px;
 }
+
+.login-form::before {
+  height: 0 !important;
+}
 /////////////////////////////////  FORGOT PASSWORD
 .forgot-password {
   color: black;
@@ -139,6 +143,36 @@ div .login-form {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
+
+.footer-top {
+  margin-top: 100px;
+}
+
+// body {
+//   display: table;
+//   width: 100%;
+// }
+
+// body > footer {
+//    display: table-row;
+// }
+
+
+// #page-container {
+//   position: relative;
+//   min-height: 100vh;
+// }
+
+// #content-wrap {
+//   padding-bottom: 2.5rem;    /* Footer height */
+// }
+
+// #footer {
+//   position: absolute;
+//   bottom: 0;
+//   width: 100%;
+//   height: 2.5rem;            /* Footer height */
+// }
 
 // .form-wrapper {
 //   background: white;
