@@ -3,13 +3,23 @@
   background:#31404B;
   height: 90px;
 }
-
-.fixed-navbar {
-
-  top: 0;
+.navbar {
+  position: fixed;
   width: 100%;
+  top: 0;
   z-index: 1000;
 }
+
+.messages-d-none{
+ display: none;
+}
+
+// .fixed-navbar {
+//   position: fixed;
+//   top: 0;
+//   width: 100%;
+//   z-index: 1000;
+// }
 
 .navbar-mw .navbar-collapse {
   flex-grow: 0;
@@ -20,19 +30,28 @@
   // border-radius: 50%;
 }
 .links-navbar {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
   display: flex;
   display: -ms-flexbox;
   justify-content: space-between;
   align-items: center;
-  gap: 2em;
+  gap: 24em;
   margin-left: auto;
   margin-right: auto;
 }
 
-
+ .links-navbar a:hover,
+.links-navbar a:focus {
+  text-decoration: none;
+  color: yellow;
+ /* Add hover and focus styles here */
+}
 .links-navbar  a {
   color: white;
-  text-decoration: none;
+}
+.navbar-light .navbar-nav .nav-link  {
+  color: #fff;
 }
 
 .links-navbar a:nth-child(1) {

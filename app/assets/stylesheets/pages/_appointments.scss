@@ -30,5 +30,82 @@
   &:hover {
     background: lightgray;
     color: #fff;
+
+.card {
+  background-color: white, !important;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+
+  .card-footer {
+    background-color: $card-background-color;
+    border-top: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 1.25rem;
+
+    .btn {
+      margin-right: 10px;
+    }
+  }
+
+  .appointments-index {
+    .appointment-card {
+      background: #fff;
+      border-radius: 15px;
+      transition: box-shadow 0.3s ease-in-out;
+
+      &:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .card-body {
+        padding: 2rem;
+
+        .card-title {
+          font-size: 1.25rem;
+          color: lightgray;
+        }
+
+        .card-text {
+          margin-bottom: 1rem;
+          color: gray;
+
+          strong {
+            color: lightgray;
+          }
+        }
+
+        .text-end {
+          .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+
+            &.btn-outline-primary {
+              border-color: $primary;
+              color: $primary;
+
+              &:hover {
+                background: $primary;
+                color: #fff;
+              }
+            }
+
+            &.btn-outline-danger {
+              border-color: $danger;
+              color: $danger;
+
+              &:hover {
+                background: $danger;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

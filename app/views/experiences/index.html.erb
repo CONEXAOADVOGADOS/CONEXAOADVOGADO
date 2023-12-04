@@ -1,32 +1,31 @@
-
 <div class="container">
   <h1>Experiences</h1>
   <hr>
+
   <h2 id="excursions">Excursions</h2>
   <div class="row">
     <% @experiences.where(category: "excursion").each do |experience| %>
       <div class="col-3">
         <div class="card">
+          <!-- Display content for Excursions -->
           <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
           <p><%= experience.description %></p>
           <p><%= experience.local %></p>
           <p><%= experience.specialty %></p>
           <p><%= experience.date %></p>
           <p><%= experience.price %></p>
-          <!-- ... (unchanged code for Gastronomy) ... -->
         </div>
       </div>
     <% end %>
   </div>
-<hr>
-  <h2 id="gastronomy" >Gastronomy</h2>
+  <hr>
 
+  <h2 id="gastronomy">Gastronomys<a href="#experiences" class="back-to-top-link"></a></h2>
   <div class="row">
-
     <% @experiences.where(category: "gastronomy").each do |experience| %>
-
       <div class="col-3">
         <div class="card">
+          <!-- Display content for Gastronomy -->
           <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
           <p><%= experience.description %></p>
           <p><%= experience.local %></p>
@@ -37,14 +36,11 @@
       </div>
     <% end %>
   </div>
-<hr>
-  <a href="/experiences#excursions"></a>
+  <hr>
+
   <h2 id="workshops">Workshops</h2>
-
   <div class="row">
-
     <% @experiences.where(category: "workshop").each do |experience| %>
-
       <div class="col-3">
         <div class="card">
           <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
@@ -57,3 +53,10 @@
         </div>
       </div>
     <% end %>
+  </div>
+  <hr>
+     <p class="float-end"><a href="#">Back to top</a></p>
+
+  <!-- ... (other sections if needed) ... -->
+
+</div>
