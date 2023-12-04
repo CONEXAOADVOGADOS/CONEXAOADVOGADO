@@ -11,6 +11,9 @@ class UsersController < ApplicationController
     authorize @experience
   end
 
+  def index
+  end
+
   def create
     @experience = Experience.new(experience_params)
     @experience.user = current_user
