@@ -1,21 +1,25 @@
 <!-- FILEPATH: /home/benjamin/code/Benyoumen/MYWELCOME/app/views/experiences/show.html.erb -->
 
-<div class="margin-top-200">
 
+
+
+<div class="margin-top-200 center-container">
   <div class="event-detail-container">
-    <%# <h1 class="event-detail-title">Event Details</h1> %>
     <h1 class="event-detail-title"><%= @experience.specialty %></h1>
 
+    <div class="card-img-container">
       <% if @experience.photo.key %>
         <%= cl_image_tag @experience.photo.key, class: "card-img-top" %>
       <% else %>
-        <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
+        <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "img-card" %>
       <% end %>
-      <p class="event-detail"><strong>Category:</strong> <%= @experience.category %></p>
-      <p class="event-detail"><strong>Description:</strong> <%= @experience.description %></p>
-      <p class="event-detail"><strong>Location:</strong> <%= @experience.local %></p>
-      <p class="event-detail"><strong>Date:</strong> <%= @experience.date %></p>
-      <p class="event-detail"><strong>Price:</strong> <%= number_to_currency(@experience.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
+    </div>
+
+    <p class="event-detail"><strong>Category:</strong> <%= @experience.category %></p>
+    <p class="event-detail"><strong>Description:</strong> <%= @experience.description %></p>
+    <p class="event-detail"><strong>Location:</strong> <%= @experience.local %></p>
+    <p class="event-detail"><strong>Date:</strong> <%= @experience.date %></p>
+    <p class="event-detail"><strong>Price:</strong> <%= number_to_currency(@experience.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
 
     <% if policy(@experience).edit? %>
       <%= link_to "Edit", edit_experience_path, class: "btn btn-success rounded" %>
@@ -23,6 +27,6 @@
     <% if policy(@experience).edit? %>
       <%= link_to 'Delete', experience_path, class: "btn btn-danger rounded", data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
     <% end %>
-    </div>
   </div>
-<div class="margin-top-200">
+</div>
+<div class="margin-top-200"></div>

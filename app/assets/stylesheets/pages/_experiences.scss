@@ -129,5 +129,39 @@ label {
 .float-end {
   float: right;
 }
+.w-100 {
+  width: 30%;
+}
+.event-detail-container {
+  margin-top: 150px;
+  width: 45%;
+}
+.event-detail-title {
+  display: flex;
+  justify-content: center;
+}
 
-/* Add any additional styling for the footer as needed */
+.img-card {
+  height: 300px;
+}
+// p .event-detail {
+//   display: flex;
+// justify-content: center;
+
+// }
+
+  .center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .card-img-container {
+    text-align: center;
+  }
+
+  .card-img-container img {
+    width: 100%;
+
+  }
