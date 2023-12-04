@@ -1,16 +1,13 @@
 class ExperiencesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
 
-  include Pundit
-  after_action :verify_authorized, except: :index, unless: :skip_pundit?
-  after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
-
   def index
     @experiences = policy_scope(Experience)
     filters = {}
     filters[:category] = "%#{params[:category]}%" if params[:category].present?
     filters[:date] = Date.parse(params[:date]) if params[:date].present?
     filters[:local] = "%#{params[:location]}%" if params[:location].present?
+    apply_filters(@experiences, filters)
   end
 
   def show
@@ -63,10 +60,6 @@ class ExperiencesController < ApplicationController
 
   private
 
-  def skip_pundit?
-    devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
-  end
-
   def apply_filters(scope, filters)
     filters.each do |key, value|
       case key
@@ -78,7 +71,7 @@ class ExperiencesController < ApplicationController
         scope = scope.where("local ILIKE ?", value)
       end
     end
-    scope
+    @experiences = scope
   end
 
   def experience_params
