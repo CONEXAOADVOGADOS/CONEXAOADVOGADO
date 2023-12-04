@@ -1,9 +1,9 @@
 class AppointmentsController < ApplicationController
   before_action :set_event, only: %i[new create]
 
-  # include Pundit::Authorization
-  # after_action :verify_authorized, except: :index, unless: :skip_pundit?
-  # after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
+  include Pundit::Authorization
+  after_action :verify_authorized, except: :index, unless: :skip_pundit?
+  after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
 
   def index
     @appointments = Appointment.where(user: current_user)
@@ -48,6 +48,4 @@ class AppointmentsController < ApplicationController
   def set_event
     @experience = Experience.find(params[:experience_id])
   end
-
-
 end

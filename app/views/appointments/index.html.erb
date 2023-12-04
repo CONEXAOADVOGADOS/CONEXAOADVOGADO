@@ -1,23 +1,30 @@
-<div class="appointments-index">
-  <h1 class="mb-4 text-center">Appointments Details</h1>
+<div class="appointments-container">
+
+  <h1>Appointments</h1>
 
   <% @appointments.each do |appointment| %>
-    <div class="card mb-3 shadow-sm">
-      <div class="card-header bg-primary text-white">
-        <h5 class="card-title mb-0">Appointment Details</h5>
+
+    <div class="appointment-card">
+
+      <div class="card-header">
+        <h3>Appointment Details</h3>
       </div>
+
       <div class="card-body">
-        <p class="card-text"><strong>Experience:</strong> <%= appointment.experience.specialty %></p>
-        <p class="card-text"><strong>Description:</strong> <%= appointment.experience.description %></p>
-        <p class="card-text"><strong>Category:</strong> <%= appointment.experience.category %></p>
-        <p class="card-text"><strong>Date:</strong> <%= appointment.experience.date %></p>
-        <p class="card-text"><strong>Local:</strong> <%= appointment.experience.local %></p>
-        <p class="card-text"><strong>Price:</strong> <%= appointment.experience.price %></p>
+
+        <!-- Show appointment details -->
+
+        <div class="actions">
+          <%= link_to "Delete", appointment_path(appointment),
+                      method: :delete,
+                      data: { confirm: "Are you sure?" },
+                      class: "btn btn-outline-danger" %>
+        </div>
+
       </div>
-      <div class="card-footer d-flex justify-content-between align-items-center">
-        <%# <%= link_to 'Edit', edit_appointment_path(appointment), class: 'btn btn-secondary' %>
-        <%= link_to 'Delete', appointment_path(appointment), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
-      </div>
+
     </div>
+
   <% end %>
+
 </div>
