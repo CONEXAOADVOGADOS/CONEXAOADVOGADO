@@ -3,30 +3,30 @@
 pt-BR:
   devise:
     confirmations:
-      confirmed: "Sua conta foi confirmada com sucesso. Você está logado."
-      send_instructions: "Dentro de minutos, você receberá um e-mail com instruções para a confirmação da sua conta."
-      send_paranoid_instructions: "Se o seu endereço de e-mail estiver cadastrado, você receberá uma mensagem com instruções para confirmação da sua conta."
+      confirmed: "Your account has been successfully confirmed. You are logged in."
+      send_instructions: "Within minutes, you will receive an email with instructions for confirming your account."
+      send_paranoid_instructions: "If your email address is registered, you will receive a message with instructions to confirm your account."
     failure:
-      already_authenticated: "Você já está logado."
-      inactive: "Sua conta ainda não foi ativada."
-      invalid: "%{authentication_keys} ou senha inválida."
-      locked: "Sua conta está bloqueada."
-      last_attempt: "Você tem mais uma tentativa antes de bloquear sua conta."
-      not_found_in_database: "%{authentication_keys} ou senha inválida."
-      timeout: "Sua sessão expirou, por favor, efetue login novamente para continuar."
-      unauthenticated: "Para continuar, efetue login ou registre-se."
-      unconfirmed: "Antes de continuar, confirme a sua conta."
+      already_authenticated: "You are already logged in."
+      inactive: "Your account has not yet been activated."
+      invalid: "%{authentication_keys} or invalid password."
+      locked: "Your account is blocked."
+      last_attempt: "You have one more try before your account is blocked."
+      not_found_in_database: "%{authentication_keys} or invalid password."
+      timeout: "Your session has expired, please log in again to continue."
+      unauthenticated: "To continue, log in or register."
+      unconfirmed: "Before continuing, confirm your account."
     mailer:
       confirmation_instructions:
-        subject: "Instruções de confirmação"
+        subject: "Confirmation Instructions"
       reset_password_instructions:
-        subject: "Instruções de troca de senha"
+        subject: "Password change instructions"
       unlock_instructions:
-        subject: "Instruções de desbloqueio"
+        subject: "Unlocking Instructions"
       email_changed:
-        subject: "E-mail alterado"
+        subject: "Email changed"
       password_change:
-        subject: "Senha alterada"
+        subject: "Password changed"
     omniauth_callbacks:
       failure: "Could not authenticate you as %{kind} because %{reason}."
       success: "Successfully authenticated with an account of %{kind}."

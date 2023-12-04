@@ -15,27 +15,27 @@
 // @import 'variables';
 
 
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  position: relative;
-  background-image: url('Logo.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+// body {
+//   display: flex;
+//   flex-direction: column;
+//   height: 100vh;
+//   position: relative;
+//   background-image: url('Logo.png');
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+// }
 
-body::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Ajuste o último valor para controlar a opacidade do overlay */
-  z-index: -1; /* Garante que o overlay fique atrás do conteúdo da página */
-}
+// body::before {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.8); /* Ajuste o último valor para controlar a opacidade do overlay */
+//   z-index: -1; /* Garante que o overlay fique atrás do conteúdo da página */
+// }
 
 /////////////////////////////////////////////////    TITLES EXPERIENCE
 #excursions,#gastronomy,#workshops {
