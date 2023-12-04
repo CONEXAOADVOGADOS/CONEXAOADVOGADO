@@ -37,6 +37,13 @@ body::before {
   z-index: -1; /* Garante que o overlay fique atrás do conteúdo da página */
 }
 
+/////////////////////////////////////////////////    TITLES EXPERIENCE
+#excursions,#gastronomy,#workshops {
+  color: #f01a1a;
+  font-size: 35px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
 
  /////////////////////////////////////////////// REGISTRATION
 h2.login{
@@ -50,7 +57,6 @@ h2.login{
   border: 0.5px solid black;
   border-radius: 4px;
 }
-
 
 .form-inputs {
   background-color: rgba(224, 228, 231, 0.8); /* O último valor (0.8) controla a opacidade (0 totalmente transparente, 1 totalmente opaco) */

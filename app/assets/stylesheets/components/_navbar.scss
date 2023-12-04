@@ -50,6 +50,9 @@
 .links-navbar  a {
   color: white;
 }
+.navbar-light .navbar-nav .nav-link  {
+  color: #fff;
+}
 
 .links-navbar a:nth-child(1) {
   margin-right: 20px;
@@ -66,8 +69,4 @@ a .avatar {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.nav-item{
-color: #fff;
-
 }
