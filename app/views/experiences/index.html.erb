@@ -1,7 +1,5 @@
-<div class="container">
-  <h1>Experiences</h1>
-  <hr>
-
+<div class="container my-5">
+  <h1 class="h1-experiences">Experiences</h1>
   <h2 id="excursions" class= "<%= 'd-none' unless @experiences.where("category ILIKE ?", "excursion").any? %>">Excursions</h2>
   <div class="row">
     <% @experiences.where("category ILIKE ?", "excursion").each do |experience| %>
@@ -18,9 +16,13 @@
       </div>
     <% end %>
   </div>
-  <hr>
-
-  <h2 id="gastronomy" class= "<%= 'd-none' unless @experiences.where(category: "gastronomy").any? %>">Gastronomys<a href="#experiences" class="back-to-top-link"></a></h2>
+  <div class="mt-5" id="gastronomy-title"></div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h2 id="gastronomy" class= "<%= 'd-none' unless @experiences.where(category: "gastronomy").any? %>">Gastronomy<a href="#experiences" class="back-to-top-link"></a></h2>
   <div class="row">
     <% @experiences.where(category: "gastronomy").each do |experience| %>
       <div class="col-3">
@@ -36,7 +38,7 @@
       </div>
     <% end %>
   </div>
-  <hr>
+
 
   <h2 id="workshops" class= "<%= 'd-none' unless @experiences.where(category: "workshop").any? %>">Workshops</h2>
   <div class="row">
@@ -55,7 +57,10 @@
     <% end %>
   </div>
   <hr>
-   
+  <br>
+  <br>
+  <br>
+  <br>
 
   <!-- ... (other sections if needed) ... -->
 

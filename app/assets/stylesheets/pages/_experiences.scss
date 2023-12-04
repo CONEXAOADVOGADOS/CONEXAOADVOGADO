@@ -1,6 +1,7 @@
 
-h1 {
-  color: white;
+.h1-experiences{
+  margin-top: 110px;
+  color: black;
   text-align: center;
 }
 h2 {
@@ -31,9 +32,6 @@ body {
   border-radius: 2%;
 }
 
-#gastronomys, #workshops {
-  padding-top: 10%;
-}
 div .card {
   margin-bottom: 4px;
 }
@@ -43,6 +41,7 @@ div .card {
   color: rgb(121, 121, 121);
   font-size: 22px;
 }
+
 
 .form-heading {
   margin-bottom: 30px;
@@ -111,9 +110,10 @@ label {
 
 #excursions, #gastronomy, #workshops {
   text-align: center;
-  margin-top: 0px;
+  margin-top: 50px;
   padding-top: 0%;
 }
+
 /* Add this CSS to your stylesheet (e.g., app/assets/stylesheets/application.css) */
 
 .footer-container {

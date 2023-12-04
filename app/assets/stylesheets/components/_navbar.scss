@@ -4,17 +4,17 @@
   height: 90px;
 
 }
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  margin-bottom: 120px;
+  width: 100%;
+  z-index: 1000;
+
+}
 
 .messages-d-none{
  display: none;
-}
-
-
-.fixed-navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
 }
 
 .navbar-mw .navbar-collapse {
