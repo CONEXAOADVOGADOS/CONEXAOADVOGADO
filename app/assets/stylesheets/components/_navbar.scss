@@ -2,24 +2,20 @@
   justify-content: space-between;
   background:#31404B;
   height: 90px;
-}
-.navbar {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+
 }
 
 .messages-d-none{
  display: none;
 }
 
-// .fixed-navbar {
-//   position: fixed;
-//   top: 0;
-//   width: 100%;
-//   z-index: 1000;
-// }
+
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
 
 .navbar-mw .navbar-collapse {
   flex-grow: 0;
@@ -36,9 +32,9 @@
   display: -ms-flexbox;
   justify-content: space-between;
   align-items: center;
-  gap: 24em;
-  margin-left: auto;
-  margin-right: auto;
+  gap: 15em;
+  margin-left: 10%;
+
 }
 
  .links-navbar a:hover,
@@ -70,3 +66,35 @@ a .avatar {
   justify-content: center;
   align-items: center;
 }
+
+
+
+
+
+
+
+// .links-navbar a:hover,
+// .links-navbar a:focus {
+//   /* Add hover and focus styles here */
+// }
+// .links-navbar  a {
+//   color: white;
+//   text-decoration: none;
+// }
+
+// .links-navbar a:nth-child(1) {
+//   margin-right: 20px;
+// }
+// .links-navbar a:nth-child(2) {
+//   margin-right: 20px;
+// }
+// a .avatar {
+//   border: 1px solid  #763FE2;
+//   height: 60px;
+//   width: 60px;
+// }
+// .navbar-nav {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
