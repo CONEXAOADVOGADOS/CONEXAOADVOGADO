@@ -2,9 +2,9 @@
   <h1>Experiences</h1>
   <hr>
 
-  <h2 id="excursions">Excursions</h2>
+  <h2 id="excursions" class= "<%= 'd-none' unless @experiences.where("category ILIKE ?", "excursion").any? %>">Excursions</h2>
   <div class="row">
-    <% @experiences.where(category: "excursion").each do |experience| %>
+    <% @experiences.where("category ILIKE ?", "excursion").each do |experience| %>
       <div class="col-3">
         <div class="card">
           <!-- Display content for Excursions -->
@@ -20,7 +20,7 @@
   </div>
   <hr>
 
-  <h2 id="gastronomy">Gastronomys<a href="#experiences" class="back-to-top-link"></a></h2>
+  <h2 id="gastronomy" class= "<%= 'd-none' unless @experiences.where(category: "gastronomy").any? %>">Gastronomys<a href="#experiences" class="back-to-top-link"></a></h2>
   <div class="row">
     <% @experiences.where(category: "gastronomy").each do |experience| %>
       <div class="col-3">
@@ -38,7 +38,7 @@
   </div>
   <hr>
 
-  <h2 id="workshops">Workshops</h2>
+  <h2 id="workshops" class= "<%= 'd-none' unless @experiences.where(category: "workshop").any? %>">Workshops</h2>
   <div class="row">
     <% @experiences.where(category: "workshop").each do |experience| %>
       <div class="col-3">
