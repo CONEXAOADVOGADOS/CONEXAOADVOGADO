@@ -1,6 +1,7 @@
 
 $card-background-color: #f8f9fa; // Example color
 
+
 .card {
   background-color: $card-background-color;
   border: 0; // Remove border
@@ -27,7 +28,7 @@ $card-background-color: #f8f9fa; // Example color
     .appointment-card {
       background: #fff;
       border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: box-shadow 0.3s ease-in-out;
 
       &:hover {

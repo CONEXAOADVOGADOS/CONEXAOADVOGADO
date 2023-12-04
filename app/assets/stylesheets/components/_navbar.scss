@@ -30,22 +30,25 @@
   // border-radius: 50%;
 }
 .links-navbar {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
   display: flex;
   display: -ms-flexbox;
   justify-content: space-between;
   align-items: center;
-  gap: 2em;
+  gap: 24em;
   margin-left: auto;
   margin-right: auto;
 }
 
-// .links-navbar a:hover,
-// .links-navbar a:focus {
-//   /* Add hover and focus styles here */
-// }
+ .links-navbar a:hover,
+.links-navbar a:focus {
+  text-decoration: none;
+  color: yellow;
+ /* Add hover and focus styles here */
+}
 .links-navbar  a {
   color: white;
-  text-decoration: none;
 }
 
 .links-navbar a:nth-child(1) {
@@ -63,4 +66,8 @@ a .avatar {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.nav-item{
+color: #fff;
+
 }
