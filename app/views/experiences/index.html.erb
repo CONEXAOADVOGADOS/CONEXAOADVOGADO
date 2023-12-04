@@ -27,8 +27,8 @@
       <div class="col-3">
         <div class="card">
           <!-- Display content for Gastronomy -->
-          <% if @experience.photo.key %>
-          <%= cl_image_tag @experience.photo.key, class: "card-img-top" %>
+          <% if @experiences.photos.key %>
+          <%= cl_image_tag @experiences.photos.key, class: "card-img-top" %>
           <% else %>
           <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
           <% end %>
