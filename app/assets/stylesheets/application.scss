@@ -14,11 +14,43 @@
 // Assuming the file is named _variables.scss
 // @import 'variables';
 
-body {
+
+// body {
+//   display: flex;
+//   flex-direction: column;
+//   height: 100vh;
+//   position: relative;
+//   background-image: url('Logo.png');
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+// }
+
+// body::before {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.8); /* Ajuste o último valor para controlar a opacidade do overlay */
+//   z-index: -1; /* Garante que o overlay fique atrás do conteúdo da página */
+// }
+
+/////////////////////////////////////////////////    TITLES EXPERIENCE
+#excursions,#gastronomy,#workshops {
+  color: #f01a1a;
+  font-size: 35px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+ /////////////////////////////////////////////// REGISTRATION
+h2.login{
   display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background-color: rgb(238, 90, 22);
+  justify-content: center;
+  margin-top: 25px;
+  color: #fff;
 }
 
 .form-control {
@@ -27,10 +59,11 @@ body {
 }
 
 .form-inputs {
+  background-color: rgba(224, 228, 231, 0.8); /* O último valor (0.8) controla a opacidade (0 totalmente transparente, 1 totalmente opaco) */
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5px 600px 20px;
+  margin: 0px 600px 0px;
   padding: 10px;
   border: 1px solid black;
   border-radius: 4px;
@@ -48,7 +81,7 @@ body {
   padding: 8px 16px;
   cursor: pointer;
 }
-
+////////////////////////////////   SIGN UP
 .sign-up-div {
   margin-top: 50px;
 }
@@ -61,6 +94,7 @@ body {
   margin-bottom: 4px;
   border-radius: 4px;
 }
+/////////////////////////////////  FORGOT PASSWORD
 .forgot-password {
   color: black;
   background-color: rgb(233, 167, 45);
@@ -73,33 +107,52 @@ body {
 .forgot-pass-div {
   margin: 60px;
 }
-
 .custom-button:hover {
-  background-color: darkgreen; /* Cor ao passar o mouse */
+  background-color: darkgreen;
+}
+/////////////////////////////////////    LOGIN FORM
+div .login-form {
+  background-color: #ddd;
 }
 
 .login-form {
-  max-width: 400px;
-  margin: 40px auto;
-  padding: 30px;
-  border: 1px solid #ddd;
+  background-color: rgba(224, 228, 231, 0.8); /* O último valor (0.8) controla a opacidade (0 totalmente transparente, 1 totalmente opaco) */
+  width: 600px;
+  margin: 165px auto;
+  padding: 30px 60px;
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  box-sizing: border-box;
+  position: relative;
 }
 
-.form-wrapper {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px #ddd;
+.login-form::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
+
+// .form-wrapper {
+//   background: white;
+//   padding: 20px;
+//   border-radius: 10px;
+//   box-shadow: 2px 2px 10px #ddd;
+// }
 
 .form-control {
   background: #f9f9f9;
-  border-radius: 8px;
+  border-radius: 4px;
   border: none;
 }
 
 .btn-primary {
-  background-color: #6d5dfc;
+  background-color: #f03800;
   border: none;
   font-weight: 600;
 
@@ -107,3 +160,33 @@ body {
     background-color: darken(#6d5dfc, 5%);
   }
 }
+/////////////////////////////// BUTTON  CANCEL ACCOUNT
+.div-cancel {
+  text-align: center;
+  margin-top: 5px;
+}
+.div-cancel button {
+  background-color: #fdc086;
+  color: rgb(7, 7, 7);
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 5px 5px;
+  margin-top: 50px;
+}
+.cancel-button a, .back-button a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+// .float-end  a{
+//   text-decoration: none;
+//   color:rgb(0, 0, 0);
+//   border:1px solid black;
+//   width: 30px 30px;
+//   background-color: #d6d6d6;
+//   margin-right: 80px;
+//   padding: 8px 18px;
+//   border-radius: 4px;
+//   font-size: 14px;
+
+// }

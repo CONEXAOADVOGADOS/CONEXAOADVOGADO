@@ -1,25 +1,24 @@
-
 $card-background-color: #f8f9fa; // Example color
+$primary: #007bff; // Example primary color
+$danger: #dc3545; // Example danger color
+$light-gray: #f1f1f1; // Example light gray color
 
 .card {
   background-color: $card-background-color;
-  border: 0; // Remove border
-  border-radius: 0; // Remove border radius
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2); // Remove box shadow
-  margin-bottom: 30px; // Spacing between cards
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
 
   .card-footer {
     background-color: $card-background-color;
-    border-top: 0; // Remove top border
-    border-bottom-left-radius: 0; // Remove bottom left border radius
-    border-bottom-right-radius: 0; // Remove bottom right border radius
+    border-top: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     padding: 1.25rem;
-  }
-
 
     .btn {
-      // Style for buttons
-            margin-right: 10px; // Spacing between buttons
+      margin-right: 10px;
     }
   }
 
@@ -27,7 +26,6 @@ $card-background-color: #f8f9fa; // Example color
     .appointment-card {
       background: #fff;
       border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: box-shadow 0.3s ease-in-out;
 
       &:hover {
@@ -39,14 +37,15 @@ $card-background-color: #f8f9fa; // Example color
 
         .card-title {
           font-size: 1.25rem;
-          color: lightgray; // Adjust as per your color scheme
+          color: lightgray;
         }
 
         .card-text {
           margin-bottom: 1rem;
-          color: gray; // Adjust as per your color scheme
+          color: gray;
+
           strong {
-            color: lightgray; // Adjust as per your color scheme
+            color: lightgray;
           }
         }
 
@@ -73,32 +72,7 @@ $card-background-color: #f8f9fa; // Example color
 
               &:hover {
                 background: $danger;
-                color: #fff
-              }
-            }
-            .appointments-index {
-              .card {
-                border-radius: 10px;
-
-                &-header {
-                  font-weight: bold;
-                }
-
-                &-body {
-                  background-color: $light-gray; // Use a variable for light gray color
-                  p {
-                    margin-bottom: 0.5rem;
-                    strong {
-                      color: $primary; // Use a variable for primary color
-                    }
-                  }
-                }
-
-                &-footer {
-                  .btn {
-                    border-radius: 5px;
-                  }
-                }
+                color: #fff;
               }
             }
           }
@@ -106,3 +80,4 @@ $card-background-color: #f8f9fa; // Example color
       }
     }
   }
+}
