@@ -8,10 +8,11 @@
       <div class="col-3">
         <div class="card">
           <!-- Display content for Excursions -->
-          <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
+          <%= cl_image_tag("san_francisco", alt: "Logo My-Welcome", class: "w-100 img-card") %>
+          <p><%= "Experience: #{experience.specialty}" %></p>
+
           <p><%= experience.description %></p>
           <p><%= experience.local %></p>
-          <p><%= experience.specialty %></p>
           <p><%= experience.date %></p>
           <p><%= experience.price %></p>
         </div>
@@ -20,13 +21,17 @@
   </div>
   <hr>
 
-  <h2 id="gastronomy" class= "<%= 'd-none' unless @experiences.where(category: "gastronomy").any? %>">Gastronomys<a href="#experiences" class="back-to-top-link"></a></h2>
+  <h2 id="gastronomy" class= "<%= 'd-none' unless @experiences.where(category: "gastronomy").any? %>">Gastronomy<a href="#experiences" class="back-to-top-link"></a></h2>
   <div class="row">
     <% @experiences.where(category: "gastronomy").each do |experience| %>
       <div class="col-3">
         <div class="card">
           <!-- Display content for Gastronomy -->
+          <% if @experience.photo.key %>
+          <%= cl_image_tag @experience.photo.key, class: "card-img-top" %>
+          <% else %>
           <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
+          <% end %>
           <p><%= experience.description %></p>
           <p><%= experience.local %></p>
           <p><%= experience.specialty %></p>
@@ -55,7 +60,7 @@
     <% end %>
   </div>
   <hr>
-   
+
 
   <!-- ... (other sections if needed) ... -->
 

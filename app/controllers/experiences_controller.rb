@@ -61,16 +61,14 @@ class ExperiencesController < ApplicationController
   private
 
   def apply_filters(scope, filters)
-    filters.each do |key, value|
-      case key
-      when :category
-        scope = scope.where("category ILIKE ?", value)
-      when :date
-        scope = scope.where(date: value)
-      when :local
-        scope = scope.where("local ILIKE ?", value)
-      end
-    end
+    filter_mapping = {
+      category: ->(value) { scope.where("category ILIKE ?", value) },
+      date: ->(value) { scope.where(date: value) },
+      local: ->(value) { scope.where("local ILIKE ?", value) }
+    }
+
+    filters.each { |key, value| scope = filter_mapping[key]&.call(value) || scope }
+
     @experiences = scope
   end
 
