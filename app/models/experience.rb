@@ -11,6 +11,8 @@ class Experience < ApplicationRecord
 
   has_one_attached :photo
   has_many :users, through: :appointments
+  has_many_attached :photos
+  has_many :photos
 
   include PgSearch::Model
 

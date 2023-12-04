@@ -10,6 +10,7 @@ class ExperiencesController < ApplicationController
     apply_filters(@experiences, filters)
   end
 
+
   def show
     @experience = Experience.find(params[:id])
     authorize @experience
@@ -73,7 +74,7 @@ class ExperiencesController < ApplicationController
   end
 
   def experience_params
-    params.require(:experience).permit(:specialty, :category, :description, :date, :price, :local, :photo)
+    params.require(:experience).permit(:specialty, :photos, :category, :description, :date, :price, :local, :photo)
   end
 
   def search
