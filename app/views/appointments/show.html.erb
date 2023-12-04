@@ -1,18 +1,21 @@
-<!-- app/views/appointments/show.html.erb -->
+<%= render 'shared/navbar' %>
 
-<h1 class="mb-4">Appointment Details</h1>
+<div class="container mt-4">
+  <h1 class="mt-4 mb-4">Appointment Details</h1>
 
-<div class="card">
-  <div class="card-body">
-    <p class="card-text"><strong>Experience:</strong> <%= @appointment.experience.specialty %></p>
-    <p class="card-text"><strong>Description:</strong> <%= @appointment.experience.description %></p>
-    <p class="card-text"><strong>Category:</strong> <%= @appointment.experience.category %></p>
-    <p class="card-text"><strong>Date:</strong> <%= @appointment.experience.date %></p>
-    <p class="card-text"><strong>Local:</strong> <%= @appointment.experience.local %></p>
-    <p class="card-text"><strong>Price:</strong> <%= @appointment.experience.price %></p>
-  </div>
-  <div class="card-footer">
-    <%# <%= link_to 'Edit', edit_appointment_path(@appointment), class: 'btn btn-primary' %>
-    <%= link_to 'Delete', appointment_path, class: "btn btn-danger rounded", data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><%= @appointment.experience.specialty %></h5>
+      <p class="card-text"><i class="bi bi-card-text icon"></i><strong>Description:</strong> <%= @appointment.experience.description %></p>
+      <p class="card-text"><i class="bi bi-tags icon"></i><strong>Category:</strong> <%= @appointment.experience.category %></p>
+      <p class="card-text"><i class="bi bi-calendar icon"></i><strong>Date:</strong> <%= @appointment.experience.date.strftime('%B %d, %Y') %></p>
+      <p class="card-text"><i class="bi bi-geo-alt icon"></i><strong>Local:</strong> <%= @appointment.experience.local %></p>
+      <p class="card-text"><i class="bi bi-cash icon"></i><strong>Price:</strong> <%= number_to_currency(@appointment.experience.price, unit: 'R$') %></p>
+    </div>
+    <div class="card-footer">
+      <%# <%= link_to 'Edit', edit_appointment_path(@appointment), class: 'btn btn-primary' %>
+      <%# <%= link_to 'Delete', appointment_path(@appointment), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+      <%= link_to 'Delete', appointment_path, class: "btn btn-danger rounded", data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
+    </div>
   </div>
 </div>
