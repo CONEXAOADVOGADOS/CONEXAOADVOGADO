@@ -1,18 +1,21 @@
 <div class="form-container">
   <h1 style="color: black;">Create an Experience</h1>
   <div class="form-wrapper">
-    <%= simple_form_for @experience do |f| %>
+    <%= simple_form_for( @experience, html: { class: 'new-event-form' } ) do |f| %>
       <div class="row">
         <div class="col-md-6">
           <%= f.input :specialty, label: "Experience Name" %>
           <%= f.input :category, collection: ['Excursions', 'Gastronomy', 'Workshops'], prompt: "Select Category" %>
           <%= f.input :local, collection: ['São Paulo', 'Rio de Janeiro', 'Fortaleza'], prompt: "Select City" %>
-          <>
         </div>
         <div class="col-md-6">
+          <%= f.input :date, as: :date, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
           <%= f.input :price %>
           <%= f.input :photo, as: :file %>
+
         </div>
+        <%= f.input :description, as: :text, label_html: { class: 'form-label' }, input_html: { class: 'form-textarea' } %>
+        <%= f.button :submit, "Create Experience", class: 'btn-success' %>
       </div>
       <%= f.input :description %>
       <div class="actions">

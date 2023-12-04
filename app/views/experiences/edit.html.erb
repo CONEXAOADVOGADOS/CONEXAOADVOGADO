@@ -1,23 +1,24 @@
-<div class="new-event-container">
-  <h1 class="new-event-title">Edit Event</h1>
+<div class="form-container">
+  <h1 style="color: black;">Edit an Experience</h1>
+  <div class="form-wrapper">
+    <%= simple_form_for( @experience, html: { class: 'new-event-form' } ) do |f| %>
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.input :specialty, label: "Experience Name" %>
+          <%= f.input :category, collection: ['Excursions', 'Gastronomy', 'Workshops'], prompt: "Select Category" %>
+          <%= f.input :local, collection: ['São Paulo', 'Rio de Janeiro', 'Fortaleza'], prompt: "Select City" %>
+        </div>
+        <div class="col-md-6">
+          <%= f.input :date, as: :date, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
+          <%= f.input :price %>
+          <%= f.input :photo, as: :file %>
 
-  <%= simple_form_for( @experience, html: { class: 'new-event-form' } ) do |f| %>
-
-    <%= f.input :category, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
-
-    <%= f.input :specialty, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
-
-    <%= f.input :description, as: :text, label_html: { class: 'form-label' }, input_html: { class: 'form-textarea' } %>
-
-    <%= f.input :local, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
-
-    <%= f.input :price, as: :string, label_html: { class: 'form-label' }, input_html: { class: 'form-input', placeholder: 'R$' } %>
-
-    <%= f.input :photo, as: :file %>
-
-    <%= f.button :submit, "Edit Event", class: 'btn-submit' %>
-
-  <% end %>
+        </div>
+        <%= f.input :description, as: :text, label_html: { class: 'form-label' }, input_html: { class: 'form-textarea' } %>
+        <%= f.button :submit, "Edit Experience", class: 'btn-success' %>
+      </div>
+    <% end %> <!-- Adicionei o fechamento correto da tag form -->
+  </div>
 </div>
 
     <%# <%= f.input :date, as: :date, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %> 
