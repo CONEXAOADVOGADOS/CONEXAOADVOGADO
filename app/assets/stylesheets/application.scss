@@ -39,14 +39,26 @@
 
 /////////////////////////////////////////////////    TITLES EXPERIENCE
 #excursions,#gastronomy,#workshops {
-  color: #f01a1a;
+  color: #000000;
   font-size: 35px;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
 }
 
+
  /////////////////////////////////////////////// REGISTRATION
 h2.login{
+=======
+.row {
+  margin-top: 40px;
+}
+ ///////////////////////////////////////////////  LOGIN
+h1 {
+  color: #000000;
+}
+
+ h2.login{
+
   display: flex;
   justify-content: center;
   margin-top: 25px;
@@ -59,7 +71,7 @@ h2.login{
 }
 
 .form-inputs {
-  background-color: rgba(224, 228, 231, 0.8); /* O último valor (0.8) controla a opacidade (0 totalmente transparente, 1 totalmente opaco) */
+  background-color: rgba(224, 228, 231, 0.8);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -115,19 +127,27 @@ h2.login{
   background-color: darkgreen;
 }
 /////////////////////////////////////    LOGIN FORM
+///
+///
+///
+///
+///
+///
 div .login-form {
-  background-color: #ddd;
+  margin-top: 50%;
+  background-color: rgba(233, 233, 233, 0.8);
 }
 
 .login-form {
-  background-color: rgba(224, 228, 231, 0.8); /* O último valor (0.8) controla a opacidade (0 totalmente transparente, 1 totalmente opaco) */
-  width: 600px;
-  margin: 165px auto;
+  background-color: rgba(233, 233, 233, 0.8);
+  width: 642px;
+  margin: 218px auto;
   padding: 30px 60px;
-  border: 1px solid #c4c4c4;
+  /* border: 1px solid #c4c4c4; */
   border-radius: 4px;
   box-sizing: border-box;
   position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .login-form::before {
