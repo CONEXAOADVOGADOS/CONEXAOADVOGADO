@@ -11,10 +11,12 @@
       <% end %>
     </div>
     <p><i class="icon-category"></i> <strong>Category: </strong>  <%=" "%> <%= @experience.category %></p>
-    <p><i class="icon-category"></i> <strong>Description: </strong>  <%=" "%> <%= @experience.description %></p>
+    <p><i class="icon-category"></i> <strong>Description: </strong>
+    <%=" "%> <%= @experience.description %></p>
     <p><i class="icon-category"></i> <strong>Local: </strong>  <%=" "%> <%= @experience.local %></p>
     <p><i class="icon-category"></i> <strong>Date: </strong>  <%=" "%> <%= @experience.date.strftime("%d %B %Y") %></p>
-    <p><i class="icon-category"></i> <strong>Price: </strong>  <%=" "%> <%= @experience.price, unit: "R$ ", separator: ",", delimiter: "." %></p>
+  
+
 
     <% if policy(@experience).edit? %>
       <%= link_to "Edit", edit_experience_path, class: "btn btn-success rounded" %>
