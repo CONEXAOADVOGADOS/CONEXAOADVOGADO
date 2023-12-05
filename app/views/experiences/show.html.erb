@@ -15,7 +15,7 @@
     <%=" "%> <%= @experience.description %></p>
     <p><i class="icon-category"></i> <strong>Local: </strong>  <%=" "%> <%= @experience.local %></p>
     <p><i class="icon-category"></i> <strong>Date: </strong>  <%=" "%> <%= @experience.date.strftime("%d %B %Y") %></p>
-  
+
 
 
     <% if policy(@experience).edit? %>
@@ -23,6 +23,10 @@
     <% end %>
     <% if policy(@experience).edit? %>
       <%= link_to 'Delete', experience_path, class: "btn btn-danger rounded", data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
+    <% end %>
+
+    <%= simple_form_for [@experience, @appointment], method: :post do |f| %>
+    <%= f.submit "Contratar", class:"btn btn-primary rounded"%>
     <% end %>
   </div>
 </div>
