@@ -1,77 +1,86 @@
+
 <div class="container my-5">
-  <h1 class="h1-experiences">Experiences</h1>
-  <h2 id="excursions" class= "<%= 'd-none' unless @experiences.where("category ILIKE ?", "excursion").any? %>">Excursions</h2>
-  <div class="row">
-    <% @experiences.where("category ILIKE ?", "excursion").each do |experience| %>
-      <div class="col-3">
-        <div class="card">
-          <!-- Display content for Excursions -->
-          <%= cl_image_tag("san_francisco", alt: "Logo My-Welcome", class: "w-100 img-card") %>
-          <p><%= "Experience: #{experience.specialty}" %></p>
+  <%# <h1 class="h1-experiences">Experiences</h1> %>
+  <% if params[:show_only].blank? || ( params[:show_only].present? && params[:show_only] == 'excursions') %>
+    <h2 id="excursions" class= "<%= 'd-none' unless @experiences.where("category ILIKE ?", "excursions").any? %>">Excursions</h2>
+    <div class="row">
+      <% @experiences.where("category ILIKE ?", "excursions").each do |experience| %>
+        <div class="col-3">
+          <div class="card">
+            <% if experience.photo.key %>
+              <%= cl_image_tag experience.photo.key, class: "card-img-top", width: 300, height: 300, crop: :fill %>
+            <% else %>
+              <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "card-img-top", width: 300, height: 300, crop: :fill %>
+            <% end %><!-- Display content for Excursions -->
 
-          <p><%= experience.description %></p>
-          <p><%= experience.local %></p>
-          <p><%= experience.date.strftime("%d %B %Y")  %></p>
-          <p><%= experience.number_to_currency(@experience.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
+            <p><%= "Experience: #{experience.specialty}" %></p>
+
+            <p><%= experience.description %></p>
+            <p><%= experience.local %></p>
+            <p><%= experience.date.strftime("%d %B %Y")  %></p>
+            <p><%= number_to_currency(experience.price, unit: "U$ ", separator: ",", delimiter: ".") %></p>
+            <%= link_to "See More", experience_path(experience), class: "btn btn-primary" %>
+          </div>
         </div>
-      </div>
-    <% end %>
-  </div>
+      <% end %>
+      <%= link_to "See All Experiences", experiences_path %>
+    </div>
+  <% end %>
 
-  <div class="mt-5" id="gastronomy-title"></div>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  <% if params[:show_only].blank? || ( params[:show_only].present? && params[:show_only] == 'gastronomy')  %>
 
-  <hr>
+    <h2 id="gastronomy" class= "<%= 'd-none' unless @experiences.where("category ILIKE ?", "gastronomy").any? %>">Gastronomy<a href="#experiences" class="back-to-top-link"></a></h2>
+    <div class="row">
+      <% @experiences.where("category ILIKE ?", "gastronomy").each do |experience| %>
+        <div class="col-3">
+          <div class="card">
+            <!-- Display content for Gastronomy -->
+            <%# <% raise %>
+            <% if experience.photo.key %>
+              <%= cl_image_tag experience.photo.key, class: "card-img-top", width: 300, height: 300, crop: :fill %>
+            <% else %>
+              <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "card-img-top", width: 300, height: 300, crop: :fill %>
+            <% end %>
+            <p><%= experience.description %></p>
+            <p><%= experience.local %></p>
+            <p><%= experience.specialty %></p>
+            <p><%= experience.date.strftime("%d %B %Y")  %></p>
+            <p><%= number_to_currency(experience.price, unit: "U$ ", separator: ",", delimiter: ".") %></p>
+            <%= link_to "See More", experience_path(experience), class: "btn btn-primary" %><%# <% raise  %>
 
-
-  <h2 id="gastronomy" class= "<%= 'd-none' unless @experiences.where(category: "gastronomy").any? %>">Gastronomy<a href="#experiences" class="back-to-top-link"></a></h2>
-  <div class="row">
-    <% @experiences.where(category: "gastronomy").each do |experience| %>
-      <div class="col-3">
-        <div class="card">
-          <!-- Display content for Gastronomy -->
-          <% if @experiences.photos.key %>
-          <%= cl_image_tag @experiences.photos.key, class: "card-img-top" %>
-          <% else %>
-          <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
-          <% end %>
-          <p><%= experience.description %></p>
-          <p><%= experience.local %></p>
-          <p><%= experience.specialty %></p>
-          <p><%= experience.date.strftime("%d %B %Y")  %></p>
-          <p><%= experience.number_to_currency(@experience.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
+          </div>
         </div>
-      </div>
-    <% end %>
-  </div>
+      <% end %>
+    </div>
+
+  <% end %>
+
+   <% if params[:show_only].blank? || ( params[:show_only].present? && params[:show_only] == 'workshops')  %>
 
 
-  <h2 id="workshops" class= "<%= 'd-none' unless @experiences.where(category: "workshop").any? %>">Workshops</h2>
-  <div class="row">
-    <% @experiences.where(category: "workshop").each do |experience| %>
-      <div class="col-3">
-        <div class="card">
-          <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "w-100 img-card" %>
-          <p><%= experience.description %></p>
-          <p><%= experience.local %></p>
-          <p><%= experience.specialty %></p>
-          <p><%= experience.date.strftime("%d %B %Y")  %></p>
-          <p><%= experience.number_to_currency(@experience.price, unit: "R$ ", separator: ",", delimiter: ".") %></p>
-          <!-- ... (unchanged code for Workshops) ... -->
+    <h2 id="workshops" class= "<%= 'd-none' unless @experiences.where("category ILIKE ?", "workshops").any? %>">Workshops</h2>
+    <div class="row">
+      <% @experiences.where("category ILIKE ?", "workshops").each do |experience| %>
+        <div class="col-3">
+          <div class="card">
+            <% if experience.photo.key %>
+              <%= cl_image_tag experience.photo.key, class: "card-img-top", width: 300, height: 300, crop: :fill %>
+            <% else %>
+              <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "card-img-top", width: 300, height: 300, crop: :fill %>
+            <% end %>
+            <p><%= experience.description %></p>
+            <p><%= experience.local %></p>
+            <p><%= experience.specialty %></p>
+            <p><%= experience.date.strftime("%d %B %Y")  %></p>
+            <p><%= number_to_currency(experience.price, unit: "U$ ", separator: ",", delimiter: ".") %></p>
+            <%= link_to "See More", experience_path(experience), class: "btn btn-primary" %><!-- ... (unchanged code for Workshops) ... -->
+          </div>
         </div>
-      </div>
-    <% end %>
-  </div>
-  <hr>
+      <% end %>
+    </div>
 
-  <br>
-  <br>
-  <br>
-  <br>
+  <% end %>
+
 
 
 

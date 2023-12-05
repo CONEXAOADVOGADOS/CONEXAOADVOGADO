@@ -10,7 +10,7 @@
       <p class="card-text"><i class="bi bi-tags icon"></i><strong>Category:</strong> <%= @appointment.experience.category %></p>
       <p class="card-text"><i class="bi bi-calendar icon"></i><strong>Date:</strong> <%= @appointment.experience.date.strftime('%B %d, %Y') %></p>
       <p class="card-text"><i class="bi bi-geo-alt icon"></i><strong>Local:</strong> <%= @appointment.experience.local %></p>
-      <p class="card-text"><i class="bi bi-cash icon"></i><strong>Price:</strong> <%= number_to_currency(@appointment.experience.price, unit: 'R$') %></p>
+      <p class="card-text"><i class="bi bi-cash icon"></i><strong>Price:</strong> <%= number_to_currency(@appointment.experience.price, unit: 'U$') %></p>
     </div>
     <div class="card-footer justify-content-center">
       <%# <%= link_to 'Edit', edit_appointment_path(@appointment), class: 'btn btn-primary' %>

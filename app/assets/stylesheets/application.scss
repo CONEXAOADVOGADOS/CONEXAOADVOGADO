@@ -93,32 +93,22 @@ h2.login{
 ////////////////////////////////   SIGN UP
 .sign-up-div {
   margin-top: 50px;
+  text-align: center;
 }
-.sign-up {
-  color: black;
-  background-color: rgb(0, 81, 255);
-  text-decoration: none;
-  border: 1px solid black;
-  padding: 20px 40px;
-  margin-bottom: 4px;
-  border-radius: 4px;
+
+
+
+.forgot-pass-div {
+  text-align: center;
 }
 
 .login-form::before {
   height: 0 !important;
 }
 /////////////////////////////////  FORGOT PASSWORD
-.forgot-password {
-  color: black;
-  background-color: rgb(233, 167, 45);
-  text-decoration: none;
-  border: 1px solid black;
-  padding: 20px 40px;
-  margin-bottom: 30px;
-  border-radius: 4px;
-}
+
 .forgot-pass-div {
-  margin: 60px;
+  margin: 0px;
 }
 .custom-button:hover {
   background-color: darkgreen;
@@ -160,7 +150,7 @@ div .login-form {
 }
 
 .footer-top {
-  margin-top: 100px;
+  margin-top: 150px;
 }
 
 // body {

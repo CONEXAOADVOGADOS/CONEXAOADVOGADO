@@ -10,7 +10,6 @@ class ExperiencesController < ApplicationController
     apply_filters(@experiences, filters)
   end
 
-
   def show
     @experience = Experience.find(params[:id])
     authorize @experience
