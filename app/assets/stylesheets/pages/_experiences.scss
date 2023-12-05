@@ -116,11 +116,12 @@ label {
 /* Add this CSS to your stylesheet (e.g., app/assets/stylesheets/application.css) */
 
 .footer-container {
-  position: absolute;
+  position: absolute; /* Change to 'fixed' so it's always at the bottom of the viewport */
+  left: 0;
   bottom: 0;
   width: 100%;
   background-color: #f8f9fa; /* Adjust the background color as needed */
-  padding: 8px;
+  padding: 2px; /* Increase padding for spacing */
   text-align: center;
   border-top: 1px solid #dee2e6; /* Add a border to separate the footer from the content */
 }
