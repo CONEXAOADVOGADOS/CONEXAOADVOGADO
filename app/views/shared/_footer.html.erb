@@ -1,15 +1,32 @@
-   <footer class="footer-container fixed-bottom h-1">
-      <%# <p>&copy; 2023 My Welcome </p> %>
-    <div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+
+
+ <footer class="footer-container fixed-bottom h-1">
+  <div class="footer">
+    <div class="footer-links">
+      <%= link_to 'https://github.com/rails/rails', target: '_blank' do %>
+        <i class="fab fa-github"></i>
+      <% end %>
+
+      <%= link_to 'https://www.instagram.com/', target: '_blank' do %>
+        <i class="fab fa-instagram"></i>
+      <% end %>
+
+      <%= link_to 'https://www.facebook.com/?locale=pt_BR', target: '_blank' do %>
+        <i class="fab fa-facebook"></i>
+      <% end %>
+
+      <%= link_to 'https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D', target: '_blank' do %>
+        <i class="fab fa-twitter"></i>
+      <% end %>
+
+      <%= link_to 'https://www.linkedin.com/company/login-nl/about/', target: '_blank' do %>
+        <i class="fab fa-linkedin"></i>
+      <% end %>
+    </div>
+
+    <div class="footer-copyright">
+      Making Every City Feel Like Home <i class="fas fa-heart"></i> <%= link_to 'MyWelcome', '#' %>
+    </div>
   </div>
-  <div class="footer-copyright">
-    Making Every City Feel Like Home <i class="fas fa-heart"></i> <a href="#">MyWelcome</a>
-  </div>
-</div>
- </footer>
+</footer>

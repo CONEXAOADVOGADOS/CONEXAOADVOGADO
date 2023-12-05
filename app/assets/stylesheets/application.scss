@@ -47,8 +47,7 @@
 
 
  /////////////////////////////////////////////// REGISTRATION
-h2.login{
-=======
+
 .row {
   margin-top: 40px;
 }
@@ -58,7 +57,6 @@ h1 {
 }
 
  h2.login{
-
   display: flex;
   justify-content: center;
   margin-top: 25px;
@@ -93,6 +91,7 @@ h1 {
   padding: 8px 16px;
   cursor: pointer;
 }
+
 ////////////////////////////////   SIGN UP
 .sign-up-div {
   margin-top: 50px;
@@ -164,6 +163,9 @@ div .login-form {
 
 .footer-top {
   margin-top: 100px;
+}
+.footer {
+  height: 70px;
 }
 
 // body {
