@@ -3,8 +3,15 @@
 
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "lg-mw-transparent-preview.png", class: "logo-nav" %>
+      <%= image_tag "logotransparente.png", class: "logo-nav" %>
     <% end %>
+
+
+    <div class="links-navbar">
+    <%= link_to "Excursions", experiences_path(anchor: 'excursions') %>
+    <%= link_to "Gastronomy", experiences_path(anchor: 'gastronomy-title') %>
+    <%= link_to "Workshops", experiences_path(anchor: 'workshops') %>
+    </div>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -12,10 +19,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-        <li class="nav-item dropdown">
-          <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-search"></i>
-          </a>
+          <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Excursions", experiences_path(anchor: 'excursions'), class: "dropdown-item" %>
               <%= link_to "Gastronomy", experiences_path(anchor: 'gastronomy'), class: "dropdown-item" %>
@@ -36,7 +40,7 @@
           <!-- <li class="nav-item">
             <%= link_to "Messages", "#", class: "nav-link messages-d-none" %>
           </li>  -->
-          <li class="nav-item dropdown">
+          <%# <li class="nav-item dropdown"> %>
             <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
             </a>
