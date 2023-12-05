@@ -48,7 +48,7 @@ experience.photo.attach(io: file, filename: "cheese.png", content_type: "image/p
 experience.save!
 
 experience = Experience.new( specialty: "Vineyards",
-                             category: "excursion",
+                             category: "excursions",
                              description: "Wine tasting day trip to vineyards",
                              date: Date.today + 6.weeks,
                              price: 90,
@@ -104,7 +104,7 @@ experience = Experience.new( specialty: "Farmer's Market",
                              price: 100,
                              local: "São Paulo",
                              user: User.all.sample)
-                             https://traveler.marriott.com/wp-content/uploads/2016/12/ALMY_F7B7X6_HippyMarket.jpg?1481222838
+                            #  https://traveler.marriott.com/wp-content/uploads/2016/12/ALMY_F7B7X6_HippyMarket.jpg?1481222838
 file = URI.open("https://res.cloudinary.com/dop9mb8rc/image/upload/v1701794577/captura_de_tela_de_2023-12-05_13-31-04_lc1z2l.png")
 experience.photo.attach(io: file, filename: "winet.png", content_type: "image/png")
 experience.save!
