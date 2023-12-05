@@ -25,9 +25,9 @@ class ExperiencesController < ApplicationController
     @experience.user = current_user
     authorize @experience
     if @experience.save
-      redirect_to experience_path(@experience)
+      redirect_to experience_path(@experience), alert: "Experience created with success!"
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 

@@ -1,18 +1,6 @@
-.alert-danger{
-  display: flex;
-  justify-content: center;
-  margin-top: 17px;
-  margin-left: 200px;
-  margin-right: 300px;
+.alert {
   position: fixed;
-  bottom: 16px;
+  bottom: 100px;
   right: 16px;
   z-index: 1000;
-  height: 50px;
-  width: 89%;
-
-}
-.alert-info {
-  display: flex;
-  justify-content: center;
 }

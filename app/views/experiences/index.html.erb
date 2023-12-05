@@ -41,7 +41,7 @@
             <% else %>
               <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "card-img-top", width: 300, height: 300, crop: :fill %>
             <% end %>
-            <p><%= experience.description %></p>
+            <p><i class="fa-solid fa-list"></i> <%= experience.description %></p>
             <p><%= experience.local %></p>
             <p><%= experience.specialty %></p>
             <p><%= experience.date.strftime("%d %B %Y")  %></p>
