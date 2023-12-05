@@ -71,7 +71,35 @@ label {
   border-radius: 4px;
   color: black;
 }
+.form-container-create {
+  background-color: rgba(238, 238, 238, 0.8);
+  max-width: 50%;
+  margin: 10% 24%;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  // border: 1px solid #000000;
+  border-radius: 4px;
+  color: black;
+}
 
+.btn-group-sm>.btn, .btn-sm {
+  padding: 0.85rem 8.5rem;
+  font-size: 30px;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+  height: 100%;
+  width: 30%;
+}
+.col-md-12 {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+.h1-create {
+  display: flex;
+  justify-content: center;
+
+}
 .form-wrapper {
   padding: 2px;
   border-radius: 8px;
