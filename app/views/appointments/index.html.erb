@@ -1,61 +1,21 @@
-<!-- Backend code -->
-
 <div class="appointments-container">
-
   <h1>Appointments</h1>
-
   <% @appointments.each do |appointment| %>
-
     <div class="appointment-card">
-
       <div class="card-header">
-        <h3>Appointment Details</h3>
+        <h3><%= appointment.experience.description %></h3>
+        <p><%= appointment.experience.date.strftime("%e %B %Y") %></p>
+        <p><%= appointment.experience.local %></p>
       </div>
-
       <div class="card-body">
-
         <!-- Show appointment details -->
-
-        <div class="actions">
-        <%= link_to "Ver mais", appointment_path(appointment),
-                    method: :delete,
-                    data: { confirm: "Are you sure?" } %>
+        <div class="appointment-image">
+          <%# <%= image_tag appointment.experience.image_url, class: "img-fluid" if appointment.experience.image_url.present? %>
         </div>
-
+        <div class="appointment-actions">
+          <%= link_to "See more", appointment_path(appointment), class: "btn btn-primary" %>
+        </div>
       </div>
-
     </div>
-
   <% end %>
-
-</div>
-
-
-<!-- Frontend presentation -->
-
-<div class="appointments-page">
-
-  <h1>My Appointments</h1>
-
-  <div class="appointments-grid">
-
-    <% @appointments.each do |appointment| %>
-
-      <div class="appointment-card">
-
-        <div class="details">
-          <%# <h3><%= appointment.category_name</h3>  %>
-          <%# <p><%= appointment.date</p> %>
-        </div>
-
-        <div class="actions">
-          <%= link_to "Cancel", appointment_path(appointment), class: "cancel-btn" %>
-        </div>
-
-      </div>
-
-    <% end %>
-
-  </div>
-
 </div>

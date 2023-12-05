@@ -217,3 +217,63 @@
   margin-right: 5px;
 }
 
+.appointments-container {
+  text-align: center;
+  margin-top: 20px;
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .appointment-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+
+    .card-header {
+      padding: 15px;
+      background-color: #f0f0f0;
+      border-bottom: 1px solid #e0e0e0;
+
+      h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+    }
+
+    .card-body {
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .appointment-actions {
+        .btn {
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          text-decoration: none;
+          font-size: 16px;
+        }
+      }
+
+      .appointment-image {
+        img {
+          max-width: 100%;
+          max-height: 200px;
+          object-fit: cover;
+          margin-right: 10px; /* Add this to create space between image and button */
+        }
+      }
+    }
+  }
+}
