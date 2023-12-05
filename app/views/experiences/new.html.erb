@@ -1,5 +1,10 @@
-<div class="form-container">
-  <h1 style="color: black;">Create an Experience</h1>
+
+
+
+
+
+<div class="form-container-create">
+  <h1  class="h1-create"style="color: black;">Create an Experience</h1>
   <div class="form-wrapper">
     <%= simple_form_for( @experience, html: { class: 'new-event-form' } ) do |f| %>
       <div class="row">
@@ -12,11 +17,13 @@
           <%= f.input :date, as: :date, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
           <%= f.input :price %>
           <%= f.input :photo, as: :file %>
-
         </div>
         <%= f.input :description, as: :text, label_html: { class: 'form-label' }, input_html: { class: 'form-textarea' } %>
-        <%= f.button :submit, "Create Experience", class: 'btn-success' %>
-      </div>
+
+        <div class="col-md-12"> <!-- Adicione uma nova div para envolver o botão -->
+          <%= f.button :submit, "Create Experience", class: 'btn btn-success btn-sm' %>
+          <!-- Adicione a classe 'btn-sm' para diminuir o tamanho do botão -->
+        </div>
       </div>
     <% end %>
   </div>
