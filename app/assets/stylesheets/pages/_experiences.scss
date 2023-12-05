@@ -7,9 +7,9 @@
 h2 {
   margin-bottom: 20px;
 }
-body {
-  background-color: blue;
-}
+// body {
+//   background-color: blue;
+// }
 .div-excur {
   display: flex;
   justify-content: center;
@@ -26,8 +26,8 @@ body {
   justify-content: center;
   align-items: center;
 }
-.img-card {
-  height: 250px;
+.img-card , .carousel-item {
+  height: 400px;
   object-fit: cover;
   border-radius: 2%;
 }
@@ -41,7 +41,6 @@ div .card {
   color: rgb(121, 121, 121);
   font-size: 22px;
 }
-
 
 .form-heading {
   margin-bottom: 30px;
@@ -129,5 +128,39 @@ label {
 .float-end {
   float: right;
 }
+.w-100 {
+  width: 30%;
+}
+.event-detail-container {
+  margin-top: 60px;
+  width: 45%;
+}
+.event-detail-title {
+  display: flex;
+  justify-content: center;
+}
 
-/* Add any additional styling for the footer as needed */
+
+.event-detail {
+  font-size: 20px;
+  color: #6d5dfc;
+  display: flex;
+justify-content:left;
+
+}
+
+  .center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .card-img-container {
+    text-align: center;
+  }
+
+  .card-img-container img {
+    width: 100%;
+
+  }
