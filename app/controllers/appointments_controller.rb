@@ -15,19 +15,26 @@ class AppointmentsController < ApplicationController
   end
 
   def create
-    @appointment = Appointment.create!(experience: @experience, experience_sku: @experience.sku, amount: @experience.price, state: "pending", user: current_user)
+    experience = Experience.find(params[:experience_id])
+    @appointment = Appointment.create!(experience: experience, amount: experience.price * 100, state: "pending", user: current_user)
     # redirect_to appointments_path, notice: 'Appointment created successfully.'
     authorize @appointment
 
     session = Stripe::Checkout::Session.create(
       payment_method_types: ['card'],
       line_items: [{
-        name: @experience.sku,
-        images: [@experience.photo_url],
-        amount: @experience.price_cents,
-        currency: 'usd',
-        quantity: 1
+        price_data: {
+          currency: 'usd',
+          unit_amount: @appointment.amount,
+          product_data: {
+            name: @experience.category,
+            description: @experience.description,
+            images: [@experience.photo&.url],
+          },
+        },
+        quantity: 1,
       }],
+      mode: 'payment',
       success_url: appointment_url(@appointment),
       cancel_url: appointment_url(@appointment)
     )

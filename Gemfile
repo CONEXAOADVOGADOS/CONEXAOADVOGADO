@@ -84,6 +84,5 @@ gem 'rubocop', require: false
 gem "pundit"
 gem "geocoder"
 gem "pg_search"
-gem 'money-rails'
 gem 'stripe'
 gem 'stripe_event'
