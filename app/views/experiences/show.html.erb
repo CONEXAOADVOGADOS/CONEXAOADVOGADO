@@ -1,22 +1,33 @@
-<div class="container justify-content-center">
-  <div class="margin-top-400">
-    <div class="event-detail-container">
-      <h1 class="event-detail-title"><%= @experience.specialty %></h1>
+<div class="container mt-4">
+  <h1 class="mt-4 mb-4 text-center">Experience Details</h1>
 
-      <div class="card-img-container">
-        <% if @experience.photo.key %>
-          <%= cl_image_tag @experience.photo.key, class: "card-img-top", width: 300, height: 300, crop: :fill %>
-        <% else %>
-          <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "img-card", class: "card-img-top", width: 300, height: 300, crop: :fill %>
-        <% end %>
-      </div>
-      <p><i class="icon-category"></i> <strong>Category: </strong>  <%=" "%> <%= @experience.category %></p>
-      <p><i class="icon-category"></i> <strong>Description: </strong>
-      <%=" "%> <%= @experience.description %></p>
-      <p><i class="icon-category"></i> <strong>Local: </strong>  <%=" "%> <%= @experience.local %></p>
-      <p><i class="icon-category"></i> <strong>Date: </strong>  <%=" "%> <%= @experience.date.strftime("%d %B %Y") %></p>
+  <div class="card">
+    <div class="card-body">
 
+<<<<<<< HEAD
+      <% if @experience.photo.key %>
+              <%= cl_image_tag @experience.photo.key, class: "card-img-top", width: 300, height: 300, crop: :fill %>
+            <% else %>
+              <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "card-img-top", width: 300, height: 300, crop: :fill %>
+            <% end %>
 
+      <%# <h5 class="card-title"><%= @experience.specialty %>
+      <p class="card-text"><i class="bi bi-card-text icon"></i><strong>Description:</strong> <%= @experience.description %></p>
+      <p class="card-text"><i class="bi bi-tags icon"></i><strong>Category:</strong> <%= @experience.category %></p>
+      <p class="card-text"><i class="bi bi-calendar icon"></i><strong>Date:</strong> <%= @experience.date.strftime('%B %d, %Y') %></p>
+      <p class="card-text"><i class="bi bi-geo-alt icon"></i><strong>Local:</strong> <%= @experience.local %></p>
+      <p class="card-text"><i class="bi bi-cash icon"></i><strong>Price:</strong> <%= number_to_currency(@experience.price, unit: 'U$') %></p>
+    </div>
+    <div class="card-footer justify-content-center">
+      <%# <%= link_to 'Edit', edit_appointment_path(@appointment), class: 'btn btn-primary' %>
+      <%# <%= link_to 'Delete', appointment_path(@appointment), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+      <% if policy(@experience).edit? %>
+        <%= link_to "Edit", edit_experience_path, class: "btn btn-success rounded" %>
+      <% end %>
+      <% if policy(@experience).edit? %>
+        <%= link_to 'Delete', experience_path, class: "btn btn-danger rounded", data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
+      <% end %>
+=======
       <div class="div-buttons-edit-delete-buy">
         <div>
           <% if policy(@experience).edit? %>
@@ -31,6 +42,7 @@
         <% end %>
       </div>
 
+>>>>>>> master
     </div>
   </div>
 </div>
