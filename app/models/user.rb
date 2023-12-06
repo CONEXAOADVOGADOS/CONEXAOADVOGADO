@@ -3,6 +3,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :experiences, dependent: :destroy
+  has_many :appointments, dependent: :destroy
+
 
   validates :name, presence: true
   validates :cpf, presence: true, format: { with: /\A\d{3}\.\d{3}\.\d{3}-\d{2}\z/ }
