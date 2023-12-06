@@ -14,7 +14,6 @@
 // Assuming the file is named _variables.scss
 // @import 'variables';
 
-
 /////////////////////////////////////////////////    TITLES EXPERIENCE
 #excursions,#gastronomy,#workshops {
   color: #000000;
@@ -24,9 +23,9 @@
 }
 
  /////////////////////////////////////////////// REGISTRATION
-.row {
-  margin-top: 40px;
-}
+// .row {
+//   margin-top: 40px;
+// }
  ///////////////////////////////////////////////  LOGIN
 h1 {
   color: #000000;
@@ -55,6 +54,7 @@ h2.login{
   border: 1px solid black;
   border-radius: 4px;
 }
+
 
 .custom-input {
   border-radius: 4px;
@@ -85,6 +85,7 @@ h2.login{
   text-align: center;
 }
 }
+
 
 .forgot-pass-div {
   text-align: center;
@@ -131,19 +132,6 @@ div .login-form {
   margin-top: 50%;
   background-color: rgba(233, 233, 233, 0.8);
 }
-.login-form-user-login {
-  background-color: rgba(233, 233, 233, 0.8);
-  width: 642px;
-  margin: 218px auto;
-  padding: 30px 60px;
-  /* border: 1px solid #c4c4c4; */
-  border-radius: 4px;
-  box-sizing: border-box;
-  position: relative;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
 
 .login-form {
   background-color: rgba(233, 233, 233, 0.8);
@@ -162,11 +150,6 @@ div .login-form {
   color: #fff;
 }
 
-.btn-success {
-  background-color: #f5c058;
-  border:none;
-}
-
 .login-form::before {
   content: "";
   display: block;
@@ -179,9 +162,9 @@ div .login-form {
   border-top-right-radius: 4px;
 }
 
-.col-3 {
-  flex-grow: 2;
-}
+// .col-3 {
+//   flex-grow: 2;
+// }
 
 body {
   margin-top: 100px;
@@ -241,38 +224,4 @@ body {
   justify-content: center;
   margin-top: 110px;
   color: #000000;
-}
-.form-container-edit-experience {
-    background-color: rgba(224, 228, 231, 0.8);
-    margin: 150px 400px;
-    padding: 30px;
-    border: 1px solid #000000;
-    border-radius: 4px;
-    color: black;
-}
-.btn-success-edit-experience{
-  padding: 12px ;
-  color: #31404B;
-  background-color: #fff;
-  border: 1px solid #31404B;
-  font-weight: 400;
-
-  &:hover {
-    background-color:#899094;;
-  }
-}
-.btn-success-delete-experience {
-  padding: 12px ;
-}
-.div-buttons-edit-delete-buy {
-  display: flex;
-  justify-content: space-between;
-  // gap: 40%;
-
-}
-.buy-event-detail{
-  width: 250px;
-  color:#fff;
-  background-color: #31404B;
-  padding: 12px;
 }

@@ -8,5 +8,5 @@
 # StripeEvent.signing_secret = Rails.configuration.stripe[:signing_secret]
 
 # StripeEvent.configure do |appointments|
-#   appointments.subscribe 'checkout.session.completed', StripeCheckoutSessionService.new
+#   events.subscribe 'checkout.session.completed', StripeCheckoutSessionService.new
 # end
