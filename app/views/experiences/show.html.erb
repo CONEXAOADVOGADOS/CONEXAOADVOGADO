@@ -16,16 +16,7 @@
       <p class="card-text"><i class="bi bi-calendar icon"></i><strong>Date:</strong> <%= @experience.date.strftime('%B %d, %Y') %></p>
       <p class="card-text"><i class="bi bi-geo-alt icon"></i><strong>Local:</strong> <%= @experience.local %></p>
       <p class="card-text"><i class="bi bi-cash icon"></i><strong>Price:</strong> <%= number_to_currency(@experience.price, unit: 'U$') %></p>
-    </div>
-    <div class="card-footer justify-content-center">
-      <%# <%= link_to 'Edit', edit_appointment_path(@appointment), class: 'btn btn-primary' %>
-      <%# <%= link_to 'Delete', appointment_path(@appointment), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
-      <% if policy(@experience).edit? %>
-        <%= link_to "Edit", edit_experience_path, class: "btn btn-success rounded" %>
-      <% end %>
-      <% if policy(@experience).edit? %>
-        <%= link_to 'Delete', experience_path, class: "btn btn-danger rounded", data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
-      <% end %>
+      </div>
       <div class="div-buttons-edit-delete-buy">
         <div>
           <% if policy(@experience).edit? %>
