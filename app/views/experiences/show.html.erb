@@ -25,9 +25,15 @@
       <%= link_to 'Delete', experience_path, class: "btn btn-danger rounded", data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
     <% end %>
 
+<<<<<<< HEAD
     <%= simple_form_for [@experience, @appointments], method: :post do |f| %>
     <%= f.submit "Contratar", class:"btn btn-primary rounded"%>
     <% end %>
+=======
+    <%# <%= simple_form_for [@experience, @appointment], method: :post do |f| %>
+    <%# <%= f.submit "Contratar", class:"btn btn-primary rounded"%>
+    <%# <% end %>
+>>>>>>> 006d4c0a7342c9bda06cf61f170938ea304e67c3
   </div>
 </div>
 <div class="margin-top-200"></div>

@@ -43,7 +43,7 @@ experience = Experience.new( specialty: "Cheesemaking",
                              local: "São Paulo",
                              user: User.all.sample)
 
-file = URI.open("https://scontent.fcgh14-1.fna.fbcdn.net/v/t39.30808-6/344564697_227287006570376_8646691821337860781_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=173fa1&_nc_eui2=AeG_dgydbPoZvYnOaNRV-4o7Wc-vGxciy79Zz68bFyLLvxyCbRCdSVr2W3FfwMSAqY2K3G9_H_goRhExWv2b-v1z&_nc_ohc=LZO7PVlr-nUAX_lGCZy&_nc_ht=scontent.fcgh14-1.fna&oh=00_AfBqZwvaXXc-t6VMObHcJws2rrh0G4mOEgFMvpPhgy1okA&oe=6574185E")
+file = URI.open("https://www.saveur.com/uploads/2022/08/17/00-BRAZIL-CHEESE-SAVEUR-scaled.jpg?auto=webp&auto=webp&optimize=high&quality=70&width=1440&dpr=2")
 experience.photo.attach(io: file, filename: "cheese.png", content_type: "image/png")
 experience.save!
 
@@ -93,7 +93,7 @@ experience = Experience.new( specialty: "Churros",
                              user: User.all.sample)
 
 file = URI.open("https://ograndeabc.com.br/wp-content/uploads/2022/09/Festival-do-Morango-Churros-Chocolate-Foto-Helber-Aggio_PSA-7.jpeg")
-experience.photo.attach(io: file, filename: "winet.png", content_type: "image/png")
+experience.photo.attach(io: file, filename: "churros.png", content_type: "image/png")
 experience.save!
 
 
@@ -104,9 +104,9 @@ experience = Experience.new( specialty: "Farmer's Market",
                              price: 100,
                              local: "São Paulo",
                              user: User.all.sample)
-                            #  https://traveler.marriott.com/wp-content/uploads/2016/12/ALMY_F7B7X6_HippyMarket.jpg?1481222838
-file = URI.open("https://res.cloudinary.com/dop9mb8rc/image/upload/v1701794577/captura_de_tela_de_2023-12-05_13-31-04_lc1z2l.png")
-experience.photo.attach(io: file, filename: "winet.png", content_type: "image/png")
+                            #
+file = URI.open("https://traveler.marriott.com/wp-content/uploads/2016/12/ALMY_F7B7X6_HippyMarket.jpg?1481222838")
+experience.photo.attach(io: file, filename: "farmer.png", content_type: "image/png")
 experience.save!
 
 experience = Experience.new( specialty: "Cooking Class",
@@ -117,10 +117,57 @@ experience = Experience.new( specialty: "Cooking Class",
                              local: "São Paulo",
                              user: User.all.sample)
 
-file = URI.open("https://www.civitatis.com/f/brasil/rio-de-janeiro/galeria/clase-de-cocina-brasilena-8.jpg")
-experience.photo.attach(io: file, filename: "winet.png", content_type: "image/png")
+file = URI.open("https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/10/2e/72/6e.jpg")
+experience.photo.attach(io: file, filename: "cooking.png", content_type: "image/png")
 experience.save!
 
+experience = Experience.new( specialty: "Fusion Asian Food",
+                             category: "gastronomy",
+                             description: "Fusion food of Roy Yamaguchi, doing a tour in Brazil, with special dishes from all regions of Japan",
+                             date: Date.today + 3.weeks,
+                             price: 50,
+                             local: "São Paulo",
+                             user: User.all.sample)
+
+file = URI.open("https://static.themoscowtimes.com/image/article_1360/22/dc8d7df191694a5db5924e43e5e68f7d.jpeg")
+experience.photo.attach(io: file, filename: "faf.png", content_type: "image/png")
+experience.save!
+
+experience = Experience.new( specialty: "Hidden Gems",
+                             category: "excursions",
+                             description: "Walking tour of under the radar historical spots in São Paulo",
+                             date: Date.today + 1.weeks,
+                             price: 30,
+                             local: "São Paulo",
+                             user: User.all.sample)
+
+file = URI.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtp2h6K8suhjRDNgK3h-5WCVP8YhdHvZ2iqPWOyerpsn4mEvnkP_di7AFzjr8xBqHAwyc&usqp=CAU")
+experience.photo.attach(io: file, filename: "historical.png", content_type: "image/png")
+experience.save!
+
+experience = Experience.new( specialty: "Street Art",
+                             category: "excursions",
+                             description: "Urban artwork walking tour and live mural painting",
+                             date: Date.today + 1.weeks,
+                             price: 20,
+                             local: "São Paulo",
+                             user: User.all.sample)
+
+file = URI.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKjogfFF8dnai7lVyKrB9uZlOr0z6ubmTN_kvlrIxF9bPPr8qPfCNTDpXxLMkR-M59xPI&usqp=CAU")
+experience.photo.attach(io: file, filename: "artwork.png", content_type: "image/png")
+experience.save!
+
+experience = Experience.new( specialty: "Day Trip",
+                             category: "excursions",
+                             description: "Day trip to a coffee farm outside the city with tasting and lunch",
+                             date: Date.today + 3.weeks,
+                             price: 25,
+                             local: "São Paulo",
+                             user: User.all.sample)
+
+file = URI.open("https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/09/15/54/ac.jpg")
+experience.photo.attach(io: file, filename: "cf.png", content_type: "image/png")
+experience.save!
 
 puts "Created #{Experience.count} experiences"
 
