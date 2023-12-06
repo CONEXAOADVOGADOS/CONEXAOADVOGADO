@@ -167,6 +167,11 @@ div .login-form {
   flex-grow: 2;
 }
 
+body {
+  margin-top: 100px;
+  min-height: 100vh;
+}
+
 .actions {
   // text-align: center;
   align-items: center;
