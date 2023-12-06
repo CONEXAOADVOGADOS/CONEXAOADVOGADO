@@ -8,8 +8,9 @@ class Experience < ApplicationRecord
   validates :date, presence: true
   validates :price, presence: true
   validates :price, numericality: { greater_than: 0 }
+  monetize :price_cents
 
-  has_one_attached :photo 
+  has_one_attached :photo
   has_many :users, through: :appointments
   has_many_attached :photos
   has_many :photos
