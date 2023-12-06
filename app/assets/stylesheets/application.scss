@@ -56,7 +56,6 @@ h2.login{
   border-radius: 4px;
 }
 
-
 .custom-input {
   border-radius: 4px;
   padding: 15px 100px;
@@ -86,7 +85,6 @@ h2.login{
   text-align: center;
 }
 }
-
 
 .forgot-pass-div {
   text-align: center;
@@ -149,6 +147,10 @@ div .login-form {
 #btn-login {
   background-color:#31404B;
   color: #fff;
+}
+
+.btn-success {
+  background-color: #f5c058;
 }
 
 .login-form::before {
