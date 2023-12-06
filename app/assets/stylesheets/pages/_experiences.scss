@@ -7,9 +7,7 @@
 h2 {
   margin-bottom: 20px;
 }
-// body {
-//   background-color: blue;
-// }
+
 .div-excur {
   display: flex;
   justify-content: center;
@@ -34,14 +32,24 @@ h2 {
 
 div .card {
   margin-bottom: 4px;
+  border-radius: 4px;
+  border: 2px solid rgba(238, 238, 238, 0.8);
 }
 
 .card, p.card-desc{
   // text-align: center;
   color: rgb(121, 121, 121);
   font-size: 22px;
-}
 
+}
+p.card-desc {
+  padding:  4px 4px;
+}
+p {
+  margin-top: 4px;
+  padding-left: 20px;
+  margin-bottom: 1rem;
+}
 .form-heading {
   margin-bottom: 30px;
 }
@@ -88,11 +96,19 @@ label {
   height: 100%;
   width: 30%;
 }
+
 .col-md-12 {
   height: 50px;
   display: flex;
   justify-content: center;
 }
+
+.col-3 {
+  margin-bottom: 30px;
+  flex-grow: 2;
+}
+
+
 .h1-create {
   display: flex;
   justify-content: center;
@@ -131,15 +147,13 @@ label {
 }
 
 #excursions, #gastronomy, #workshops {
+  // font-family: "Nunito Sans", "Helvetica", "sans-serif";
   text-align: center;
   margin-top: 50px;
   padding-top: 0%;
 }
 
-/* Add this CSS to your stylesheet (e.g., app/assets/stylesheets/application.css) */
-
 .footer-container {
-
   width: 100%;
   background-color: #f8f9fa; /* Adjust the background color as needed */
   padding: 2px; /* Increase padding for spacing */
@@ -154,9 +168,10 @@ label {
   width: 30%;
 }
 .event-detail-container {
-  margin-top: 60px;
-  width: 45%;
+    margin: 10% auto;
+    width: 50%;
 }
+
 .event-detail-title {
   display: flex;
   justify-content: center;
@@ -167,7 +182,7 @@ label {
   font-size: 20px;
   color: #6d5dfc;
   display: flex;
-justify-content:left;
+  justify-content:left;
 
 }
 
@@ -180,9 +195,67 @@ justify-content:left;
 
   .card-img-container {
     text-align: center;
+
   }
 
   .card-img-container img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    border: 2px solid rgba(238, 238, 238, 0.8);
     width: 100%;
-
+    object-fit: cover;
   }
+
+  // checkout Experiences
+
+.checkout-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: #fff;
+
+    .form-group {
+        margin-bottom: 20px;
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    }
+
+    .btn-submit {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+        }
+    }
+  .my-5 {
+    margin-top: 7rem !important;
+    margin-bottom: 3rem !important;
+  }
+
+.mt-2 {
+  // font-family: "Nunito Sans", "Helvetica", "sans-serif";
+  margin-top: 1.5rem !important;
+  display: inline-block;
+  border: 1px solid #31404B;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 6px 0;
+  // margin: 3px 3px;
+  border-radius: 4px;
+}

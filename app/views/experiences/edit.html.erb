@@ -1,4 +1,4 @@
-<div class="form-container">
+<div class="form-container-edit-experience">
   <h1 style="color: black;">Edit an Experience</h1>
   <div class="form-wrapper">
     <%= simple_form_for( @experience, html: { class: 'new-event-form' } ) do |f| %>
@@ -15,7 +15,7 @@
         </div>
         <div class="col-md-6">
         <%= f.input :description, as: :text, label_html: { class: 'form-label' }, input_html: { class: 'form-textarea' } %>
-        <%= f.button :submit, "Edit Experience", class: 'btn-success' %>
+        <%= f.button :submit, "Edit Experience", class: 'btn-success-edit-experience' %>
       </div>
     <% end %> <!-- Adicionei o fechamento correto da tag form -->
   </div>
