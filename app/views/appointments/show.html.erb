@@ -5,6 +5,13 @@
 
   <div class="card">
     <div class="card-body">
+
+      <% if @appointment.experience.photo.key %>
+              <%= cl_image_tag @appointment.experience.photo.key, class: "card-img-top", width: 300, height: 300, crop: :fill %>
+            <% else %>
+              <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "card-img-top", width: 300, height: 300, crop: :fill %>
+            <% end %>
+
       <h5 class="card-title"><%= @appointment.experience.specialty %></h5>
       <p class="card-text"><i class="bi bi-card-text icon"></i><strong>Description:</strong> <%= @appointment.experience.description %></p>
       <p class="card-text"><i class="bi bi-tags icon"></i><strong>Category:</strong> <%= @appointment.experience.category %></p>
