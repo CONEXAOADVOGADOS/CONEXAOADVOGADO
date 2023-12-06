@@ -1,39 +1,33 @@
+<div class="container d-flex justify-content-center w-100">
+  <div class="margin-top-200">
+    <div class="event-detail-container">
+      <h1 class="event-detail-title"><%= @experience.specialty %></h1>
 
-<div class="margin-top-200 center-container">
-  <div class="event-detail-container">
-    <h1 class="event-detail-title"><%= @experience.specialty %></h1>
+      <div class="card-img-container">
+        <% if @experience.photo.key %>
+          <%= cl_image_tag @experience.photo.key, class: "card-img-top", width: 300, height: 300, crop: :fill %>
+        <% else %>
+          <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "img-card", class: "card-img-top", width: 300, height: 300, crop: :fill %>
+        <% end %>
+      </div>
+      <p><i class="icon-category"></i> <strong>Category: </strong>  <%=" "%> <%= @experience.category %></p>
+      <p><i class="icon-category"></i> <strong>Description: </strong>
+      <%=" "%> <%= @experience.description %></p>
+      <p><i class="icon-category"></i> <strong>Local: </strong>  <%=" "%> <%= @experience.local %></p>
+      <p><i class="icon-category"></i> <strong>Date: </strong>  <%=" "%> <%= @experience.date.strftime("%d %B %Y") %></p>
 
-    <div class="card-img-container">
-      <% if @experience.photo.key %>
-        <%= cl_image_tag @experience.photo.key, class: "card-img-top" %>
-      <% else %>
-        <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "img-card" %>
+
+
+      <% if policy(@experience).edit? %>
+        <%= link_to "Edit", edit_experience_path, class: "btn btn-success rounded" %>
+      <% end %>
+      <% if policy(@experience).edit? %>
+        <%= link_to 'Delete', experience_path, class: "btn btn-danger rounded", data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
+      <% end %>
+
+      <%= simple_form_for [@experience, @appointment], method: :post do |f| %>
+        <%= f.submit "Contratar", class:"btn btn-primary rounded"%>
       <% end %>
     </div>
-    <p><i class="icon-category"></i> <strong>Category: </strong>  <%=" "%> <%= @experience.category %></p>
-    <p><i class="icon-category"></i> <strong>Description: </strong>
-    <%=" "%> <%= @experience.description %></p>
-    <p><i class="icon-category"></i> <strong>Local: </strong>  <%=" "%> <%= @experience.local %></p>
-    <p><i class="icon-category"></i> <strong>Date: </strong>  <%=" "%> <%= @experience.date.strftime("%d %B %Y") %></p>
-
-
-
-    <% if policy(@experience).edit? %>
-      <%= link_to "Edit", edit_experience_path, class: "btn btn-success rounded" %>
-    <% end %>
-    <% if policy(@experience).edit? %>
-      <%= link_to 'Delete', experience_path, class: "btn btn-danger rounded", data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
-    <% end %>
-
-<<<<<<< HEAD
-    <%= simple_form_for [@experience, @appointments], method: :post do |f| %>
-    <%= f.submit "Contratar", class:"btn btn-primary rounded"%>
-    <% end %>
-=======
-    <%# <%= simple_form_for [@experience, @appointment], method: :post do |f| %>
-    <%# <%= f.submit "Contratar", class:"btn btn-primary rounded"%>
-    <%# <% end %>
->>>>>>> 006d4c0a7342c9bda06cf61f170938ea304e67c3
   </div>
 </div>
-<div class="margin-top-200"></div>
