@@ -18,6 +18,10 @@
   }
 }
 
+// .actions {
+//   display: flex;
+//   justify-content: flex-end;
+// }
 .actions {
   display: flex;
   justify-content: flex-center;
@@ -128,9 +132,9 @@
   align-items: center;
 }
 
-.actions {
-  margin-left: auto;
-}
+// .actions {
+//   margin-left: auto;
+// }
 
 .cancel-btn {
   border: 1px solid #ddd;
