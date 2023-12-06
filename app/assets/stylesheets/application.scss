@@ -15,28 +15,6 @@
 // @import 'variables';
 
 
-// body {
-//   display: flex;
-//   flex-direction: column;
-//   height: 100vh;
-//   position: relative;
-//   background-image: url('Logo.png');
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-// }
-
-// body::before {
-//   content: '';
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: rgba(0, 0, 0, 0.8); /* Ajuste o último valor para controlar a opacidade do overlay */
-//   z-index: -1; /* Garante que o overlay fique atrás do conteúdo da página */
-// }
-
 /////////////////////////////////////////////////    TITLES EXPERIENCE
 #excursions,#gastronomy,#workshops {
   color: #000000;
@@ -72,11 +50,12 @@ h2.login{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0px 600px 0px;
+  margin: 6px 600px 0px;
   padding: 10px;
   border: 1px solid black;
   border-radius: 4px;
 }
+
 
 .custom-input {
   border-radius: 4px;
@@ -90,12 +69,23 @@ h2.login{
   padding: 8px 16px;
   cursor: pointer;
 }
+
 ////////////////////////////////   SIGN UP
+
+.sign-up {
+  display: inline-block;
+  border:1px solid #31404B;
+  color: black;
+  text-decoration: none;
+  padding: 6px 12px;
+  margin: 12px 0;
+  border-radius: 4px;
+
 .sign-up-div {
   margin-top: 50px;
   text-align: center;
 }
-
+}
 
 
 .forgot-pass-div {
@@ -107,6 +97,31 @@ h2.login{
 }
 /////////////////////////////////  FORGOT PASSWORD
 
+.form-inputs-forgot-pass {
+    background-color: rgba(224, 228, 231, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 250px 600px 0px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.forgot-password {
+  color:#31404B;
+  text-decoration: none;
+
+  &:hover {
+    color: #587386;
+    text-decoration: none;
+  }
+}
+
+.form-actions-forgot-pass{
+  display: flex;
+  justify-content: center;
+}
+
 .forgot-pass-div {
   margin: 0px;
 }
@@ -114,12 +129,6 @@ h2.login{
   background-color: darkgreen;
 }
 /////////////////////////////////////    LOGIN FORM
-///
-///
-///
-///
-///
-///
 div .login-form {
   margin-top: 50%;
   background-color: rgba(233, 233, 233, 0.8);
@@ -135,6 +144,11 @@ div .login-form {
   box-sizing: border-box;
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#btn-login {
+  background-color:#31404B;
+  color: #fff;
 }
 
 .login-form::before {
@@ -161,39 +175,9 @@ div .login-form {
 .footer-top {
   margin-top: 150px;
 }
-
-// body {
-//   display: table;
-//   width: 100%;
-// }
-
-// body > footer {
-//    display: table-row;
-// }
-
-
-// #page-container {
-//   position: relative;
-//   min-height: 100vh;
-// }
-
-// #content-wrap {
-//   padding-bottom: 2.5rem;    /* Footer height */
-// }
-
-// #footer {
-//   position: absolute;
-//   bottom: 0;
-//   width: 100%;
-//   height: 2.5rem;            /* Footer height */
-// }
-
-// .form-wrapper {
-//   background: white;
-//   padding: 20px;
-//   border-radius: 10px;
-//   box-shadow: 2px 2px 10px #ddd;
-// }
+.footer {
+  height: 70px;
+}
 
 .form-control {
   background: #f9f9f9;
@@ -216,27 +200,24 @@ div .login-form {
   margin-top: 5px;
 }
 .div-cancel button {
-  background-color: #fdc086;
-  color: rgb(7, 7, 7);
+  background-color:#31404B;
+  color:#fff;
   border: 1px solid black;
   border-radius: 4px;
   padding: 5px 5px;
-  margin-top: 50px;
+  margin-top: 20px;
+  &:hover {
+    color: #587386;
+    text-decoration: none;
+  }
 }
 .cancel-button a, .back-button a {
   cursor: pointer;
   text-decoration: none;
 }
-
-// .float-end  a{
-//   text-decoration: none;
-//   color:rgb(0, 0, 0);
-//   border:1px solid black;
-//   width: 30px 30px;
-//   background-color: #d6d6d6;
-//   margin-right: 80px;
-//   padding: 8px 18px;
-//   border-radius: 4px;
-//   font-size: 14px;
-
-// }
+#edit-profile {
+  display: flex;
+  justify-content: center;
+  margin-top: 110px;
+  color: #000000;
+}
