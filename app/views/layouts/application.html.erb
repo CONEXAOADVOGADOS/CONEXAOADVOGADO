@@ -10,7 +10,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-  <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
   <%= javascript_importmap_tags %>
 
   <script src="/docs/5.3/assets/js/color-modes.js"></script>
@@ -108,7 +107,7 @@
 
 	</script>
 
-	<!-- Google Font -->
+	<%# <!-- Google Font -->
 	<link rel="preconnect" link_to "https://fonts.googleapis.com">
 	<link rel="preconnect" link_to "https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" link_to "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap">
@@ -119,8 +118,8 @@
 	<link rel="stylesheet" type="text/css" link_to "assets/vendor/tiny-slider/tiny-slider.css">
 	<link rel="stylesheet" type="text/css" link_to "assets/vendor/glightbox/css/glightbox.css">
 	<link rel="stylesheet" type="text/css" link_to "assets/vendor/choices/css/choices.min.css">
-	<link rel="stylesheet" type="text/css" link_to "assets/vendor/flatpickr/css/flatpickr.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" link_to "assets/vendor/flatpickr/css/flatpickr.min.css"> %>
+  <%# <link href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.css" rel="stylesheet"> %>
 
 	<!-- Theme CSS -->
 	<link rel="stylesheet" type="text/css" link_to ="./assets/css/style.css">
@@ -129,7 +128,7 @@
 
   <!-- Bootstrap CSS -->
 
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <%# <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 
 
   <!-- Bootstrap Datepicker CSS -->
@@ -142,7 +141,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
   <!-- Bootstrap Datepicker JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script> %>
+
+  <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
 
 </head>
 
@@ -152,9 +153,7 @@
 </div>
     <%= render "shared/flashes" %>
     <%= yield %>
-    <div class="footer-top">
     <%= render "shared/footer" %>
-    </div>
     <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="/assets/vendor/flatpickr/js/flatpickr.min.js"></script>
 </body>

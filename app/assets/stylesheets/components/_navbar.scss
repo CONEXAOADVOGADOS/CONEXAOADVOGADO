@@ -2,7 +2,6 @@
   justify-content: space-between;
   background:#31404B;
   height: 90px;
-
 }
 .fixed-nav {
   position: fixed;
@@ -10,11 +9,10 @@
   margin-bottom: 120px;
   width: 100%;
   z-index: 1000;
-
 }
 
 .messages-d-none{
- display: none;
+display: none;
 }
 
 .navbar-mw .navbar-collapse {
@@ -26,7 +24,6 @@
   // border-radius: 50%;
 }
 .links-navbar {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 20px;
   display: flex;
   display: -ms-flexbox;
@@ -35,9 +32,13 @@
   gap: 15em;
   margin-left: 10%;
 
+  a{
+    text-decoration: none;
+  }
+
 }
 
- .links-navbar a:hover,
+.links-navbar a:hover,
 .links-navbar a:focus {
   text-decoration: none;
   color: yellow;

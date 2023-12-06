@@ -37,7 +37,7 @@ div .card {
 }
 
 .card, p.card-desc{
-  text-align: center;
+  // text-align: center;
   color: rgb(121, 121, 121);
   font-size: 22px;
 }
@@ -118,7 +118,7 @@ label {
   padding: 12px 30px;
 
   &:hover {
-     background-color: darken(#6d5dfc, 5%);
+  background-color: darken(#6d5dfc, 5%);
   }
 }
 
@@ -139,9 +139,7 @@ label {
 /* Add this CSS to your stylesheet (e.g., app/assets/stylesheets/application.css) */
 
 .footer-container {
-  position: absolute; /* Change to 'fixed' so it's always at the bottom of the viewport */
-  left: 0;
-  bottom: 0;
+
   width: 100%;
   background-color: #f8f9fa; /* Adjust the background color as needed */
   padding: 2px; /* Increase padding for spacing */
