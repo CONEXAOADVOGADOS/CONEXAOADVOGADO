@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="checkout-container">
+        <h2>Checkout</h2>
+        <form action="/your_payment_route" method="post">
+            <div class="form-group">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" id="cardNumber" name="cardNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="cardExpiry">Expiry Date</label>
+                <input type="text" id="cardExpiry" name="cardExpiry" required>
+            </div>
+            <div class="form-group">
+                <label for="cardCVC">CVC</label>
+                <input type="text" id="cardCVC" name="cardCVC" required>
+            </div>
+            <button type="submit" class="btn-submit">Pay Now</button>
+        </form>
+    </div>
+</body>
+</html>
