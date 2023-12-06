@@ -25,7 +25,7 @@
       <%= link_to 'Delete', experience_path, class: "btn btn-danger rounded", data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
     <% end %>
 
-    <%= simple_form_for [@experience, @appointment], method: :post do |f| %>
+    <%= simple_form_for [@experience, @appointments], method: :post do |f| %>
     <%= f.submit "Contratar", class:"btn btn-primary rounded"%>
     <% end %>
   </div>
