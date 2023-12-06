@@ -15,28 +15,6 @@
 // @import 'variables';
 
 
-// body {
-//   display: flex;
-//   flex-direction: column;
-//   height: 100vh;
-//   position: relative;
-//   background-image: url('Logo.png');
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-// }
-
-// body::before {
-//   content: '';
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: rgba(0, 0, 0, 0.8); /* Ajuste o último valor para controlar a opacidade do overlay */
-//   z-index: -1; /* Garante que o overlay fique atrás do conteúdo da página */
-// }
-
 /////////////////////////////////////////////////    TITLES EXPERIENCE
 #excursions,#gastronomy,#workshops {
   color: #000000;
@@ -44,9 +22,6 @@
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
 }
-
-
- /////////////////////////////////////////////// REGISTRATION
 
 .row {
   margin-top: 40px;
@@ -73,11 +48,12 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0px 600px 0px;
+  margin: 6px 600px 0px;
   padding: 10px;
   border: 1px solid black;
   border-radius: 4px;
 }
+
 
 .custom-input {
   border-radius: 4px;
@@ -93,16 +69,14 @@ h1 {
 }
 
 ////////////////////////////////   SIGN UP
-.sign-up-div {
-  margin-top: 50px;
-}
+
 .sign-up {
+  display: inline-block;
+  border:1px solid #31404B;
   color: black;
-  background-color: rgb(0, 81, 255);
   text-decoration: none;
-  border: 1px solid black;
-  padding: 20px 40px;
-  margin-bottom: 4px;
+  padding: 6px 12px;
+  margin: 12px 0;
   border-radius: 4px;
 }
 
@@ -110,28 +84,35 @@ h1 {
   height: 0 !important;
 }
 /////////////////////////////////  FORGOT PASSWORD
-.forgot-password {
-  color: black;
-  background-color: rgb(233, 167, 45);
-  text-decoration: none;
-  border: 1px solid black;
-  padding: 20px 40px;
-  margin-bottom: 30px;
-  border-radius: 4px;
+
+.form-inputs-forgot-pass {
+    background-color: rgba(224, 228, 231, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 250px 600px 0px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
 }
-.forgot-pass-div {
-  margin: 60px;
+.forgot-password {
+  color:#31404B;
+  text-decoration: none;
+
+  &:hover {
+    color: #587386;
+    text-decoration: none;
+  }
+}
+
+.form-actions-forgot-pass{
+  display: flex;
+  justify-content: center;
 }
 .custom-button:hover {
   background-color: darkgreen;
 }
 /////////////////////////////////////    LOGIN FORM
-///
-///
-///
-///
-///
-///
 div .login-form {
   margin-top: 50%;
   background-color: rgba(233, 233, 233, 0.8);
@@ -147,6 +128,11 @@ div .login-form {
   box-sizing: border-box;
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#btn-login {
+  background-color:#31404B;
+  color: #fff;
 }
 
 .login-form::before {
@@ -167,39 +153,6 @@ div .login-form {
 .footer {
   height: 70px;
 }
-
-// body {
-//   display: table;
-//   width: 100%;
-// }
-
-// body > footer {
-//    display: table-row;
-// }
-
-
-// #page-container {
-//   position: relative;
-//   min-height: 100vh;
-// }
-
-// #content-wrap {
-//   padding-bottom: 2.5rem;    /* Footer height */
-// }
-
-// #footer {
-//   position: absolute;
-//   bottom: 0;
-//   width: 100%;
-//   height: 2.5rem;            /* Footer height */
-// }
-
-// .form-wrapper {
-//   background: white;
-//   padding: 20px;
-//   border-radius: 10px;
-//   box-shadow: 2px 2px 10px #ddd;
-// }
 
 .form-control {
   background: #f9f9f9;
@@ -222,27 +175,25 @@ div .login-form {
   margin-top: 5px;
 }
 .div-cancel button {
-  background-color: #fdc086;
-  color: rgb(7, 7, 7);
+  background-color:#31404B;
+  color:#fff;
   border: 1px solid black;
   border-radius: 4px;
   padding: 5px 5px;
-  margin-top: 50px;
+  margin-top: 20px;
+  &:hover {
+    color: #587386;
+    text-decoration: none;
+  }
 }
 .cancel-button a, .back-button a {
   cursor: pointer;
   text-decoration: none;
 }
+#edit-profile {
+  display: flex;
+  justify-content: center;
+  margin-top: 110px;
+  color: #000000;
+}
 
-// .float-end  a{
-//   text-decoration: none;
-//   color:rgb(0, 0, 0);
-//   border:1px solid black;
-//   width: 30px 30px;
-//   background-color: #d6d6d6;
-//   margin-right: 80px;
-//   padding: 8px 18px;
-//   border-radius: 4px;
-//   font-size: 14px;
-
-// }
