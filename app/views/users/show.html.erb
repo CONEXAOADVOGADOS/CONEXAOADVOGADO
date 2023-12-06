@@ -1,24 +1,32 @@
-<!-- app/views/appointments/show.html.erb -->
+<div class="container justify-elements-center">
+  <div class="margin-top justify-elements-center">
+    <div class="experience">
+      <h1 class="event-detail-title"><%= @experience.specialty %></h1>
 
-<h1 class="mb-4">Appointment Details</h1>
+      <div class="card-img-container">
+        <% if @experience.photo.key %>
+          <%= cl_image_tag @experience.photo.key, class: "card-img-top", width: 300, height: 300, crop: :fill %>
+        <% else %>
+          <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "img-card", class: "card-img-top", width: 300, height: 300, crop: :fill %>
+        <% end %>
+      </div>
+      <p><i class="icon-category"></i> <strong>Category: </strong>  <%=" "%> <%= @experience.category %></p>
+      <p><i class="icon-category"></i> <strong>Description: </strong><%=" "%> <%= @experience.description %></p>
+      <p><i class="icon-category"></i> <strong>Local: </strong>  <%=" "%> <%= @experience.local %></p>
+      <p><i class="icon-category"></i> <strong>Date: </strong>  <%=" "%> <%= @experience.date.strftime("%d %B %Y") %></p>
+      <p><i class="icon-category"></i> <strong>Price: </strong>  <%=" "%> <%= number_to_currency(@experience.price, unit: 'U$') %></p>
 
-<div class="card">
-  <div class="card-body">
-    <% if @appointment.photo.key %>
-              <%= cl_image_tag @appointment.photo.key, class: "card-img-top", width: 300, height: 300, crop: :fill %>
-            <% else %>
-              <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "card-img-top", width: 300, height: 300, crop: :fill %>
-            <% end %><!-- Display content for Excursions -->
 
-    <p class="card-text"><strong>Experience:</strong> <pre>"" "</pre>  <%= @appointment.specialty %></p>
-    <p class="card-text"><strong>Description:</strong> <%= @appointment.experience.description %></p>
-    <p class="card-text"><strong>Category:</strong> <%= @appointment.experience.category %></p>
-    <p class="card-text"><strong>Date:</strong> <%= @appointment.experience.date %></p>
-    <p class="card-text"><strong>Local:</strong> <%= @appointment.experience.local %></p>
-    <p class="card-text"><strong>Price:</strong> <%= @appointment.experience.price %></p>
-  </div>
-  <div class="card-footer">
-    <%# <%= link_to 'Edit', edit_appointment_path(@appointment), class: 'btn btn-primary' %>
-    <%= link_to 'Delete', appointment_path, class: "btn btn-danger rounded", data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
+      <% if policy(@experience).edit? %>
+        <%= link_to "Edit", edit_experience_path, class: "btn btn-success rounded" %>
+      <% end %>
+      <% if policy(@experience).edit? %>
+        <%= link_to 'Delete', experience_path, class: "btn btn-danger rounded", data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
+      <% end %>
+
+      <%= simple_form_for [@experience, @appointment], method: :post do |f| %>
+        <%= f.submit "Contratar", class:"btn btn-primary rounded"%>
+      <% end %>
+    </div>
   </div>
 </div>
