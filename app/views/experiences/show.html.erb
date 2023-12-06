@@ -4,7 +4,6 @@
   <div class="card">
     <div class="card-body">
 
-<<<<<<< HEAD
       <% if @experience.photo.key %>
               <%= cl_image_tag @experience.photo.key, class: "card-img-top", width: 300, height: 300, crop: :fill %>
             <% else %>
@@ -27,7 +26,6 @@
       <% if policy(@experience).edit? %>
         <%= link_to 'Delete', experience_path, class: "btn btn-danger rounded", data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
       <% end %>
-=======
       <div class="div-buttons-edit-delete-buy">
         <div>
           <% if policy(@experience).edit? %>
@@ -42,7 +40,6 @@
         <% end %>
       </div>
 
->>>>>>> master
     </div>
   </div>
 </div>

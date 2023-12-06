@@ -1,5 +1,5 @@
 
-<div class="container my-5">
+<div class="container my-5  container-experiences">
   <%# <h1 class="h1-experiences">Experiences</h1> %>
   <% if params[:show_only].blank? || ( params[:show_only].present? && params[:show_only] == 'excursions') %>
     <h2 id="excursions" class= "<%= 'd-none' unless @experiences.where("category ILIKE ?", "excursions").any? %>">Excursions</h2>
@@ -19,11 +19,11 @@
             <p><%= experience.local %></p>
             <p><%= experience.date.strftime("%d %B %Y")  %></p>
             <p><%= number_to_currency(experience.price, unit: "U$ ", separator: ",", delimiter: ".") %></p>
-            <%= link_to "See More", experience_path(experience), class: "btn btn-primary" %>
+            <%= link_to "See More", experience_path(experience), class: "btn btn-primary  see-more-experiences" %>
           </div>
         </div>
       <% end %>
-      <%= link_to "See All Experiences", experiences_path, class: "d-flex justify-content-center mt-2"%>
+      <%= link_to "See All Experiences", experiences_path, class: "d-flex justify-content-center see-all-experiences mt-2"%>
     </div>
   <% end %>
 
@@ -46,11 +46,11 @@
             <p><%= experience.local %></p>
             <p><%= experience.date.strftime("%d %B %Y")  %></p>
             <p><%= number_to_currency(experience.price, unit: "U$ ", separator: ",", delimiter: ".") %></p>
-            <%= link_to "See More", experience_path(experience), class: "btn btn-primary" %><%# <% raise  %>
+            <%= link_to "See More", experience_path(experience), class: "btn btn-primary see-more-experiences" %><%# <% raise  %>
           </div>
         </div>
       <% end %>
-       <%= link_to "See All Experiences", experiences_path, class: "d-flex justify-content-center mt-2"%>
+       <%= link_to "See All Experiences", experiences_path, class: "d-flex justify-content-center see-all-experiences mt-2"%>
     </div>
 
   <% end %>
@@ -74,11 +74,11 @@
             <p><%= experience.local %></p>
             <p><%= experience.date.strftime("%d %B %Y")  %></p>
             <p><%= number_to_currency(experience.price, unit: "U$ ", separator: ",", delimiter: ".") %></p>
-            <%= link_to "See More", experience_path(experience), class: "btn btn-primary" %><!-- ... (unchanged code for Workshops) ... -->
+            <%= link_to "See More", experience_path(experience), class: "btn btn-primary see-more-experiences" %><!-- ... (unchanged code for Workshops) ... -->
           </div>
         </div>
       <% end %>
-       <%= link_to "See All Experiences", experiences_path, class: "d-flex justify-content-center mt-2"%>
+       <%= link_to "See All Experiences", experiences_path, class: "d-flex justify-content-center see-all-experiences mt-2"%>
     </div>
   <% end %>
 </div>
