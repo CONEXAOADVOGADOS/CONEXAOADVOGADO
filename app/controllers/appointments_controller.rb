@@ -1,5 +1,5 @@
 class AppointmentsController < ApplicationController
-  before_action :set_event, only: %i[new create]
+  before_action :set_event, only: %i[index]
 
   def index
     @appointments = policy_scope(Appointment).where(user: current_user)
