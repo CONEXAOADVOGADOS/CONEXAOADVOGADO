@@ -17,17 +17,20 @@
       <p><i class="icon-category"></i> <strong>Date: </strong>  <%=" "%> <%= @experience.date.strftime("%d %B %Y") %></p>
 
 
+      <div class="div-buttons-edit-delete-buy">
+        <div>
+          <% if policy(@experience).edit? %>
+            <%= link_to 'Delete', experience_path, class: "btn btn-success-delete-experience btn-danger rounded", data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
+          <% end %>
+          <% if policy(@experience).edit? %>
+            <%= link_to "Edit", edit_experience_path, class: "btn btn-success-edit-experience rounded" %>
+          <% end %>
+        </div>
+        <%= simple_form_for [@experience, @appointment], method: :post do |f| %>
+          <%= f.submit "Book Now", class:"btn btn-primary rounded buy-event-detail"%>
+        <% end %>
+      </div>
 
-      <% if policy(@experience).edit? %>
-        <%= link_to "Edit", edit_experience_path, class: "btn btn-success rounded" %>
-      <% end %>
-      <% if policy(@experience).edit? %>
-        <%= link_to 'Delete', experience_path, class: "btn btn-danger rounded", data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
-      <% end %>
-
-      <%= simple_form_for [@experience, @appointment], method: :post do |f| %>
-        <%= f.submit "Contratar", class:"btn btn-primary rounded"%>
-      <% end %>
     </div>
   </div>
 </div>
