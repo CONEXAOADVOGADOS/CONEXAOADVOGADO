@@ -4,7 +4,13 @@
 
 <div class="card">
   <div class="card-body">
-    <p class="card-text"><strong>Experience:</strong> <pre>"" "</pre>  <%= @experience.specialty %></p>
+    <% if @appointment.photo.key %>
+              <%= cl_image_tag @appointment.photo.key, class: "card-img-top", width: 300, height: 300, crop: :fill %>
+            <% else %>
+              <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "card-img-top", width: 300, height: 300, crop: :fill %>
+            <% end %><!-- Display content for Excursions -->
+
+    <p class="card-text"><strong>Experience:</strong> <pre>"" "</pre>  <%= @appointment.specialty %></p>
     <p class="card-text"><strong>Description:</strong> <%= @appointment.experience.description %></p>
     <p class="card-text"><strong>Category:</strong> <%= @appointment.experience.category %></p>
     <p class="card-text"><strong>Date:</strong> <%= @appointment.experience.date %></p>

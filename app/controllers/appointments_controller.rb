@@ -65,4 +65,8 @@ class AppointmentsController < ApplicationController
   def set_event
     @experience = Experience.find(params[:experience_id])
   end
+
+  def experience_params
+    params.require(:appointment).permit(:specialty, :photos, :category, :description, :date, :price, :local, :photo)
+  end
 end
