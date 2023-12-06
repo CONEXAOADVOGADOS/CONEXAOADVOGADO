@@ -163,6 +163,15 @@ div .login-form {
   border-top-right-radius: 4px;
 }
 
+.col-3 {
+  flex-grow: 2;
+}
+
+.actions {
+  // text-align: center;
+  align-items: center;
+}
+
 .footer-top {
   margin-top: 150px;
 }

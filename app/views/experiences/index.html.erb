@@ -6,14 +6,14 @@
     <div class="row">
       <% @experiences.where("category ILIKE ?", "excursions").each do |experience| %>
         <div class="col-3">
-          <div class="card">
+          <div class="card h-100 justify-content-between">
             <% if experience.photo.key %>
               <%= cl_image_tag experience.photo.key, class: "card-img-top", width: 300, height: 300, crop: :fill %>
             <% else %>
               <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "card-img-top", width: 300, height: 300, crop: :fill %>
             <% end %><!-- Display content for Excursions -->
 
-            <p><%= "Experience: #{experience.specialty}" %></p>
+            <p><b><%= experience.specialty %></b></p>
 
             <p><%= experience.description %></p>
             <p><%= experience.local %></p>
@@ -23,7 +23,7 @@
           </div>
         </div>
       <% end %>
-      <%= link_to "See All Experiences", experiences_path %>
+      <%= link_to "See All Experiences", experiences_path, class: "d-flex justify-content-center mt-2"%>
     </div>
   <% end %>
 
@@ -33,7 +33,7 @@
     <div class="row">
       <% @experiences.where("category ILIKE ?", "gastronomy").each do |experience| %>
         <div class="col-3">
-          <div class="card">
+          <div class="card h-100 justify-content-between">
             <!-- Display content for Gastronomy -->
             <%# <% raise %>
             <% if experience.photo.key %>
@@ -41,9 +41,10 @@
             <% else %>
               <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "card-img-top", width: 300, height: 300, crop: :fill %>
             <% end %>
+            <p><b><%= experience.specialty %></b></p>
+
             <p><%= experience.description %></p>
             <p><%= experience.local %></p>
-            <p><%= experience.specialty %></p>
             <p><%= experience.date.strftime("%d %B %Y")  %></p>
             <p><%= number_to_currency(experience.price, unit: "U$ ", separator: ",", delimiter: ".") %></p>
             <%= link_to "See More", experience_path(experience), class: "btn btn-primary" %><%# <% raise  %>
@@ -51,6 +52,7 @@
           </div>
         </div>
       <% end %>
+       <%= link_to "See All Experiences", experiences_path, class: "d-flex justify-content-center mt-2"%>
     </div>
 
   <% end %>
@@ -62,21 +64,23 @@
     <div class="row">
       <% @experiences.where("category ILIKE ?", "workshops").each do |experience| %>
         <div class="col-3">
-          <div class="card">
+          <div class="card h-100 justify-content-between">
             <% if experience.photo.key %>
               <%= cl_image_tag experience.photo.key, class: "card-img-top", width: 300, height: 300, crop: :fill %>
             <% else %>
               <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "card-img-top", width: 300, height: 300, crop: :fill %>
             <% end %>
+            <p><b><%= experience.specialty %></b></p>
+
             <p><%= experience.description %></p>
             <p><%= experience.local %></p>
-            <p><%= experience.specialty %></p>
             <p><%= experience.date.strftime("%d %B %Y")  %></p>
             <p><%= number_to_currency(experience.price, unit: "U$ ", separator: ",", delimiter: ".") %></p>
             <%= link_to "See More", experience_path(experience), class: "btn btn-primary" %><!-- ... (unchanged code for Workshops) ... -->
           </div>
         </div>
       <% end %>
+       <%= link_to "See All Experiences", experiences_path, class: "d-flex justify-content-center mt-2"%>
     </div>
 
   <% end %>
