@@ -270,3 +270,21 @@ body {
     background-color:#31404B;
     color:#fff;
 }
+
+
+.buy-event-detail {
+  color: #31404B;
+  border: 1px solid #31404B;
+  background-color:#1EDD88;
+}
+.btn-edit-buy {
+  border: 1px solid #31404B;
+  color: #fff;
+  background-color:#31404B;
+}
+
+.div-buttons-edit-delete-buy {
+  display: flex;
+  justify-content:center;
+  gap: 20px 180px;
+}
