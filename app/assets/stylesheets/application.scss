@@ -16,9 +16,9 @@
 
 /////////////////////////////////////////////////    TITLES EXPERIENCE
 #excursions,#gastronomy,#workshops {
-  color: #000000;
+  color: #31404B;
   font-size: 35px;
-  font-family: 'Courier New', Courier, monospace;
+ font-family: "Nunito Sans", "Helvetica", "sans-serif";
   font-weight: bold;
 }
 
@@ -49,9 +49,10 @@ h2.login{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px 600px;
+    margin: 10px 600px;
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid rgba(177, 177, 177, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
   a {
@@ -154,7 +155,8 @@ div.login-form-user-login {
     margin: 200px 30%;
     display: flex;
     justify-content: center;
-    border: 1px solid #31404B;
+    border: 1px solid rgba(177, 177, 177, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     padding: 10px;
 }
@@ -243,7 +245,7 @@ body {
   border: 1px solid black;
   border-radius: 4px;
   padding: 5px 5px;
-  margin-top: 20px;
+  margin-top: 5px;
   &:hover {
     color: #587386;
     text-decoration: none;
@@ -256,7 +258,7 @@ body {
 #edit-profile {
   display: flex;
   justify-content: center;
-  margin-top: 110px;
+  margin-top: 70px;
   color: #000000;
 }
 .btn-update-edit-profile {
