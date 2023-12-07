@@ -1,5 +1,5 @@
 
-<div class="container my-5">
+<div class="container my-5  container-experiences">
   <%# <h1 class="h1-experiences">Experiences</h1> %>
   <% if params[:show_only].blank? || ( params[:show_only].present? && params[:show_only] == 'excursions') %>
     <h2 id="excursions" class= "<%= 'd-none' unless @experiences.where("category ILIKE ?", "excursions").any? %>">Excursions</h2>
@@ -7,7 +7,7 @@
       <% @experiences.where("category ILIKE ?", "excursions").each do |experience| %>
          <%= render "experience", experience: experience %>
       <% end %>
-      <%= link_to "See All Experiences", experiences_path, class: "d-flex justify-content-center mt-2"%>
+      <%= link_to "See All Experiences", experiences_path, class: "d-flex justify-content-center see-all-experiences mt-2"%>
     </div>
   <% end %>
 
@@ -18,7 +18,7 @@
       <% @experiences.where("category ILIKE ?", "gastronomy").each do |experience| %>
         <%= render "experience", experience: experience %>
       <% end %>
-      <%= link_to "See All Experiences", experiences_path, class: "d-flex justify-content-center mt-2"%>
+      <%= link_to "See All Experiences", experiences_path, class: "d-flex justify-content-center see-all-experiences mt-2"%>
     </div>
 
   <% end %>
@@ -31,15 +31,7 @@
       <% @experiences.where("category ILIKE ?", "workshops").each do |experience| %>
         <%= render "experience", experience: experience %>
       <% end %>
-      <%= link_to "See All Experiences", experiences_path, class: "d-flex justify-content-center mt-2"%>
+      <%= link_to "See All Experiences", experiences_path, class: "d-flex justify-content-center see-all-experiences mt-2"%>
     </div>
-
   <% end %>
-
-
-
-
-
-  <!-- ... (other sections if needed) ... -->
-
 </div>

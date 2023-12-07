@@ -11,7 +11,9 @@
               <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "card-img-top", width: 300, height: 300, crop: :fill %>
             <% end %>
 
+      <div class= "appointment mt-3">
       <h5 class="card-title"><%= @appointment.experience.description %></h5>
+      </div>
       <%# <p class="card-text"><i class="bi bi-card-text icon"></i><strong>Description:</strong> <%= @appointment.experience.description</p>  %>
       <p class="card-text"><i class="bi bi-tags icon"></i><strong>Category:</strong> <%= @appointment.experience.category %></p>
       <p class="card-text"><i class="bi bi-calendar icon"></i><strong>Date:</strong> <%= @appointment.experience.date.strftime('%B %d, %Y') %></p>
@@ -28,7 +30,7 @@
 
 <!-- app/views/orders/show.html.erb -->
 <div class="container">
-  <div class="row py-4">
+  <div class="card">
     <div class="col-md-3">
       <%# <% if @appointment.experience.photo.key %>
         <%# <%= cl_image_tag @appointment.experience.photo.key, class: "card-img-top", width: 300, height: 300, crop: :fill %>
@@ -36,12 +38,12 @@
         <%# <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "img-card", class: "card-img-top", width: 300, height: 300, crop: :fill %>
       <%# <% end %>
     </div>
-    <div class="col text-align-center">
+        <div class="card-body">
       <h1>Order #<%= @appointment.id %> <small><span class="text-info"><%= @appointment.state %></span></small></h1>
-      <ul class="list-unstyled">
-        <li><strong>ISSUED ON</strong> <%= @appointment.created_at.to_date %></li>
-        <li><strong>EXPERIENCE</strong> <%= @appointment.experience.description %> </li>
-        <li><strong>TOTAL</strong> <%= number_to_currency @appointment.amount / 100 %></li>
+      <ul>
+        <%# <li><strong>ISSUED ON</strong> <%= @appointment.created_at.to_date</li> %>
+        <%# <li><strong>EXPERIENCE</strong> <%= @appointment.experience.description </li> %>
+        <%# <li><strong>TOTAL</strong> <%= number_to_currency @appointment.amount / 100</li>  %>
         </li>
       </ul>
       <p><strong>Enjoy this wonderful experience</strong></p>

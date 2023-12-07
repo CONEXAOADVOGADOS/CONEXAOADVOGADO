@@ -15,8 +15,8 @@ class AppointmentsController < ApplicationController
   end
 
   def create
-    @experience = Experience.find(params[:experience_id])
-    @appointment = Appointment.create(experience: @experience, amount: @experience.price * 100, state: "pending", user: current_user)
+    experience = Experience.find(params[:experience_id])
+    @appointment = Appointment.create!(experience: experience, amount: experience.price * 100, state: "paid", user: current_user)
     # redirect_to appointments_path, notice: 'Appointment created successfully.'
     authorize @appointment
     create_session

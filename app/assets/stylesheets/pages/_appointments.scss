@@ -206,8 +206,9 @@
 }
 
 .btn-danger {
+  border: 1px solid #31404B;
   background-color: #dc3545;
-  border-color: #dc3545;
+  border-color: #f35b6a;
   color: #fff;
 }
 
@@ -280,4 +281,9 @@
       }
     }
   }
+}
+
+.card-order{
+background-color:#F9C450;
+color: white;
 }
