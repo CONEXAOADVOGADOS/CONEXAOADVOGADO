@@ -7,8 +7,8 @@
     <% end %>
     <div class= "p-3 d-flex flex-column justify-content-between h-100">
       <div>
-        <p><b><%= experience.specialty %></b></p>
-        <p><%= experience.description %></p>
+        <p><b><%= experience.description %></b></p>
+        <%# <p><%= experience.description %>
         <p><%= experience.local %></p>
         <p><%= experience.date.strftime("%d %B %Y")  %></p>
         <p><%= number_to_currency(experience.price, unit: "U$ ", separator: ",", delimiter: ".") %></p>

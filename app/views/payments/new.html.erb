@@ -1,16 +1,18 @@
 <!-- app/views/payments/new.html.erb -->
-<div class="container">
-  <div class="row py-4">
-    <div class="col-md-3">
-      <% if @appointment.experience.photo.key %>
+<div class="appointments-container mt-3">
+  <div class="card">
+    <div class="card-body">
+      <div class="card-body">
+      <h3><b>Checkout summary</b></h3>
+            <% if @appointment.experience.photo.key %>
         <%= cl_image_tag @appointment.experience.photo.key, class: "card-img-top", width: 300, height: 300, crop: :fill %>
       <% else %>
         <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "img-card", class: "card-img-top", width: 300, height: 300, crop: :fill %>
       <% end %>
-    </div>
-    <div class="col">
-      <h1>Checkout summary</h1>
+      <div class="purchase">
       <p>Purchase of <strong><%= @appointment.experience.description %></strong> for <strong><%= number_to_currency(@appointment.amount / 100, unit: 'U$', separator: ",", delimiter: ".") %></strong></p>
+      </div>
+      <div class="pay">
       <button id="pay" class="btn btn-primary">Pay</button>
       <script src="https://js.stripe.com/v3/"></script>
       <script>
@@ -22,6 +24,7 @@
           });
         });
       </script>
+      </div>
     </div>
   </div>
 </div>
