@@ -1,11 +1,7 @@
 <div class="login-form-user-login">
-
-  <h1>User Login</h1>
-
   <div class="form-wrapper">
-
+    <h1>User Login</h1>
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
     <div class="form-group">
       <%= f.input :email, autofocus: true, placeholder: "Email" %>
     </div>
@@ -17,25 +13,13 @@
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
 
       <!-- form fields -->
-
       <div class="actions">
        <%= f.submit "Log In", class: "btn", id: "btn-login" %>
-
         <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
           <%= link_to "Sign up", new_registration_path(resource_name),class:"sign-up" %><br />
         <% end %>
-
       </div>
-
+          <%= render "devise/shared/links" %>
     <% end %>
-
   </div>
-
-  <%= render "devise/shared/links" %>
-
-  <!-- Other links like Forgot Password -->
-
-</div>
-
-
 </div>
