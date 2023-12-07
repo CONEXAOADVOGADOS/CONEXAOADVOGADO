@@ -25,15 +25,15 @@
   }
 }
 
-div.logo-central-home {
-    display:flex;
-    justify-content: center;
-  }
-  .logo-text-home {
-  margin-top: 0px;
-  display: flex;
-  justify-content: center;
-}
+// div.logo-central-home {
+//     display:flex;
+//     justify-content: center;
+//   }
+//   .logo-text-home {
+//   margin-top: 0px;
+//   display: flex;
+//   justify-content: center;
+// }
 
 
 
@@ -173,8 +173,8 @@ p {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 0 0 60px 0;
-  object-fit: cover;
+  padding: 50px 0;
+ 
 }
 
 
@@ -212,8 +212,5 @@ p {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-.card-rounded-home {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
+//datepicker
