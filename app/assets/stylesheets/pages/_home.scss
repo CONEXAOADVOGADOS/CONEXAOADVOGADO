@@ -25,10 +25,30 @@
   }
 }
 
-.carrossel-home{
-  padding: 0 17rem;
-
+div.logo-central-home {
+    display:flex;
+    justify-content: center;
+  }
+  .logo-text-home {
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
 }
+
+
+
+// .logo-container {
+//   display: flex;
+//   height: 100vh; /* Ajuste conforme necessário */
+// }
+
+// .logo-central-home {
+//   height: 160px;
+//   width: 160px;
+//   /* Adicione outros estilos conforme necessário */
+// }
+
+
 .text-white {
   text-wrap: balance;
   font-size: 70;
@@ -81,10 +101,10 @@
 }
 
 .btn-secondary {
-  color: #fff;
-  background-color: orange !important;
+  color:#31404B;
+  background-color: #F9BA3D;
+  border: 1px solid #31404B;
   border-radius: 4px;
-  border: 1px solid #763fe2;
 
 }
 
@@ -106,7 +126,7 @@
   border-top: 1px solid #763fe2 ;
 }
 .rounded-circle {
-  border: 1px solid #763fe2;
+  border: 1px solid #F9BA3D;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,9 +150,6 @@
 //   margin-top: auto;
 // }
 
- h1 {
-  color: red;
-}
 p {
   color: gray;
 
@@ -156,7 +173,8 @@ p {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 50px 0;
+  padding: 0 0 60px 0;
+  object-fit: cover;
 }
 
 
@@ -194,7 +212,8 @@ p {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-
-//datepicker
-
-
+.card-rounded-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

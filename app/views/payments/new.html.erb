@@ -10,7 +10,7 @@
     </div>
     <div class="col">
       <h1>Checkout summary</h1>
-      <p>Purchase of <strong><%= @appointment.experience.description %></strong> for <strong><%= number_to_currency @appointment.amount / 100 %></strong></p>
+      <p>Purchase of <strong><%= @appointment.experience.description %></strong> for <strong><%= number_to_currency(@appointment.amount / 100, unit: 'U$', separator: ",", delimiter: ".") %></strong></p>
       <button id="pay" class="btn btn-primary">Pay</button>
       <script src="https://js.stripe.com/v3/"></script>
       <script>
