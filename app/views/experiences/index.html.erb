@@ -18,7 +18,7 @@
       <% @experiences.where("category ILIKE ?", "gastronomy").each do |experience| %>
         <%= render "experience", experience: experience %>
       <% end %>
-      <%= link_to "See All Experiences", experiences_path, class: "d-flex justify-content-center mt-2"%>
+      <%= link_to "See All Experiences", experiences_path, class: "d-flex justify-content-center see-all-experiences mt-2"%>
     </div>
 
   <% end %>
@@ -31,7 +31,7 @@
       <% @experiences.where("category ILIKE ?", "workshops").each do |experience| %>
         <%= render "experience", experience: experience %>
       <% end %>
-      <%= link_to "See All Experiences", experiences_path, class: "d-flex justify-content-center mt-2"%>
+      <%= link_to "See All Experiences", experiences_path, class: "d-flex justify-content-center see-all-experiences mt-2"%>
     </div>
   <% end %>
 </div>
