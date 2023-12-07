@@ -9,4 +9,3 @@ Stripe.api_key = Rails.configuration.stripe[:secret_key]
 
 # StripeEvent.configure do |appointments|
 #   events.subscribe 'checkout.session.completed', StripeCheckoutSessionService.new
-# end

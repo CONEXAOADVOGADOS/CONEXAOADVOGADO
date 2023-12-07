@@ -36,7 +36,7 @@
           <i class="bi bi-calendar"></i>Date
         <% end %>
       <div class="form-border-bottom form-control-transparent form-fs-lg mt-2">
-        <%= form.text_field :date, id: 'datepicker', class: 'form-control py-2', placeholder: 'Choose a date' %>
+        <%= form.date_field :date, id: 'datepicker', class: 'form-control py-2', placeholder: 'Choose a date' %>
       </div>
     </div>
 
@@ -185,7 +185,7 @@ About END -->
       <!-- Three columns of text below the carousel -->
     <div class="mt-4">
       <div class="carrossel-home row pt-5 bg-light w-100">
-        <div class="col-lg-4">
+        <div class="col-lg-4 d-flex flex-column align-items-center">
           <div>
             <%= image_tag "https://img.freepik.com/fotos-gratis/contacao-de-historias-de-viagem-de-casal_52683-102408.jpg", class: "bd-placeholder-img rounded-circle", width: 170, height: 170, alt: "Placeholder" %>
           </div>
@@ -195,14 +195,14 @@ About END -->
         </div><!-- /.col-lg-4 -->
 
 
-        <div class="col-lg-4">
+        <div class="col-lg-4 d-flex flex-column align-items-center">
             <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF9FnooKdnD3MvfxG49a0fzkLjexl9s0uwM4JUyX4uQ6KdahXn28yJEpKqksJ7r80h3G4&usqp=CAU", class: "bd-placeholder-img rounded-circle", width: 170, height: 170, alt: "Placeholder" %>
             <h2 class="fw-normal mt-3">Gastronomy</h2>
             <p>Embark on a culinary journey with our gastronomy tours. Guided by local experts, these tours offer a taste of regional flavors and culinary traditions, ensuring a memorable dining experience.</p>
             <p><%= link_to 'More info »', experiences_path(anchor: 'gastronomy'), class: 'btn btn-secondary' %></p>
         </div><!-- /.col-lg-4 -->
 
-        <div class="col-lg-4">
+        <div class="col-lg-4 d-flex flex-column align-items-center">
           <%= image_tag "https://img.freepik.com/fotos-premium/conceito-de-negocios-e-empreendedorismo-palestrante-dando-uma-palestra-na-sala-de-conferencias-em-evento-de-negocios-publico-na-sala-de-conferencias-concentre-se-em-pessoas-irreconheciveis_386094-61.jpg", class: "bd-placeholder-img rounded-circle", width: 170, height: 170, alt: "Placeholder" %>
           <h2 class="fw-normal mt-3">Workshops</h2>
           <p>Join our skill-enhancing workshops led by local experts. Covering a range of topics from tech to arts, these sessions are designed to foster both personal and professional development.</p>
