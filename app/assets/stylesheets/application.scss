@@ -169,8 +169,13 @@ div .login-form {
 body {
   margin-top: 90px;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+.body-nav {
+  flex-grow: 1;
+}
 .actions {
   // text-align: center;
   align-items: center;
