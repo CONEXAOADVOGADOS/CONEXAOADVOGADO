@@ -41,7 +41,7 @@
 .links-navbar a:hover,
 .links-navbar a:focus {
   text-decoration: none;
-  color: yellow;
+  color: #F9BA3D;
  /* Add hover and focus styles here */
 }
 .links-navbar  a {
@@ -57,8 +57,14 @@
 .links-navbar a:nth-child(2) {
   margin-right: 20px;
 }
+.avatar {
+  margin-right: 16px;
+  width: 40px;
+  border-radius: 50%;
+
+}
 a .avatar {
-  border: 1px solid  #763FE2;
+  border: 1px solid  #F9BA3D;
   height: 60px;
   width: 60px;
 }
