@@ -47,8 +47,8 @@ pt-BR:
       updated_but_not_signed_in: "Your account has been updated successfully. As your password has changed, you need to log in again."
     sessions:
       signed_in: "Login successfully!"
-      signed_out: "Came out successfully."
-      already_signed_out: "Came out successfully."
+      signed_out: "Logged out successfully."
+      already_signed_out: "Logged out successfully."
     unlocks:
       send_instructions: "Within minutes, you will receive an email with instructions for unlocking your account."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions to unlock it within a few minutes."
