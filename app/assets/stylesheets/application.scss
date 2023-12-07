@@ -196,14 +196,16 @@ div.login-form-user-login {
 body {
   margin-top: 90px;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-
-
-  .actions {
-    align-items: center;
-    margin-bottom: 20px;
-    align-items: center;
+.body-nav {
+  flex-grow: 1;
+}
+.actions {
+  // text-align: center;
+  align-items: center;
 }
 
 

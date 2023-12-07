@@ -5,6 +5,7 @@
     <h2 id="excursions" class= "<%= 'd-none' unless @experiences.where("category ILIKE ?", "excursions").any? %>">Excursions</h2>
     <div class="row">
       <% @experiences.where("category ILIKE ?", "excursions").each do |experience| %>
+<<<<<<< HEAD
         <div class="col-3">
           <div class="card h-100 justify-content-between">
             <% if experience.photo.key %>
@@ -22,6 +23,9 @@
             <%= link_to "See More", experience_path(experience), class: "btn btn-primary  see-more-experiences" %>
           </div>
         </div>
+=======
+         <%= render "experience", experience: experience %>
+>>>>>>> master
       <% end %>
       <%= link_to "See All Experiences", experiences_path, class: "d-flex justify-content-center see-all-experiences mt-2"%>
     </div>
@@ -32,6 +36,7 @@
     <h2 id="gastronomy" class= "<%= 'd-none' unless @experiences.where("category ILIKE ?", "gastronomy").any? %>">Gastronomy<a href="#experiences" class="back-to-top-link"></a></h2>
     <div class="row">
       <% @experiences.where("category ILIKE ?", "gastronomy").each do |experience| %>
+<<<<<<< HEAD
         <div class="col-3">
           <div class="card h-100 justify-content-between">
             <!-- Display content for Gastronomy -->
@@ -51,6 +56,11 @@
         </div>
       <% end %>
        <%= link_to "See All Experiences", experiences_path, class: "d-flex justify-content-center see-all-experiences mt-2"%>
+=======
+        <%= render "experience", experience: experience %>
+      <% end %>
+      <%= link_to "See All Experiences", experiences_path, class: "d-flex justify-content-center mt-2"%>
+>>>>>>> master
     </div>
 
   <% end %>
@@ -61,6 +71,7 @@
     <h2 id="workshops" class= "<%= 'd-none' unless @experiences.where("category ILIKE ?", "workshops").any? %>">Workshops</h2>
     <div class="row">
       <% @experiences.where("category ILIKE ?", "workshops").each do |experience| %>
+<<<<<<< HEAD
         <div class="col-3">
           <div class="card h-100 justify-content-between">
             <% if experience.photo.key %>
@@ -79,6 +90,11 @@
         </div>
       <% end %>
        <%= link_to "See All Experiences", experiences_path, class: "d-flex justify-content-center see-all-experiences mt-2"%>
+=======
+        <%= render "experience", experience: experience %>
+      <% end %>
+      <%= link_to "See All Experiences", experiences_path, class: "d-flex justify-content-center mt-2"%>
+>>>>>>> master
     </div>
   <% end %>
 </div>

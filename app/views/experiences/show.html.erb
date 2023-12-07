@@ -27,7 +27,9 @@
           <% end %>
         </div>
         <%= simple_form_for [@experience, @appointment], method: :post do |f| %>
-          <%= f.submit "Book Now", class:"btn btn-primary rounded buy-event-detail"%>
+          <div class="d-flex align items-center justify-content-center">
+            <%= f.submit "Book Now", class:"btn btn-primary rounded buy-event-detail"%>
+          </div>
         <% end %>
       </div>
 
