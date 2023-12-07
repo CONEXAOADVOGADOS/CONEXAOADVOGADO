@@ -45,14 +45,22 @@ h2.login{
 }
 
 .form-inputs {
-  background-color: rgba(224, 228, 231, 0.8);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 6px 600px 0px;
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 4px;
+    background-color: rgba(224, 228, 231, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 115px 600px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+
+  a {
+    padding: 6px;
+    border-radius: 4px;
+    background-color:#31404B;
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
 
@@ -86,7 +94,6 @@ h2.login{
 }
 }
 
-
 .forgot-pass-div {
   text-align: center;
 }
@@ -97,15 +104,16 @@ h2.login{
 /////////////////////////////////  FORGOT PASSWORD
 
 .form-inputs-forgot-pass {
-    background-color: rgba(224, 228, 231, 0.8);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 250px 600px 0px;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 4px;
+  background-color: rgba(224, 228, 231, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 250px 600px 30px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
 }
+
 .forgot-password {
   color:#31404B;
   text-decoration: none;
@@ -114,6 +122,12 @@ h2.login{
     color: #587386;
     text-decoration: none;
   }
+}
+
+.btn-signup {
+  background-color:#31404B;
+  color: #fff;
+
 }
 
 .form-actions-forgot-pass{
@@ -132,6 +146,19 @@ div .login-form {
   margin-top: 50%;
   background-color: rgba(233, 233, 233, 0.8);
 }
+
+
+
+div.login-form-user-login {
+    background-color: rgba(233, 233, 233, 0.8);
+    margin: 200px 30%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #31404B;
+    border-radius: 4px;
+    padding: 10px;
+}
+
 
 .login-form {
   background-color: rgba(233, 233, 233, 0.8);
@@ -171,10 +198,14 @@ body {
   min-height: 100vh;
 }
 
-.actions {
-  // text-align: center;
-  align-items: center;
+
+
+  .actions {
+    align-items: center;
+    margin-bottom: 20px;
+    align-items: center;
 }
+
 
 .footer-top {
   margin-top: 150px;
@@ -224,4 +255,13 @@ body {
   justify-content: center;
   margin-top: 110px;
   color: #000000;
+}
+.btn-update-edit-profile {
+    padding: 5px 15px;
+    font-size: 16px;
+    margin: 5px;
+     border-radius: 4px;
+    border: 1px solid black;
+    background-color:#31404B;
+    color:#fff;
 }

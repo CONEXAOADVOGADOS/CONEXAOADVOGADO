@@ -25,15 +25,29 @@
   }
 }
 
-img.logo-central-home {
-  display:table-column-group;
-  height: 160px;
-  width:160px;
-}
-.logo-text-home {
+div.logo-central-home {
+    display:flex;
+    justify-content: center;
+  }
+  .logo-text-home {
+  margin-top: 0px;
   display: flex;
   justify-content: center;
 }
+
+
+
+// .logo-container {
+//   display: flex;
+//   height: 100vh; /* Ajuste conforme necessário */
+// }
+
+// .logo-central-home {
+//   height: 160px;
+//   width: 160px;
+//   /* Adicione outros estilos conforme necessário */
+// }
+
 
 .text-white {
   text-wrap: balance;
@@ -136,9 +150,6 @@ img.logo-central-home {
 //   margin-top: auto;
 // }
 
- h1 {
-  color: red;
-}
 p {
   color: gray;
 
@@ -162,7 +173,8 @@ p {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 50px 0;
+  padding: 0 0 60px 0;
+  object-fit: cover;
 }
 
 

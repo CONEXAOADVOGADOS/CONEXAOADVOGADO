@@ -1,8 +1,8 @@
 <%# Web Browser %>
 <section class="pt-0">
 <div class="bg-home">
-      <div class="logo-text-home">
-         <%= image_tag "logotransparente.png", alt: "Logo My-Welcome", class: "logo-central-home", width: 300, height: 300, crop: :fill %>
+      <div class="logo-central-home">
+         <%= image_tag "logotransparente.png", alt: "Logo My-Welcome", class: "logo-text-home", width: 300, height: 300, crop: :fill %>
       </div>
 
 	<div class="container position-relative">
@@ -189,34 +189,27 @@ About END -->
       <div class="carrossel-home row pt-5 bg-light w-100">
         <div class="col-lg-4">
           <div>
-          </div>
-          <div class="card-rounded-home">
             <%= image_tag "https://img.freepik.com/fotos-gratis/contacao-de-historias-de-viagem-de-casal_52683-102408.jpg", class: "bd-placeholder-img rounded-circle", width: 170, height: 170, alt: "Placeholder" %>
+          </div>
           <h2 class="fw-normal mt-3">Excursions</h2>
           <p>Explore diverse destinations with our guided excursions. Experience captivating city tours, serene nature trails, and rich cultural landmarks, all tailored for an enriching travel adventure.</p>
           <p><%= link_to 'More info »', experiences_path(anchor: 'excursions'), class: 'btn btn-secondary' %></p>
         </div><!-- /.col-lg-4 -->
-          </div>
 
 
         <div class="col-lg-4">
-          <div class="card-rounded-home">
             <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF9FnooKdnD3MvfxG49a0fzkLjexl9s0uwM4JUyX4uQ6KdahXn28yJEpKqksJ7r80h3G4&usqp=CAU", class: "bd-placeholder-img rounded-circle", width: 170, height: 170, alt: "Placeholder" %>
             <h2 class="fw-normal mt-3">Gastronomy</h2>
             <p>Embark on a culinary journey with our gastronomy tours. Guided by local experts, these tours offer a taste of regional flavors and culinary traditions, ensuring a memorable dining experience.</p>
             <p><%= link_to 'More info »', experiences_path(anchor: 'gastronomy'), class: 'btn btn-secondary' %></p>
         </div><!-- /.col-lg-4 -->
-          </div>
 
         <div class="col-lg-4">
-        <div  class="card-rounded-home">
           <%= image_tag "https://img.freepik.com/fotos-premium/conceito-de-negocios-e-empreendedorismo-palestrante-dando-uma-palestra-na-sala-de-conferencias-em-evento-de-negocios-publico-na-sala-de-conferencias-concentre-se-em-pessoas-irreconheciveis_386094-61.jpg", class: "bd-placeholder-img rounded-circle", width: 170, height: 170, alt: "Placeholder" %>
           <h2 class="fw-normal mt-3">Workshops</h2>
           <p>Join our skill-enhancing workshops led by local experts. Covering a range of topics from tech to arts, these sessions are designed to foster both personal and professional development.</p>
           <p><%= link_to 'More info »', experiences_path(anchor: 'workshops'), class: 'btn btn-secondary' %></p>
         </div><!-- /.col-lg-4 -->
-
-        </div>
 
     </div><!-- /.container -->
 
