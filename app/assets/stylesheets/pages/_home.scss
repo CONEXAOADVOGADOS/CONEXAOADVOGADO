@@ -174,9 +174,12 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 50px 0;
- 
+
 }
 
+.paragraph-home {
+  text-align: center;
+}
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
@@ -212,5 +215,6 @@ p {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
 
 //datepicker
