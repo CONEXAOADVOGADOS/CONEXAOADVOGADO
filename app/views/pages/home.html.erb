@@ -26,7 +26,7 @@
         <%= form.label :location, class: 'h6 fw-normal mb-0' do %>
           <i class="bi bi-geo-alt"></i>Location
         <% end %>
-        <div class="form-border-bottom form-control-transparent form-fs-lg mt-2">
+        <div class="form-border-bottom form-control-transparent form-fs-lg m-1">
           <%= form.select :location, ['São Paulo', 'Rio de Janeiro', 'Fortaleza'], { prompt: 'Select location' }, { class: 'form-select js-choice', data: { search_enabled: 'true' } } %>
         </div>
       </div>
@@ -36,16 +36,18 @@
         <%= form.label :date, class: 'h6 fw-normal mb-0' do %>
           <i class="bi bi-calendar"></i>Date
         <% end %>
-      <div class="form-border-bottom form-control-transparent form-fs-lg mt-2">
-        <%= form.date_field :date, id: 'datepicker', class: 'form-control py-2', placeholder: 'Choose a date' %>
+      <div class="form-border-bottom form-control-transparent form-fs-lg m-1">
+          <%= form.date_field :date, id: 'datepicker', class: 'form-control', placeholder: 'Choose a date', style: 'background-color: var(--bs-body-bg); border: 1px solid var(--bs-border-color);' %>
       </div>
     </div>
 
 
       <!-- Guest -->
       <div class="col-3">
-        <%= form.label :category, 'Tour type', class: 'h6 fw-normal mt-2' %>
-        <div class="form-border-bottom form-control-transparent form-fs-lg">
+        <%= form.label :category, class: 'h6 fw-normal mb-0' do %>
+         <i class="bi bi-geo-alt"></i>Tour Type
+        <% end %>
+        <div class="form-border-bottom form-control-transparent form-fs-lg m-1">
           <%= form.select :category, ['Gastronomy', 'Excursion', 'Workshop'], { prompt: 'Select type' }, { class: 'form-select js-choice', data: { search_enabled: 'true' } } %>
         </div>
       </div>

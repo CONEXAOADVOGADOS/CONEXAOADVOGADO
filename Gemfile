@@ -1,3 +1,6 @@
+gem 'dotenv-rails', require: 'dotenv/rails-now'
+gem 'cloudinary'
+
 source "https://rubygems.org"
 
 ruby "3.1.2"
@@ -55,7 +58,7 @@ gem "sassc-rails"
 gem "rails-i18n"
 
 group :development, :test do
-  gem "dotenv-rails"
+  # gem "dotenv-rails"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[mri windows]
 end
