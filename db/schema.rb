@@ -64,7 +64,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_06_164733) do
 
   create_table "experiences", force: :cascade do |t|
     t.string "category"
-    t.string "specialty"
+    t.string "lawyer_name"
     t.string "description"
     t.string "local"
     t.date "date"

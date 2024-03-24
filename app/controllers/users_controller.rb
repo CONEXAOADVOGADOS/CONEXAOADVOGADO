@@ -45,7 +45,7 @@ class UsersController < ApplicationController
   end
 
   # def experience_params
-  #   params.require(:experience).permit(:specialty, :category, :description, :date, :price, :local)
+  #   params.require(:experience).permit(:lawyerd_nameame, :category, :description, :date, :price, :local)
   # end
 
   # def my_experiences
@@ -63,7 +63,7 @@ class UsersController < ApplicationController
   # end
 
   def experience_params
-    params.require(:experience).permit(:specialty, :category, :description, :date, :price, :local)
+    params.require(:experience).permit(:lawyer_name, :category, :description, :OAB, :phone, :mail, :local)
   end
 
   def search

@@ -1,14 +1,14 @@
 class ExperiencesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
 
-  def index
-    @experiences = policy_scope(Experience)
-    filters = {}
-    filters[:category] = "%#{params[:category]}%" if params[:category].present?
-    filters[:date] = Date.parse(params[:date]) if params[:date].present?
-    filters[:local] = "%#{params[:location]}%" if params[:location].present?
-    apply_filters(@experiences, filters)
-  end
+  # def index
+  #   @experiences = policy_scope(Experience)
+  #   filters = {}
+  #   filters[:category] = "%#{params[:category]}%" if params[:category].present?
+  #   filters[:date] = Date.parse(params[:date]) if params[:date].present?
+  #   filters[:local] = "%#{params[:location]}%" if params[:location].present?
+  #   apply_filters(@experiences, filters)
+  # end
 
   def show
     @experience = Experience.find(params[:id])
@@ -74,7 +74,7 @@ class ExperiencesController < ApplicationController
   end
 
   def experience_params
-    params.require(:experience).permit(:specialty, :photos, :category, :description, :date, :price, :local, :photo)
+    params.require(:experience).permit(:law, :photos, :category, :description, :OAB, :phone, :mail, :photo)
   end
 
   def search
