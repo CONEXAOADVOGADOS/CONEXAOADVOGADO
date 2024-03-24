@@ -4,13 +4,14 @@
     <%= simple_form_for( @experience, html: { class: 'new-event-form' } ) do |f| %>
       <div class="row">
         <div class="col-md-6">
-          <%= f.input :specialty, label: "Experience Name" %>
-          <%= f.input :category, collection: ['Excursions', 'Gastronomy', 'Workshops'], prompt: "Select Category" %>
-          <%= f.input :local, collection: ['São Paulo', 'Rio de Janeiro', 'Fortaleza'], prompt: "Select City" %>
+          <%= f.input :lawyer_name, label: "Nome do Advogado" %>
+          <%= f.input :category, collection: ['Previdenciario', 'Trabalhista', 'Penal'], prompt: "Selecione a Especialidade" %>
+          <%# <%= f.input :local, collection: ['São Paulo', 'Rio de Janeiro', 'Fortaleza'], prompt: "Selecione a City" %>
         </div>
         <div class="col-md-6">
-          <%= f.input :date, as: :date, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
-          <%= f.input :price %>
+          <%= f.input :OAB, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
+          <%= f.input :phone %>
+          <%= f.input :mail%>
           <%= f.input :photo, as: :file %>
         </div>
         <div class="col-md-6">
@@ -21,4 +22,4 @@
   </div>
 </div>
 
-    <%# <%= f.input :date, as: :date, label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>
+    <%# <%= f.input :date, as: , label_html: { class: 'form-label' }, input_html: { class: 'form-input' } %>

@@ -75,6 +75,6 @@ class AppointmentsController < ApplicationController
   end
 
   def experience_params
-    params.require(:appointment).permit(:specialty, :photos, :category, :description, :date, :price, :local, :photo)
+    params.require(:appointment).permit(:lawyer_name, :photos, :category, :description, :OAB, :telephone, :mail, :photo)
   end
 end

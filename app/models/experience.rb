@@ -2,12 +2,12 @@ class Experience < ApplicationRecord
   belongs_to :user
   has_many :appointments
   validates :category, presence: true
-  validates :specialty, presence: true
+  validates :lawyer_name, presence: true
   validates :description, presence: true
-  validates :local, presence: true
-  validates :date, presence: true
-  validates :price, presence: true
-  validates :price, numericality: { greater_than: 0 }
+  validates :phone, presence: true
+  validates :OAB, presence: true
+  validates :mail, presence: true
+  # validates :price, numericality: { greater_than: 0 }
 
   has_one_attached :photo
   has_many :users, through: :appointments
