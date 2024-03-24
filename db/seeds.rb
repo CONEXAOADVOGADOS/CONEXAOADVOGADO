@@ -23,13 +23,13 @@ puts "Created #{User.count} users"
 
 # Experiences seed data
 
-experience = Experience.new( specialty: "Thai Food",
-                             category: "gastronomy",
-                             description: "Thai street food festival",
-                             date: Date.today + 2.weeks,
-                             price: 15,
-                             local: "São Paulo",
-                             user: User.all.sample)
+experience = Experience.new(  specialty: "Thai Food",
+                              category: "gastronomy",
+                              description: "Thai street food festival",
+                              date: Date.today + 2.weeks,
+                              price: 15,
+                              local: "São Paulo",
+                            user: User.all.sample)
 
 file = URI.open("https://foodmagazine.com.br/imagens/noticias/butatan_food_park.jpg")
 experience.photo.attach(io: file, filename: "thai.png", content_type: "image/png")

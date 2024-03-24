@@ -3,14 +3,14 @@
 
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "logotransparente.png", class: "logo-nav" %>
+    <%#   <%= image_tag "logotransparente.png", class: "logo-nav" %>
     <% end %>
 
 
     <div class="links-navbar">
-    <%= link_to "Excursions", experiences_path('show_only': 'excursions') %>
-    <%= link_to "Gastronomy", experiences_path('show_only': 'gastronomy') %>
-    <%= link_to "Workshops", experiences_path('show_only': 'workshops') %>
+    <%= link_to "Trabalhista", experiences_path('show_only': 'excursions') %>
+    <%= link_to "Previdenciário", experiences_path('show_only': 'gastronomy') %>
+    <%= link_to "Penal", experiences_path('show_only': 'workshops') %>
     </div>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

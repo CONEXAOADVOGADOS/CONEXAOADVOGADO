@@ -131,7 +131,7 @@ GEM
       railties (>= 3.2)
     drb (2.2.0)
       ruby2_keywords
-    error_highlight (0.5.1)
+    error_highlight (0.6.0)
     erubi (1.12.0)
     execjs (2.9.1)
     faker (3.2.2)
@@ -347,7 +347,7 @@ DEPENDENCIES
   debug
   devise
   dotenv-rails
-  error_highlight (>= 0.4.0)
+  error_highlight (>= 0.6.0)
   faker
   font-awesome-sass (~> 6.1)
   geocoder
