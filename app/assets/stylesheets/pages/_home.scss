@@ -102,7 +102,7 @@
 
 .btn-secondary {
   color:#31404B;
-  background-color: #F9BA3D;
+  background-color: #27c9dc;
   border: 1px solid #31404B;
   border-radius: 4px;
 
@@ -126,7 +126,7 @@
   border-top: 1px solid #763fe2 ;
 }
 .rounded-circle {
-  border: 1px solid #F9BA3D;
+  border: 1px solid #27c9dc;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -168,13 +168,12 @@ p {
   grid-gap: 16px;
 }
 
-.bg-home{
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), asset-url("bg/02.png");
+.bg-home {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url("https://res.cloudinary.com/dop9mb8rc/image/upload/v1711334808/man-5806015_640_neo6kr.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 50px 0;
-
 }
 
 .paragraph-home {

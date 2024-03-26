@@ -1,0 +1,38 @@
+<div class="container mt-4">
+  <h1 class="mt-4 mb-4 text-center">Lawyer Details</h1>
+
+  <div class="card">
+    <div class="card-body">
+
+      <% if @lawyer.photo.key %>
+              <%= cl_image_tag @lawyer.photo.key, class: "card-img-top", width: 300, height: 300, crop: :fill %>
+            <% else %>
+              <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "card-img-top", width: 300, height: 300, crop: :fill %>
+            <% end %>
+
+      <%# <h5 class="card-title"><%= @lawyer.specialty %>
+      <p class="card-text"><i class="bi bi-card-text icon"></i><strong>Description:</strong> <%= @lawyer.description %></p>
+      <p class="card-text"><i class="bi bi-tags icon"></i><strong>Category:</strong> <%= @lawyer.category %></p>
+      <p class="card-text"><i class="bi bi-calendar icon"></i><strong>Date:</strong> <%= @lawyer.date.strftime('%B %d, %Y') %></p>
+      <p class="card-text"><i class="bi bi-geo-alt icon"></i><strong>Local:</strong> <%= @lawyer.local %></p>
+      <p class="card-text"><i class="bi bi-cash icon"></i><strong>Price:</strong> <%= number_to_currency(@lawyer.price, unit: 'U$') %></p>
+      </div>
+      <div class="div-buttons-edit-delete-buy">
+        <div>
+          <% if policy(@lawyer).edit? %>
+            <%= link_to 'Delete', lawyer_path, class: "btn btn-success-delete-lawyer btn-danger rounded", data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
+          <% end %>
+          <% if policy(@lawyer).edit? %>
+            <%= link_to "Edit", edit_lawyer_path, class: "btn btn-success-edit-lawyer btn-edit-buy rounded" %>
+          <% end %>
+        </div>
+        <%= simple_form_for [@lawyer, @appointment], method: :post do |f| %>
+          <div class="d-flex align items-center justify-content-center">
+            <%= f.submit "Book Now", class:"btn btn-primary rounded buy-event-detail"%>
+          </div>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>

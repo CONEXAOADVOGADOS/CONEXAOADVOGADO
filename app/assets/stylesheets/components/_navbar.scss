@@ -1,6 +1,7 @@
 .navbar-mw{
   justify-content: space-between;
-  background:#31404B;
+  // background:#31404B;
+  background-color: #f8f9fa;
   height: 90px;
 }
 .fixed-nav {
@@ -45,7 +46,7 @@
  /* Add hover and focus styles here */
 }
 .links-navbar  a {
-  color: white;
+  color: rgba(0,0,0,0.3);
 }
 .navbar-light .navbar-nav .nav-link  {
   color: #fff;

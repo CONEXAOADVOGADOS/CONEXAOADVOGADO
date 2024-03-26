@@ -1,4 +1,4 @@
-class Experience < ApplicationRecord
+class Lawyer < ApplicationRecord
   belongs_to :user
   has_many :appointments
   validates :category, presence: true

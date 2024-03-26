@@ -1,8 +1,8 @@
 
 <div class="form-container-create">
-  <h1  class="h1-create"style="color: black;">Create an Experience</h1>
+  <h1  class="h1-create"style="color: black;">Create an Lawyer</h1>
   <div class="form-wrapper">
-    <%= simple_form_for( @experience, html: { class: 'new-event-form' } ) do |f| %>
+    <%= simple_form_for( @lawyer, html: { class: 'new-event-form' } ) do |f| %>
       <div class="row">
         <div class="col-md-6">
           <%= f.input :lawyer_name, label: "Nome do advogado" %>
@@ -18,8 +18,8 @@
         <%= f.input :description, as: :text, label_html: { class: 'form-label' }, input_html: { class: 'form-textarea' } %>
 
         <div class="col-md-12 d-flex flex-column align-items-center"> <!-- Adicione uma nova div para envolver o botão -->
-          <%# <%= f.button :submit, "Create Experience", class: 'btn btn-success btn-sm', data: { confirm: "Experience created successfully", turbo_confirm: "Experience created successfully" }, method: :create %>
-          <%= f.button :submit, "Create Experience", class: 'btn btn-success btn-sm' %>
+          <%# <%= f.button :submit, "Create Lawyer", class: 'btn btn-success btn-sm', data: { confirm: "Lawyer created successfully", turbo_confirm: "Lawyer created successfully" }, method: :create %>
+          <%= f.button :submit, "Create Lawyer", class: 'btn btn-success btn-sm' %>
           <!-- Adicione a classe 'btn-sm' para diminuir o tamanho do botão -->
         </div>
       </div>

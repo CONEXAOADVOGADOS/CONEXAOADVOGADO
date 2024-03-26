@@ -2,54 +2,54 @@ class UsersController < ApplicationController
   include Pundit::Authorization
 
   def show
-    @experiences = Experience.where(user: current_user)
+    @lawyers = Lawyer.where(user: current_user)
     @appointments = Appointment.all
   end
 
   def new
-    @experience = Experience.new
-    authorize @experience
+    @lawyer = Lawyer.new
+    authorize @lawyer
   end
 
   def index
   end
 
   def create
-    @experience = Experience.new(experience_params)
-    @experience.user = current_user
-    authorize @experience
-    if @experience.save
-      redirect_to experience_path(@experience)
+    @lawyer = Lawyer.new(lawyer_params)
+    @lawyer.user = current_user
+    authorize @lawyer
+    if @lawyer.save
+      redirect_to lawyer_path(@lawyer)
     else
       render :new
     end
   end
 
   def edit
-    @experience = Experience.find(params[:id])
-    authorize @experience
+    @lawyer = Lawyer.find(params[:id])
+    authorize @lawyer
   end
 
   def update
-    @experience = Experience.find(params[:id])
-    authorize @experience
-    @experience.update(experience_params)
-    redirect_to experience_path(@experience)
+    @lawyer = Lawyer.find(params[:id])
+    authorize @lawyer
+    @lawyer.update(lawyer_params)
+    redirect_to lawyer_path(@lawyer)
   end
 
   def destroy
-    @experience = Experience.find(params[:id])
-    authorize @experience
-    @experience.destroy
-    redirect_to experiences_path
+    @lawyer = Lawyer.find(params[:id])
+    authorize @lawyer
+    @lawyer.destroy
+    redirect_to lawyers_path
   end
 
-  # def experience_params
-  #   params.require(:experience).permit(:lawyerd_nameame, :category, :description, :date, :price, :local)
+  # def lawyer_params
+  #   params.require(:lawyer).permit(:lawyerd_nameame, :category, :description, :date, :price, :local)
   # end
 
-  # def my_experiences
-  # @experiences = Experience.where(user: current_user)
+  # def my_lawyers
+  # @lawyers = Lawyer.where(user: current_user)
   # end
 
   # def my_appointments
@@ -62,12 +62,12 @@ class UsersController < ApplicationController
   #   devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
   # end
 
-  def experience_params
-    params.require(:experience).permit(:lawyer_name, :category, :description, :OAB, :phone, :mail, :local)
+  def lawyer_params
+    params.require(:lawyer).permit(:lawyer_name, :category, :description, :OAB, :phone, :mail, :local)
   end
 
   def search
-    @experiences = Experience.where("category LIKE ?", "%#{params[:q]}%")
+    @lawyers = Lawyer.where("category LIKE ?", "%#{params[:q]}%")
     render :index
   end
 end

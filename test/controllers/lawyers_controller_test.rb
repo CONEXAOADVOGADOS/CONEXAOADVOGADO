@@ -1,6 +1,6 @@
 require "test_helper"
 
-class ExperienceTest < ActiveSupport::TestCase
+class LawyersControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   get "up" => "rails/health#show", as: :rails_health_check
-  resources :experiences do
+  resources :lawyers do
     resources :appointments, only: [:new, :create]
   end
   resources :appointments, except: [:new, :create] do
@@ -14,6 +14,6 @@ Rails.application.routes.draw do
 
   resources :users, only: [:edit, :update]
 
-  # resources :experiences
+  # resources :lawyers
   # resources :appointments
 end
