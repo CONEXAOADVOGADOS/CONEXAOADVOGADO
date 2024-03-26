@@ -3,14 +3,21 @@
 
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag "https://res.cloudinary.com/dop9mb8rc/image/upload/v1711326214/cb956f35352489.56f344556f06f_dsghko.jpg" %>
     <%#   <%= image_tag "logotransparente.png", class: "logo-nav" %>
     <% end %>
 
 
     <div class="links-navbar">
-    <%= link_to "Trabalhista", experiences_path('show_only': 'excursions') %>
-    <%= link_to "Previdenciário", experiences_path('show_only': 'gastronomy') %>
-    <%= link_to "Penal", experiences_path('show_only': 'workshops') %>
+      <%# <%= link_to "Trabalhista", lawyers_path('show_only': 'excursions') %>
+      <%# <%= link_to "Previdenciário", lawyers_path('show_only': 'gastronomy') %>
+      <%# <%= link_to "Penal", lawyers_path('show_only': 'workshops') %>
+
+      <%= link_to "Sobre", lawyers_path %>
+      <%= link_to "Área do Cliente", lawyers_path%>
+      <%= link_to "Área do Advogado", lawyers_path %>
+      <%= link_to "Agendamento Online", lawyers_path%>
+      <%= link_to "Planos e Preços", lawyers_path%>
     </div>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,9 +28,9 @@
       <ul class="navbar-nav me-auto">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Excursions", experiences_path(anchor: 'excursions'), class: "dropdown-item" %>
-              <%= link_to "Gastronomy", experiences_path(anchor: 'gastronomy'), class: "dropdown-item" %>
-              <%= link_to "Workshops", experiences_path(anchor: 'workshops'), class: "dropdown-item" %>
+              <%= link_to "Excursions", lawyers_path(anchor: 'excursions'), class: "dropdown-item" %>
+              <%= link_to "Gastronomy", lawyers_path(anchor: 'gastronomy'), class: "dropdown-item" %>
+              <%= link_to "Workshops", lawyers_path(anchor: 'workshops'), class: "dropdown-item" %>
             </div>
           </li>
           </ul>
@@ -42,12 +49,12 @@
           </li>  -->
           <%# <li class="nav-item dropdown"> %>
             <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= image_tag "https://res.cloudinary.com/dop9mb8rc/image/upload/v1701794577/captura_de_tela_de_2023-12-05_13-31-04_lc1z2l.png", class: "avatar", alt: "dropdown menu" %>
+              <%= image_tag "https://res.cloudinary.com/dop9mb8rc/image/upload/v1711326214/cb956f35352489.56f344556f06f_dsghko.jpg", class: "avatar", alt: "dropdown menu" %>
             </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Appointments", appointments_path, class: "dropdown-item" %>
               <%= link_to "Edit Profile", edit_user_registration_path, class: "dropdown-item" %>
-              <%= link_to "Create Experience", new_experience_path, class: "dropdown-item" %>
+              <%= link_to "Create Lawyer", new_lawyer_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
           </li>

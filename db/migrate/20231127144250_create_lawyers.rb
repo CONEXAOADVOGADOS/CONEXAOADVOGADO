@@ -1,11 +1,11 @@
-class CreateExperiences < ActiveRecord::Migration[7.1]
+class CreateLawyers < ActiveRecord::Migration[7.1]
   def change
-    create_table :experiences do |t|
+    create_table :lawyers do |t|
       t.string :category
       t.string :lawyer_name
       t.string :description
       t.string :mail
-      t.integer :OAB
+      t.string :OAB
       t.string :phone
       t.references :user, null: false, foreign_key: true
 

@@ -4,13 +4,13 @@
     <div class="card-body">
       <div class="card-body">
       <h3><b>Checkout summary</b></h3>
-            <% if @appointment.experience.photo.key %>
-        <%= cl_image_tag @appointment.experience.photo.key, class: "card-img-top", width: 300, height: 300, crop: :fill %>
+            <% if @appointment.lawyer.photo.key %>
+        <%= cl_image_tag @appointment.lawyer.photo.key, class: "card-img-top", width: 300, height: 300, crop: :fill %>
       <% else %>
         <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "img-card", class: "card-img-top", width: 300, height: 300, crop: :fill %>
       <% end %>
       <div class="purchase">
-      <p>Purchase of <strong><%= @appointment.experience.description %></strong> for <strong><%= number_to_currency(@appointment.amount / 100, unit: 'U$', separator: ",", delimiter: ".") %></strong></p>
+      <p>Purchase of <strong><%= @appointment.lawyer.description %></strong> for <strong><%= number_to_currency(@appointment.amount / 100, unit: 'U$', separator: ",", delimiter: ".") %></strong></p>
       </div>
       <div class="pay">
       <button id="pay" class="btn btn-primary">Pay</button>

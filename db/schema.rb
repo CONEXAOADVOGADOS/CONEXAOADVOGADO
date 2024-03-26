@@ -44,13 +44,13 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_06_164733) do
 
   create_table "appointments", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.bigint "experience_id", null: false
+    t.bigint "lawyer_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "amount"
     t.string "state"
     t.string "checkout_session_id"
-    t.index ["experience_id"], name: "index_appointments_on_experience_id"
+    t.index ["lawyer_id"], name: "index_appointments_on_lawyer_id"
     t.index ["user_id"], name: "index_appointments_on_user_id"
   end
 
@@ -62,17 +62,17 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_06_164733) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "experiences", force: :cascade do |t|
+  create_table "lawyers", force: :cascade do |t|
     t.string "category"
     t.string "lawyer_name"
     t.string "description"
-    t.string "local"
-    t.date "date"
-    t.integer "price"
+    t.string "mail"
+    t.string "OAB"
+    t.string "phone"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_experiences_on_user_id"
+    t.index ["user_id"], name: "index_lawyers_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -85,14 +85,14 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_06_164733) do
     t.datetime "updated_at", null: false
     t.string "name"
     t.string "cpf"
-    t.string "phone"
+    t.string "phone_number"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "appointments", "experiences"
+  add_foreign_key "appointments", "lawyers"
   add_foreign_key "appointments", "users"
-  add_foreign_key "experiences", "users"
+  add_foreign_key "lawyers", "users"
 end

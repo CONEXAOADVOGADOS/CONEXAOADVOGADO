@@ -1,30 +1,30 @@
 <div class="container justify-elements-center">
   <div class="margin-top justify-elements-center">
-    <div class="experience">
-      <h1 class="event-detail-title"><%= @experience.lawyer_name %></h1>
+    <div class="lawyer">
+      <h1 class="event-detail-title"><%= @lawyer.lawyer_name %></h1>
 
       <div class="card-img-container">
-        <% if @experience.photo.key %>
-          <%= cl_image_tag @experience.photo.key, class: "card-img-top", width: 300, height: 300, crop: :fill %>
+        <% if @lawyer.photo.key %>
+          <%= cl_image_tag @lawyer.photo.key, class: "card-img-top", width: 300, height: 300, crop: :fill %>
         <% else %>
           <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "img-card", class: "card-img-top", width: 300, height: 300, crop: :fill %>
         <% end %>
       </div>
-      <p><i class="icon-category"></i> <strong>Category: </strong>  <%=" "%> <%= @experience.category %></p>
-      <p><i class="icon-category"></i> <strong>Description: </strong><%=" "%> <%= @experience.description %></p>
-      <p><i class="icon-category"></i> <strong>Local: </strong>  <%=" "%> <%= @experience.local %></p>
-      <p><i class="icon-category"></i> <strong>Date: </strong>  <%=" "%> <%= @experience.date.strftime("%d %B %Y") %></p>
-      <p><i class="icon-category"></i> <strong>Price: </strong>  <%=" "%> <%= number_to_currency(@experience.price, unit: 'U$') %></p>
+      <p><i class="icon-category"></i> <strong>Category: </strong>  <%=" "%> <%= @lawyer.category %></p>
+      <p><i class="icon-category"></i> <strong>Description: </strong><%=" "%> <%= @lawyer.description %></p>
+      <p><i class="icon-category"></i> <strong>Local: </strong>  <%=" "%> <%= @lawyer.local %></p>
+      <p><i class="icon-category"></i> <strong>Date: </strong>  <%=" "%> <%= @lawyer.date.strftime("%d %B %Y") %></p>
+      <p><i class="icon-category"></i> <strong>Price: </strong>  <%=" "%> <%= number_to_currency(@lawyer.price, unit: 'U$') %></p>
 
 
-      <% if policy(@experience).edit? %>
-        <%= link_to "Edit", edit_experience_path, class: "btn btn-success rounded" %>
+      <% if policy(@lawyer).edit? %>
+        <%= link_to "Edit", edit_lawyer_path, class: "btn btn-success rounded" %>
       <% end %>
-      <% if policy(@experience).edit? %>
-        <%= link_to 'Delete', experience_path, class: "btn btn-danger rounded", data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
+      <% if policy(@lawyer).edit? %>
+        <%= link_to 'Delete', lawyer_path, class: "btn btn-danger rounded", data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
       <% end %>
 
-      <%= simple_form_for [@experience, @appointment], method: :post do |f| %>
+      <%= simple_form_for [@lawyer, @appointment], method: :post do |f| %>
         <%= f.submit "Contratar", class:"btn btn-primary rounded"%>
       <% end %>
     </div>
