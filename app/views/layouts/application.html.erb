@@ -1,7 +1,7 @@
 <%# @import 'variables'
-@import 'pages/appointments'; %>
+@import 'pages/connections'; %>
 <%# <% @import 'bootstrap/scss/bootstrap'; %>
-<%# <% @import 'pages/appointments'; %>
+<%# <% @import 'pages/connections'; %>
 
 <!DOCTYPE html>
 <html>
@@ -148,16 +148,19 @@
 </head>
 
 <body>
-<div class="fixed-nav">
-    <%= render "shared/navbar" %>
-</div>
-    <%= render "shared/flashes" %>
-<div class="body-nav">
-    <%= yield %>
-</div>
-    <%= render "shared/footer" %>
-    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="/assets/vendor/flatpickr/js/flatpickr.min.js"></script>
+  <div class="fixed-nav body-nav">
+      <%= render "shared/navbar" %>
+  </div class="px-5">
+      <%= render "shared/flashes" %>
+  <div class="body-nav mx-spetial">
+      <%= yield %>
+  </div>
+  <div class="fixed-footer">
+      <%= render "shared/footer" %>
+  </div>
+  <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="/assets/vendor/flatpickr/js/flatpickr.min.js"></script>
+  <%= javascript_include_tag "scripts" %>
 </body>
 </html>
 <%# &middot; %>

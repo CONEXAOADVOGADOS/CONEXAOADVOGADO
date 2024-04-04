@@ -6,14 +6,15 @@ Rails.application.routes.draw do
 
   get "up" => "rails/health#show", as: :rails_health_check
   resources :lawyers do
-    resources :appointments, only: [:new, :create]
+    resources :connections, only: [:new, :create]
   end
-  resources :appointments, except: [:new, :create] do
+
+  resources :connections, except: [:new, :create] do
     resources :payments, only: :new
   end
 
   resources :users, only: [:edit, :update]
 
   # resources :lawyers
-  # resources :appointments
+  # resources :connections
 end

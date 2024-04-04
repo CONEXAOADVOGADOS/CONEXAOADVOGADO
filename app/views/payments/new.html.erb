@@ -1,29 +1,30 @@
-<!-- app/views/payments/new.html.erb -->
-<div class="appointments-container mt-3">
+<!-- app/views/connections/new.html.erb -->
+<div class="connections-container mt-3">
   <div class="card">
     <div class="card-body">
       <div class="card-body">
-      <h3><b>Checkout summary</b></h3>
-            <% if @appointment.lawyer.photo.key %>
-        <%= cl_image_tag @appointment.lawyer.photo.key, class: "card-img-top", width: 300, height: 300, crop: :fill %>
-      <% else %>
-        <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "img-card", class: "card-img-top", width: 300, height: 300, crop: :fill %>
-      <% end %>
-      <div class="purchase">
-      <p>Purchase of <strong><%= @appointment.lawyer.description %></strong> for <strong><%= number_to_currency(@appointment.amount / 100, unit: 'U$', separator: ",", delimiter: ".") %></strong></p>
-      </div>
-      <div class="pay">
-      <button id="pay" class="btn btn-primary">Pay</button>
-      <script src="https://js.stripe.com/v3/"></script>
-      <script>
-        const paymentButton = document.getElementById('pay');
-        paymentButton.addEventListener('click', () => {
-          const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
-          stripe.redirectToCheckout({
-            sessionId: '<%= @appointment.checkout_session_id %>'
-          });
-        });
-      </script>
+        <h3><b>Checkout summary</b></h3>
+        <% if @connection.lawyer.photo.key %>
+          <%= cl_image_tag @connection.lawyer.photo.key, class: "card-img-top", width: 300, height: 300, crop: :fill %>
+        <% else %>
+          <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "img-card", class: "card-img-top", width: 300, height: 300, crop: :fill %>
+        <% end %>
+        <div class="purchase">
+          <p>Purchase of <strong><%= @connection.lawyer.description %></strong> for <strong><%= number_to_currency(@connection.amount / 100, unit: 'U$', separator: ",", delimiter: ".") %></strong></p>
+        </div>
+        <div class="pay">
+          <button id="pay" class="btn btn-primary">Pay</button>
+          <script src="https://js.stripe.com/v3/"></script>
+          <script>
+            const paymentButton = document.getElementById('pay');
+            paymentButton.addEventListener('click', () => {
+              const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+              stripe.redirectToCheckout({
+                sessionId: '<%= @connection.checkout_session_id %>'
+              });
+            });
+          </script>
+        </div>
       </div>
     </div>
   </div>

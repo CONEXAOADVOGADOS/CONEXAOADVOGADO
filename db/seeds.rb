@@ -1,12 +1,12 @@
 require 'faker'
 
 # Limpar os dados existentes
-Appointment.destroy_all
+Connection.destroy_all
 Lawyer.destroy_all
 User.destroy_all
 
 # Criar usuário administrador
-User.create!(email: "admin@admin.com", password: "admin123", name: "Admin", cpf: "123.123.123-12", phone_number: "(12)32123-1231")
+User.create!(email: "admin@admin.com", password: "admin123", name: "Admin", CPF: "123.123.123-12", phone_number: "(12)32123-1231")
 
 # Criar usuários aleatórios
 10.times do
@@ -14,7 +14,7 @@ User.create!(email: "admin@admin.com", password: "admin123", name: "Admin", cpf:
     email: Faker::Internet.email,
     password: "password", # Senha padrão para simplificar
     name: Faker::Name.name,
-    cpf: Faker::IDNumber.brazilian_citizen_number(formatted: true),
+    CPF: Faker::IDNumber.brazilian_citizen_number(formatted: true),
     phone_number: Faker::PhoneNumber.cell_phone
   )
 end
@@ -179,15 +179,15 @@ advogado = Lawyer.new(
 
 puts "Created #{Lawyer.count} lawyers"
 
-# Criar appointments associados a usuários existentes
+# Criar connections associados a usuários existentes
 
 8.times do
-  appointment = Appointment.create!(
+  connection = Connection.create!(
     lawyer: Lawyer.all.sample,
     user: User.all.sample
   )
-  # puts "Created appointment for user #{user}"
+  # puts "Created connection for user #{user}"
 end
 
-puts "Created #{Appointment.count} appointments"
-puts "Seed data for Users, Lawyers, and Appointments created successfully."
+puts "Created #{Connection.count} connections"
+puts "Seed data for Users, Lawyers, and Connections created successfully."

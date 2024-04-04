@@ -1,6 +1,6 @@
 # class StripeCheckoutSessionService
-#   def call(appointment)
-#     appointment = Appointment.find_by(checkout_session_id: appointment.data.object.id)
-#     appointment.update(state: 'paid')
+#   def call(connection)
+#     connection = Connection.find_by(checkout_session_id: connection.data.object.id)
+#     connection.update(state: 'paid')
 #   end
 # end

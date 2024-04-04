@@ -1,6 +1,6 @@
 class PaymentsController < ApplicationController
   def new
-    @appointment = current_user.appointments.where(state: 'paid').find(params[:appointment_id])
-    authorize @appointment
+    @connection = current_user.connections.where(state: 'paid').find(params[:connection_id])
+    authorize @connection
   end
 end

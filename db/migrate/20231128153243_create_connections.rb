@@ -1,6 +1,6 @@
-class CreateAppointments < ActiveRecord::Migration[7.1]
+class CreateConnections < ActiveRecord::Migration[7.1]
   def change
-    create_table :appointments do |t|
+    create_table :connections do |t|
       t.references :user, null: false, foreign_key: true
       t.references :lawyer, null: false, foreign_key: true
 

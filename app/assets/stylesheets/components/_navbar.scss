@@ -1,13 +1,14 @@
 .navbar-mw{
-  justify-content: space-between;
+  // justify-content: space-between;
   // background:#31404B;
   background-color: #f8f9fa;
   height: 90px;
 }
+
 .fixed-nav {
   position: fixed;
   top: 0;
-  margin-bottom: 90px;
+  margin-bottom: 65px;
   width: 100%;
   z-index: 1000;
 }
@@ -19,19 +20,19 @@
 .navbar-mw .navbar-collapse {
   flex-grow: 0;
 }
+
 .navbar-mw .navbar-brand img {
   width: 80px;
   height: 80px;
   // border-radius: 50%;
 }
+
 .links-navbar {
   font-size: 20px;
-  display: flex;
-  display: -ms-flexbox;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: center;
-  gap: 2em;
-  margin-left: 16%;
+  // gap: 2em;
+  // margin-left: 33px;
 
   a{
     text-decoration: none;
@@ -39,47 +40,156 @@
 
 }
 
-.links-navbar a:hover,
-.links-navbar a:focus {
-  text-decoration: none;
-  color: #F9BA3D;
- /* Add hover and focus styles here */
-}
-.links-navbar  a {
-  color: rgba(0,0,0,0.3);
-}
-.navbar-light .navbar-nav .nav-link  {
-  color: #fff;
-}
+// .links-navbar .navbar-light .navbar-nav .nav-link a:hover,
+// .links-navbar .navbar-light .navbar-nav .nav-link a:focus {
+//   text-decoration: none;
+//   color: #F9BA3D !important;
+//  /* Add hover and focus styles here */
+// }
+
+// .links-navbar  a {
+//   color: rgba(0,0,0,0.3);
+//   display: flex;
+//   flex-wrap: wrap;
+// }
+
+// .navbar-light .navbar-nav .nav-link  {
+//   color: rgba(0,0,0,0.3);
+// }
+
 
 .links-navbar a:nth-child(1) {
   margin-right: 20px;
 }
+
 .links-navbar a:nth-child(2) {
   margin-right: 20px;
 }
+
 .avatar {
   margin-right: 16px;
   width: 40px;
   border-radius: 50%;
 
 }
+
 a .avatar {
   border: 1px solid  #F9BA3D;
   height: 60px;
   width: 60px;
 }
+
 .navbar-nav {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.custom-search {
+  border: none;
+  background-color: none;
+}
 
+.custom-search input[type="search"] {
+  border: 1px solid gray;
+  background-color: none;
+  width: 80%;
+}
 
+.mx-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 80px;
+}
 
+// .links-navbar {
+//   display: flex;
+//   flex-wrap: wrap;
+// }
 
+// .links-navbar a {
+//   margin-right: 20px;
+//   margin-bottom: 10px; /* Espaçamento entre os links */
+// }
 
+// @media (max-width: 576px) {
+//   .links-navbar a {
+//     margin-right: 0;
+//     margin-bottom: 10px; /* Espaçamento entre os links */
+//     width: 100%;
+//   }
+// }
+
+/* Adiciona mais margem ao redor do link de login */
+.login-link {
+  margin: 10px;
+}
+
+/* Aumenta o tamanho da fonte do link de login */
+.login-link {
+  font-size: 16px;
+}
+
+/* Altera a cor do texto do link de login */
+.login-link {
+  color: #000; /* Cor preta */
+}
+
+/* Adiciona margem ao redor do link de login */
+.login-link {
+  margin: 2%;
+}
+
+/* Define o tamanho da fonte do link de login */
+.login-link {
+  font-size: 1.2em; /* 1.2 vezes o tamanho padrão da fonte */
+}
+
+@media (min-width: 1100px) {
+  .me-custom {
+    margin-right: 182px;
+  }
+}
+
+// Define a cor de fonte cinza escuro para os links
+.nav-link-custom {
+  color: #333333; // ou outra cor cinza escuro de sua preferência
+}
+
+// Define o estilo de hover dos links
+.nav-link-custom:hover {
+  color: #0d6efd; // Azul padrão do Bootstrap
+}
+
+// Aumenta a fonte dos links na navbar
+.navbar-nav .nav-link-custom {
+  font-size: 18px; // ou outro tamanho de fonte de sua preferência
+}
+
+// Define o fundo dos itens do menu hambúrguer
+.navbar-collapse {
+  background-color: #f8f9fa; // ou outra cor de fundo de sua preferência
+  padding: 10px; // Espaçamento interno para os itens do menu
+  border-radius: 5px; // Borda arredondada
+  margin-top: 10px; // Espaçamento superior
+}
+
+// Adiciona espaçamento entre os itens do menu hambúrguer
+.navbar-collapse .navbar-nav .nav-link {
+  margin-bottom: 5px; // Espaçamento entre os itens
+}
+
+@media (max-width: 991.98px) {
+  // Mantém a classe navbar-nav com flex-direction: row; quando o menu hambúrguer é clicado
+  .navbar-toggler:focus + .collapse .navbar-nav,
+  .navbar-toggler:active + .collapse .navbar-nav {
+    display: flex;
+    flex-direction: row; // Altera a direção para linha
+    align-items: center;
+  }
+}
 
 // .links-navbar a:hover,
 // .links-navbar a:focus {

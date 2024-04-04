@@ -26,7 +26,7 @@
             <%= link_to "Edit", edit_lawyer_path, class: "btn btn-success-edit-lawyer btn-edit-buy rounded" %>
           <% end %>
         </div>
-        <%= simple_form_for [@lawyer, @appointment], method: :post do |f| %>
+        <%= simple_form_for [@lawyer, @connection], method: :post do |f| %>
           <div class="d-flex align items-center justify-content-center">
             <%= f.submit "Book Now", class:"btn btn-primary rounded buy-event-detail"%>
           </div>
