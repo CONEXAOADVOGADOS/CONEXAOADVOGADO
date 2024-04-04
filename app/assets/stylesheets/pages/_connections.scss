@@ -1,12 +1,12 @@
 // Assuming lightgray is defined in a separate variables file
 // @import 'variables'; // Adjust the path as per your project structure
 
-.appointments-container {
+.connections-container {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.appointment-card {
+.connection-card {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px #ddd;
@@ -54,8 +54,8 @@
     }
   }
 
-  .appointments-index {
-    .appointment-card {
+  .connections-index {
+    .connection-card {
       background: #fff;
       border-radius: 15px;
       transition: box-shadow 0.3s ease-in-out;
@@ -116,14 +116,14 @@
 }
 }
 
-//////Views Index Appointments
+//////Views Index Connections
 
-.appointments-page {
+.connections-page {
   max-width: 800px;
   margin: 40px auto;
 }
 
-.appointment-card {
+.connection-card {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
@@ -142,7 +142,7 @@
   padding: 6px 12px;
 }
 
-.appointment-card {
+.connection-card {
   border-radius: 12px;
   box-shadow: 0 3px 12px rgba(0,0,0,0.15);
   padding: 20px;
@@ -166,7 +166,7 @@
   }
 }
 
-/* assets/stylesheets/appointments.scss */
+/* assets/stylesheets/connections.scss */
 
 .card {
   margin-top: 20px;
@@ -222,7 +222,7 @@
   margin-right: 5px;
 }
 
-.appointments-container {
+.connections-container {
   text-align: center;
   margin-top: 20px;
 
@@ -231,7 +231,7 @@
     margin-bottom: 20px;
   }
 
-  .appointment-card {
+  .connection-card {
     background-color: #fff;
     border: 1px solid #e0e0e0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -259,7 +259,7 @@
       justify-content: space-between;
       align-items: center;
 
-      .appointment-actions {
+      .connection-actions {
         .btn {
           background-color: #007bff;
           color: #fff;
@@ -271,7 +271,7 @@
         }
       }
 
-      .appointment-image {
+      .connection-image {
         img {
           max-width: 100%;
           max-height: 200px;

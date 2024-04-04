@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 85px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
 }
@@ -32,4 +32,12 @@
 }
 .footer .fa-heart {
   color: #D23333;
+}
+
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 85px;
+  width: 100%;
+  z-index: 1000;
 }

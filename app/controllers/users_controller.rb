@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def show
     @lawyers = Lawyer.where(user: current_user)
-    @appointments = Appointment.all
+    @connections = Connection.all
   end
 
   def new
@@ -52,8 +52,8 @@ class UsersController < ApplicationController
   # @lawyers = Lawyer.where(user: current_user)
   # end
 
-  # def my_appointments
-  #   @appointments = Appointment.where(user: current_user)}
+  # def my_connections
+  #   @connections = Connection.where(user: current_user)}
   # end
 
   private

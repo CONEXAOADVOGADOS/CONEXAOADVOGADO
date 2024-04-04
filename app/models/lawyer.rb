@@ -1,6 +1,6 @@
 class Lawyer < ApplicationRecord
   belongs_to :user
-  has_many :appointments
+  has_many :connections
   validates :category, presence: true
   validates :lawyer_name, presence: true
   validates :description, presence: true
@@ -10,7 +10,7 @@ class Lawyer < ApplicationRecord
   # validates :price, numericality: { greater_than: 0 }
 
   has_one_attached :photo
-  has_many :users, through: :appointments
+  has_many :users, through: :connections
   has_many_attached :photos
   has_many :photos
 

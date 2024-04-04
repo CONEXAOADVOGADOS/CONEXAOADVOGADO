@@ -13,7 +13,7 @@ class LawyersController < ApplicationController
   def show
     @lawyer = Lawyer.find(params[:id])
     authorize @lawyer
-    @appointment = Appointment.new
+    @connection = Connection.new
   end
 
   def new
@@ -55,8 +55,8 @@ class LawyersController < ApplicationController
   # @lawyers = Lawyer.where(user: current_user)
   # end
 
-  # def my_appointments
-  #   @appointments = Appointment.where(user: current_user)}
+  # def my_connections
+  #   @connections = Connection.where(user: current_user)}
   # end
 
   private

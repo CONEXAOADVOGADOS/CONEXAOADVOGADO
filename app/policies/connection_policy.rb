@@ -1,4 +1,4 @@
-class AppointmentPolicy < ApplicationPolicy
+class ConnectionPolicy < ApplicationPolicy
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
     def resolve
@@ -6,19 +6,19 @@ class AppointmentPolicy < ApplicationPolicy
     end
   end
 
-  def show? # anyone can view a restaurant
+  def show?
     true
   end
 
-  def create? # only logged in users can create a restaurant
+  def create?
     true
   end
 
-  def update? # only restaurant creator can update it
+  def update?
     record.user == user
   end
 
-  def destroy? # only restaurant creator can destroy it
+  def destroy?
     record.user == user
   end
 

@@ -180,6 +180,11 @@ p {
   text-align: center;
 }
 
+.mt-custom {
+  margin-top: 10rem;
+}
+
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
@@ -202,9 +207,9 @@ p {
 }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
+@media (min-width: 1050px) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 

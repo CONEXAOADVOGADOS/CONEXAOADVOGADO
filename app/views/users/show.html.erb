@@ -24,7 +24,7 @@
         <%= link_to 'Delete', lawyer_path, class: "btn btn-danger rounded", data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
       <% end %>
 
-      <%= simple_form_for [@lawyer, @appointment], method: :post do |f| %>
+      <%= simple_form_for [@lawyer, @connection], method: :post do |f| %>
         <%= f.submit "Contratar", class:"btn btn-primary rounded"%>
       <% end %>
     </div>
