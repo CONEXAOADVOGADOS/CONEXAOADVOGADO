@@ -216,3 +216,45 @@ a .avatar {
 //   justify-content: center;
 //   align-items: center;
 // }
+
+// Define a cor de fonte cinza escuro para os links
+.nav-link-custom {
+  color: #333333; // ou outra cor cinza escuro de sua preferência
+}
+
+// Define o estilo de hover dos links
+.nav-link-custom:hover {
+  color: #0d6efd; // Azul padrão do Bootstrap
+}
+
+// Aumenta a fonte dos links na navbar
+.navbar-nav {
+  .nav-link-custom {
+    font-size: 18px; // ou outro tamanho de fonte de sua preferência
+  }
+}
+
+// Define o fundo dos itens do menu hambúrguer
+.navbar-toggler + .collapse {
+  background-color: #f8f9fa; // ou outra cor de fundo de sua preferência
+  padding: 10px; // Espaçamento interno para os itens do menu
+  border-radius: 5px; // Borda arredondada
+  margin-top: 10px; // Espaçamento superior
+}
+
+// Adiciona espaçamento entre os itens do menu hambúrguer
+.navbar-toggler + .collapse .navbar-nav {
+  .nav-link {
+    margin-bottom: 5px; // Espaçamento entre os itens
+  }
+}
+
+@media (max-width: 991.98px) {
+  // Mantém a classe navbar-nav com flex-direction: row; quando o menu hambúrguer é clicado
+  .navbar-toggler:focus + .collapse .navbar-nav,
+  .navbar-toggler:active + .collapse .navbar-nav {
+    display: flex;
+    flex-direction: row; // Altera a direção para linha
+    align-items: center;
+  }
+}
