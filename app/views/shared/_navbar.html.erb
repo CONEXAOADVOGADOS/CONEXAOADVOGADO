@@ -1,46 +1,5 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-<style>
-  /* Define a cor de fonte cinza escuro para os links */
-  .nav-link-custom {
-    color: #333333; /* ou outra cor cinza escuro de sua preferência */
-  }
-
-  /* Define o estilo de hover dos links */
-  .nav-link-custom:hover {
-    color: #0d6efd; /* Azul padrão do Bootstrap */
-  }
-
-  /* Aumenta a fonte dos links na navbar */
-  .navbar-nav .nav-link-custom {
-    font-size: 18px; /* ou outro tamanho de fonte de sua preferência */
-  }
-
-  /* Define o fundo dos itens do menu hambúrguer */
-  .navbar-toggler + .collapse {
-    background-color: ##f8f9fa; /* ou outra cor de fundo de sua preferência */
-    padding: 10px; /* Espaçamento interno para os itens do menu */
-    border-radius: 5px; /* Borda arredondada */
-    margin-top: 10px; /* Espaçamento superior */
-  }
-
-  /* Adiciona espaçamento entre os itens do menu hambúrguer */
-  .navbar-toggler + .collapse .navbar-nav .nav-link {
-    margin-bottom: 5px; /* Espaçamento entre os itens */
-  }
-
-  @media (max-width: 991.98px) {
-  /* Mantém a classe navbar-nav com flex-direction: row; quando o menu hambúrguer é clicado */
-  .navbar-toggler:focus + .collapse .navbar-nav,
-  .navbar-toggler:active + .collapse .navbar-nav {
-    display: flex;
-    flex-direction: row; /* Altera a direção para linha */
-    align-items: center;
-  }
-}
-
-</style>
-
 <div class="navbar navbar-expand-lg navbar-light navbar-mw">
   <div class="container-fluid mx-spetial">
     <div class="links-navbar d-lg-block d-lg-flex justify-content-center align-items-left">
@@ -58,16 +17,22 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <li class="nav-item me-5">
-          <%= link_to "Sobre", lawyers_path, class: "nav-link nav-link-custom" %>
+          <%= link_to "Sobre", sobre_path, class: "nav-link nav-link-custom" %>
         </li>
         <li class="nav-item me-5">
           <%= link_to "Notícias", lawyers_path, class: "nav-link nav-link-custom" %>
         </li>
         <li class="nav-item me-custom">
-          <%= link_to "Área do Advogado", lawyers_path, class: "nav-link nav-link-custom" %>
+          <%= link_to "Área do Advogado", adv_path, class: "nav-link nav-link-custom" %>
         </li>
       </ul>
       <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <div class="d-flex justify-content-center align-items-center flex-row">
+            <span class="navbar-nav bg-none border-1 me-2"><i class="bi bi-search "></i></span>
+            <input class="border-1 bg-white me-5" type="search" placeholder=" Buscar..." aria-label="Buscar">
+          </div>
+        </li>
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -82,12 +47,6 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <div class="d-flex justify-content-center align-items-center flex-row">
-              <span class="navbar-nav bg-none border-1 me-2"><i class="bi bi-search "></i></span>
-              <input class="border-1 bg-white me-5" type="search" placeholder=" Buscar..." aria-label="Buscar">
-            </div>
-          </li>
-          <li class="nav-item">
             <%= link_to new_user_session_path, class: "nav-link nav-link-custom" do %>
               Login
             <% end %>
@@ -98,28 +57,3 @@
   </div>
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const body = document.querySelector('body');
-
-    navbarToggler.addEventListener('click', function() {
-      body.classList.toggle('menu-open');
-    });
-
-    const toggleResponsiveLinks = () => {
-      const linksNavbar = document.querySelector('.navbar-collapse');
-      const navbarToggler = document.querySelector('.navbar-toggler');
-      if (window.innerWidth < 1007) {
-        linksNavbar.classList.add('show');
-        navbarToggler.classList.remove('d-none');
-      } else {
-        linksNavbar.classList.remove('show');
-        navbarToggler.classList.add('d-none');
-      }
-    };
-
-    toggleResponsiveLinks(); // Chama a função ao carregar a página
-    window.addEventListener('resize', toggleResponsiveLinks); // Chama a função quando a janela for redimensionada
-  });
-</script>
