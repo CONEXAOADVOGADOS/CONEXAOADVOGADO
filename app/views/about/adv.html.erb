@@ -39,6 +39,16 @@
       flex: 1;
       margin-top: 20px; /* Margem superior em relação ao botão */
       margin-bottom: 20px; /* Margem inferior em relação ao botão */
+      display: flex;
+      justify-content: center; /* Centraliza o conteúdo horizontalmente */
+      align-items: flex-start; /* Alinha o conteúdo ao topo */
+      position: relative; /* Define o posicionamento relativo */
+    }
+    .button-container {
+      position: absolute; /* Define o posicionamento absoluto */
+      top: 50%; /* Centraliza verticalmente */
+      left: 50%; /* Centraliza horizontalmente */
+      transform: translate(-50%, -50%); /* Centraliza o botão */
     }
 
     /* Define que o texto e a imagem ocupem toda a largura em telas menores ou igual a md */
@@ -46,13 +56,6 @@
       .text, .image {
         flex: 100%;
         max-width: 100%;
-      }
-    }
-
-    /* Define o botão para estar centralizado em telas maiores que 1300px */
-    @media (min-width: 1500px) {
-      .text-center {
-        text-align: center;
       }
     }
   </style>
@@ -71,8 +74,8 @@
       <p>Junte-se a nós hoje mesmo e descubra como o <span class="blue-text">Conexão Advogados</span> pode ser a chave para o crescimento e sucesso de sua prática jurídica.</p>
     </div>
     <div class="image">
-      <img src="https://res.cloudinary.com/dop9mb8rc/image/upload/v1711296264/pexels-photo-7693241_zfr9gq.jpg" alt="Imagem" />
-      <div class="text-center">
+      <img src="https://res.cloudinary.com/dop9mb8rc/image/upload/v1712281578/mulher-advogada-trabalhando-com-papelada-em-sua-mesa-no-local-de-trabalho-do-escritorio-para-advogado-consultor-no-escritorio_533890-2152_hrrpyu.jpg" alt="Imagem" />
+      <div class="button-container">
         <a href="#" class="btn btn-primary btn-lg fs-4">Cadastre-se Aqui</a>
       </div>
     </div>
