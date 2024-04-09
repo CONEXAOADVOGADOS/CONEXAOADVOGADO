@@ -83,27 +83,27 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.btn-bd-primary {
-  --bd-violet-bg: #712cf9;
-  --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+// .btn-bd-primary {
+//   --bd-violet-bg: #712cf9;
+//   --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
 
-  --bs-btn-font-weight: 600;
-  --bs-btn-color: var(--bs-white);
-  --bs-btn-bg: var(--bd-violet-bg);
-  --bs-btn-border-color: var(--bd-violet-bg);
-  --bs-btn-hover-color: var(--bs-white);
-  --bs-btn-hover-bg: #6528e0;
-  --bs-btn-hover-border-color: #6528e0;
-  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-  --bs-btn-active-color: var(--bs-btn-hover-color);
-  --bs-btn-active-bg: #5a23c8;
-  --bs-btn-active-border-color: #5a23c8;
-}
+//   --bs-btn-font-weight: 600;
+//   --bs-btn-color: var(--bs-white);
+//   --bs-btn-bg: var(--bd-violet-bg);
+//   --bs-btn-border-color: var(--bd-violet-bg);
+//   --bs-btn-hover-color: var(--bs-white);
+//   --bs-btn-hover-bg: #6528e0;
+//   --bs-btn-hover-border-color: #6528e0;
+//   --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+//   --bs-btn-active-color: var(--bs-btn-hover-color);
+//   --bs-btn-active-bg: #5a23c8;
+//   --bs-btn-active-border-color: #5a23c8;
+// }
 
 .btn-secondary {
-  color:#31404B;
-  background-color: #27c9dc;
-  border: 1px solid #31404B;
+  color:#01385D;
+  background-color: #3E769B;
+  border: 1px solid #01385D;
   border-radius: 4px;
 
 }
@@ -121,23 +121,24 @@
   margin: 0 auto;
 }
 
-.carousel-item {
-  border-bottom: 1px solid #763fe2;
-  border-top: 1px solid #763fe2 ;
-}
+// .carousel-item {
+//   border-bottom: 1px solid #763fe2;
+//   border-top: 1px solid #763fe2 ;
+// }
+
 .rounded-circle {
-  border: 1px solid #27c9dc;
+  border: 1px solid #3E769B;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 
-.img-fluid {
-  width: 4;
-  border-radius: 4px;
-  border:1px solid #763fe2;
-}
+// .img-fluid {
+//   width: 4;
+//   border-radius: 4px;
+//   border:1px solid #763fe2;
+// }
 
 .text-white {
   text-wrap: balance;
@@ -151,12 +152,12 @@
 // }
 
 p {
-  color: gray;
+  color: rgba(0,0,0,0.5);
 
 }
 
 .card-category {
-  color: #fff;
+  color: #ffffff;
   height: 300px;
   width: 340px;
   border-radius: 6%;
@@ -169,7 +170,7 @@ p {
 }
 
 .bg-home {
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url("https://res.cloudinary.com/dop9mb8rc/image/upload/v1711334808/man-5806015_640_neo6kr.jpg");
+  background-image: linear-gradient(to bottom, #00000080 0%, #00000080 100%), url("https://res.cloudinary.com/dop9mb8rc/image/upload/v1711334808/man-5806015_640_neo6kr.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -219,6 +220,5 @@ p {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-
 
 //datepicker
