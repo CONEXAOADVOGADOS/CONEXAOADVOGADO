@@ -7,8 +7,12 @@
   <title>Bem-vindo ao Conexão Advogados</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.4.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    a {
+      text-decoration: none; /* Remove o sublinhado */
+      color: white; /* Define a cor do texto como branco */
+    }
     .blue-text {
-      color: blue;
+      color: #3E769B;
     }
     h1 {
       margin-top: 60px;
@@ -28,6 +32,7 @@
     .content {
       display: flex;
       flex-wrap: wrap; /* Permite que os elementos quebrem linha em telas menores */
+      justify-content: center; /* Centraliza os elementos horizontalmente */
     }
     .text {
       flex: 1;
@@ -40,8 +45,9 @@
       margin-top: 20px; /* Margem superior em relação ao botão */
       margin-bottom: 20px; /* Margem inferior em relação ao botão */
       display: flex;
-      justify-content: center; /* Centraliza o conteúdo horizontalmente */
-      align-items: flex-start; /* Alinha o conteúdo ao topo */
+      flex-direction: column; /* Muda a direção dos elementos para coluna */
+      justify-content: center; /* Centraliza o conteúdo verticalmente */
+      align-items: center; /* Centraliza o conteúdo horizontalmente */
       position: relative; /* Define o posicionamento relativo */
     }
     .button-container {
@@ -76,7 +82,7 @@
     <div class="image">
       <img src="https://res.cloudinary.com/dop9mb8rc/image/upload/v1712281578/mulher-advogada-trabalhando-com-papelada-em-sua-mesa-no-local-de-trabalho-do-escritorio-para-advogado-consultor-no-escritorio_533890-2152_hrrpyu.jpg" alt="Imagem" />
       <div class="button-container">
-        <a href="#" class="btn btn-primary btn-lg fs-4">Cadastre-se Aqui</a>
+        <div class="btn btn-custom btn-lg fs-4 rounded-pill"><%= link_to "Cadastre-se Aqui", new_lawyer_path %></div>
       </div>
     </div>
   </main>

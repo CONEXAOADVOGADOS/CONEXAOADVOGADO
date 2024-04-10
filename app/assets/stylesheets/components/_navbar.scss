@@ -1,7 +1,8 @@
 .navbar-mw{
   // justify-content: space-between;
   // background:#31404B;
-  background-color: #f8f9fa;
+  // background-color: #f8f9fa;
+  background-color: #FFFFFF;
   height: 90px;
 }
 
@@ -74,7 +75,7 @@
 }
 
 a .avatar {
-  border: 1px solid  #F9BA3D;
+  border: 1px solid #DFB72E;
   height: 60px;
   width: 60px;
 }
@@ -91,7 +92,7 @@ a .avatar {
 }
 
 .custom-search input[type="search"] {
-  border: 1px solid gray;
+  border: 1px solid #FFFFFF;
   background-color: none;
   width: 80%;
 }
@@ -134,7 +135,7 @@ a .avatar {
 
 /* Altera a cor do texto do link de login */
 .login-link {
-  color: #000; /* Cor preta */
+  color: #01385D; /* Cor preta */
 }
 
 /* Adiciona margem ao redor do link de login */
@@ -170,7 +171,7 @@ a .avatar {
 
 // Define o fundo dos itens do menu hambúrguer
 .navbar-collapse {
-  background-color: #f8f9fa; // ou outra cor de fundo de sua preferência
+  background-color: #FFFFFF; // ou outra cor de fundo de sua preferência
   padding: 10px; // Espaçamento interno para os itens do menu
   border-radius: 5px; // Borda arredondada
   margin-top: 10px; // Espaçamento superior
@@ -219,12 +220,12 @@ a .avatar {
 
 // Define a cor de fonte cinza escuro para os links
 .nav-link-custom {
-  color: #333333; // ou outra cor cinza escuro de sua preferência
+  color: #01385D; // ou outra cor cinza escuro de sua preferência
 }
 
 // Define o estilo de hover dos links
 .nav-link-custom:hover {
-  color: #0d6efd; // Azul padrão do Bootstrap
+  color: #3E769B; // Azul padrão do Bootstrap
 }
 
 // Aumenta a fonte dos links na navbar
@@ -236,7 +237,7 @@ a .avatar {
 
 // Define o fundo dos itens do menu hambúrguer
 .navbar-toggler + .collapse {
-  background-color: #f8f9fa; // ou outra cor de fundo de sua preferência
+  background-color: #FFFFFF; // ou outra cor de fundo de sua preferência
   padding: 10px; // Espaçamento interno para os itens do menu
   border-radius: 5px; // Borda arredondada
   margin-top: 10px; // Espaçamento superior

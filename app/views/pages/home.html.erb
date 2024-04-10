@@ -15,7 +15,7 @@
             <div class="text-center mt-3 d-flex flex-column align-items-center mt-3">
               <div class="position-absolute" id="dynamic-text"></div>
               <%# <h1 class="font-weight-bold text-white display-1 px-3" style="font-family: 'Nunito', sans-serif;">CONEXÃO ADVOGADO</h1> %>
-              <div class="mt-custom"><%= link_to "Saiba mais", "#", class: "p-2 px-4 m-5 btn btn-primary rounded-pill" %></div>
+              <div class="mt-custom"><%= link_to "Saiba mais", sobre_path, class: "p-2 px-4 m-5 btn btn-custom rounded-pill" %></div>
             </div>
             <%# <p class="text-white mb-0">Planning for a trip? We will organize your best trip with the best destination and within the best budgets!</p> %>
           </div>
@@ -28,7 +28,7 @@
     <div class="row">
 
       <div class="col-3 d-flex flex-column justify-content-center d-none d-md-block">
-          <h3 class="u-text-color-navy hero-heading text-left"> Encontre o seu advogado online. </h3>
+          <h3 class="u-text-color-navy hero-heading text-left text-black"> Encontre o seu advogado online. </h3>
       </div>
 
       <!-- Check in -->
@@ -48,7 +48,7 @@
 
       <!-- Button -->
       <div class='col-4 col-md-3 d-flex flex-column justify-content-center'>
-        <%= form.submit 'Procuar', class: 'btn btn-dark w-100' %>
+        <%= form.submit 'Procuar', class: 'btn btn-custom w-100' %>
       </div>
 
     </div>
@@ -245,7 +245,7 @@ About END -->
 
 <script>
   // Texto que será "digitado"
-  var text = "CONEXÃO\nADVOGADO";
+  var text = "CONEXÃO\nADVOGADOS";
   var index = 0;
 
   function WriteText() {
@@ -266,7 +266,7 @@ About END -->
     font-size: 56px;
     font-weight: bold;
     font-family: Arial, sans-serif;
-    color: #333;
-    color: white;
+    color: #3E769B;
+    color: #FFFFFF;
   }
 </style>
