@@ -182,7 +182,7 @@ div.login-form-user-login {
 
 #btn-login {
   background-color:#31404B;
-  color: #fff;
+  color: #FFFFFF;
 }
 
 .login-form::before {
@@ -206,6 +206,7 @@ body {
   min-height: 87vh;
   display: flex;
   flex-direction: column;
+  background-color: #FFFFFF;
   // margin-left: 60px !important;
   // margin-right: 60px !important;
 }
@@ -319,3 +320,4 @@ body {
     background-color: #3E769B; /* Cor ao passar o mouse */
   }
 }
+
