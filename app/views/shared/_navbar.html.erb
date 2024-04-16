@@ -9,12 +9,13 @@
     </div>
 
     <!-- Botão do menu hambúrguer para telas menores que lx -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler text-color" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
+
     <!-- Área de colapso para os links do menu -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="navbar-mb collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <li class="nav-item me-5">
           <%= link_to "Sobre", sobre_path, class: "nav-link nav-link-custom" %>
@@ -29,7 +30,7 @@
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
           <div class="d-flex justify-content-center align-items-center flex-row">
-            <span class="navbar-nav bg-none border-1 me-2"><i class="bi bi-search "></i></span>
+            <span class="navbar-nav bg-none border-1 me-2"><i class="bi bi-search text-white"></i></span>
             <input class="border-1 bg-white me-5" type="search" placeholder=" Buscar..." aria-label="Buscar">
           </div>
         </li>
@@ -56,4 +57,3 @@
     </div>
   </div>
 </div>
-
