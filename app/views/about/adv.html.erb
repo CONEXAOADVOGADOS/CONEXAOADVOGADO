@@ -62,8 +62,7 @@
       cursor: pointer; /* Cursor ao passar o mouse */
       transition: background-color 0.3s; /* Transição suave ao passar o mouse */
       &:hover {
-        color: #FFFFFF !important;
-        background-color: #3E769B; /* Cor ao passar o mouse */
+        background-color: #FFFFFF; /* Cor ao passar o mouse */
       }
     }
     /* Define que o texto e a imagem ocupem toda a largura em telas menores ou igual a md */
@@ -95,7 +94,7 @@
       <div class="image">
         <img src="https://res.cloudinary.com/dop9mb8rc/image/upload/v1712281578/mulher-advogada-trabalhando-com-papelada-em-sua-mesa-no-local-de-trabalho-do-escritorio-para-advogado-consultor-no-escritorio_533890-2152_hrrpyu.jpg" alt="Imagem" />
         <div class="mt-4">
-          <%= link_to "Novo Advogado", new_lawyer_path, class: "btn-custom btn-lg fs-4 rounded-pill", style: "text-decoration: none; color: white;" %>
+          <%= link_to "Cadastre-se", new_lawyer_path, class: "btn-custom btn-lg fs-4 rounded-pill", style: "text-decoration: none; color: white;" %>
         </div>
       </div>
     </main>

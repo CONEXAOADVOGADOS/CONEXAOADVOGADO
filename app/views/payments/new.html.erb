@@ -8,7 +8,7 @@
           <%= cl_image_tag @connection.lawyer.photo.key, class: "card-img-top", width: 300, height: 300, crop: :fill %>
         <% else %>
           <%= image_tag "Logo.png", alt: "Logo My-Welcome", class: "img-card", class: "card-img-top", width: 300, height: 300, crop: :fill %>
-        <% end %>
+        <% end %> 
         <div class="purchase">
           <p>Purchase of <strong><%= @connection.lawyer.description %></strong> for <strong><%= number_to_currency(@connection.amount / 100, unit: 'U$', separator: ",", delimiter: ".") %></strong></p>
         </div>

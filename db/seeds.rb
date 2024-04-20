@@ -23,11 +23,13 @@ puts "Created #{User.count} users"
 
 # Criar advogados
 advogado = Lawyer.new(
-    lawyer_name: "João Silva",
+    name: User.pluck(:name).sample,
+    email: User.pluck(:email).sample,
+    city: "Conexão Advogados",
+    state: 
     category: "Direito Civil",
     description: "Advogado especializado em casos de direito civil, com experiência em contratos e responsabilidade civil.",
     phone: "(11) 1234-5678",
-    mail: "joao.silva@example.com",
     OAB: "12345/SP",
     user: User.all.sample)
 

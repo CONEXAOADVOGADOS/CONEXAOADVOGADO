@@ -63,12 +63,14 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_06_164733) do
   end
 
   create_table "lawyers", force: :cascade do |t|
-    t.string "category"
-    t.string "lawyer_name"
-    t.string "description"
+    t.string "state"
+    t.string "city"
     t.string "mail"
     t.string "OAB"
-    t.string "phone"
+    t.string "type"
+    t.string "category"
+    t.string "faculty"
+    t.string "description"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
