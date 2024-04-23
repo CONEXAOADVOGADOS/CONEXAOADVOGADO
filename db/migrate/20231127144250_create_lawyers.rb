@@ -3,7 +3,6 @@ class CreateLawyers < ActiveRecord::Migration[7.1]
     create_table :lawyers do |t|
       t.string :state
       t.string :city
-      t.string :mail
       t.string :OAB
       t.string :type
       t.string :category

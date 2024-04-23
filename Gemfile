@@ -82,7 +82,7 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "cloudinary"
+gem "pgreset"
 gem 'rubocop', require: false
 gem "pundit"
 gem "geocoder"
@@ -90,4 +90,3 @@ gem "pg_search"
 gem 'stripe'
 gem 'stripe_event'
 gem 'rails-rename', group: :development
-
