@@ -63,8 +63,7 @@ class UsersController < ApplicationController
   # end
 
   def lawyer_params
-    params.require(:lawyer).permit(:state, :city, :photos, :category, :description, :OAB, :faculty, :type, :photo,
-                                   :status)
+    params.require(:lawyer).permit(:UF, :city, :photos, :category, :detail, :OAB, :faculty, :group, :photo, :status)
   end
 
   def search

@@ -1,13 +1,13 @@
 class Lawyer < ApplicationRecord
   belongs_to :user
   has_many :connections
-  validates :state, presence: true
   validates :city, presence: true
+  validates :UF, presence: true
   validates :OAB, presence: true
-  validates :type, presence: true
+  validates :group, presence: true
   validates :category, presence: true
   validates :faculty, presence: true
-  validates :description, presence: true
+  validates :detail, presence: true
   validates :status, presence: true
 
   # validates :price, numericality: { greater_than: 0 }

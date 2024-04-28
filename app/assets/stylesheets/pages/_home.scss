@@ -169,11 +169,25 @@ p {
 }
 
 .bg-home {
-  background-image: linear-gradient(to bottom, #00000080 0%, #00000080 100%), url("https://res.cloudinary.com/dop9mb8rc/image/upload/v1711334808/man-5806015_640_neo6kr.jpg");
+  position: relative;
+  padding-top: 85px;
+}
+
+.bg-home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://res.cloudinary.com/dop9mb8rc/image/upload/v1714152624/Design_sem_nome_cjvpwm.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 50px 0;
+  // filter: blur(0.4px); /* Adiciona um efeito de borramento com 8px de intensidade */
+  // opacity: 0.89; /* Opacidade de 50% para tornar a imagem mais opaca */
+  // box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5); /* Adiciona um sombreamento com opacidade de 50% */
+  z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo */
 }
 
 .paragraph-home {
@@ -184,6 +198,18 @@ p {
   margin-top: 10rem;
 }
 
+.image-150 {
+  width: 350px;
+  height: 150px;
+}
+
+.mb-300 {
+  margin-bottom: 300px;
+}
+
+.image-wrapper {
+  display: inline-block; /* Para que a div se ajuste ao tamanho da imagem */
+}
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {

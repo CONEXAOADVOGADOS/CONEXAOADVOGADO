@@ -5,56 +5,80 @@
 <section class="pt-0">
 <div class="bg-home">
 
-
 	<div class="container position-relative">
 		<!-- Bg image -->
-		<div class="rounded-3" >
-			<!-- Banner title -->
-        <div class="row justify-content-center align-items-center min-vh-60">
-          <div class="col-md-7 col-lg-8 col-xxl-7 pb-5 mb-0 mb-lg-5">
-            <div class="text-center mt-3 d-flex flex-column align-items-center mt-3">
-              <div class="position-absolute" id="dynamic-text"></div>
-              <%# <h1 class="font-weight-bold text-white display-1 px-3" style="font-family: 'Nunito', sans-serif;">CONEXÃO ADVOGADO</h1> %>
-              <div class="mt-custom"><%= link_to "Saiba mais", sobre_path, class: "p-2 px-4 m-5 btn btn-custom rounded-pill" %></div>
+		<!--
+    <div class="rounded-3" >
+      <div class="row justify-content-center align-items-center min-vh-60">
+        <div class="col-md-7 col-lg-8 col-xxl-7 pb-5 mb-0 mb-lg-5">
+          <div class="text-center mt-3 d-flex flex-column align-items-center mt-3">
+            <div class="position-absolute" id="dynamic-text"></div>
+            <%# <h1 class="font-weight-bold text-white display-1 px-3" style="font-family: 'Nunito', sans-serif;">CONEXÃO ADVOGADO</h1> %>
+            <div class="mt-custom"><%= link_to "Saiba mais", sobre_path, class: "p-2 px-4 m-5 btn btn-custom rounded-pill" %></div>
+          </div>
+          <%# <p class="text-white mb-0">Planning for a trip? We will organize your best trip with the best destination and within the best budgets!</p> %>
+        </div>
+      </div>
+    </div>
+    -->
+<div class="rounded-3 mb-300">
+  <!-- Banner title -->
+  <div class="row min-vh-60">
+    <div class="pb-5 mb-0 mb-lg-5">
+      <div class="text-center mt-3 d-flex flex-column align-items-center mt-3">
+        <div class="position-absolute d-flex align-items-center">
+          <!-- Espaço para a imagem -->
+          <div class="col-5 m-4 d-flex flex-column justify-content-center align-items-center d-none d-md-block image-150">
+            <%= image_tag "https://res.cloudinary.com/dop9mb8rc/image/upload/v1714153419/9_w5ehxf.png", class: "image-150" %>
+          </div>
+          <!-- Linha vertical -->
+          <div class="col-1 d-flex justify-content-end align-items-center">
+            <div style="border-left: 1px solid white; height: 200px;"></div>
+          </div>
+          <!-- Texto -->
+          <div class="col-6 m-5 d-flex flex-column text-white mt-5 text-justify">
+            <div>
+              <h4>A PLATAFORMA QUE FALTAVA PARA SEUS</h4>
             </div>
-            <%# <p class="text-white mb-0">Planning for a trip? We will organize your best trip with the best destination and within the best budgets!</p> %>
+            <div style="text-color: red">
+              <h4>SERVIÇOS JURÍDICOS</h4>
+            </div>
           </div>
         </div>
-		</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 		<!-- Search START -->
 
   <%= form_with url: lawyers_path, method: :get, local: true, class: 'bg-white shadow rounded-3 p-4' do |form| %>
-    <div class="row">
-
-      <div class="col-3 d-flex flex-column justify-content-center d-none d-md-block">
-          <h3 class="u-text-color-navy hero-heading text-left text-black"> Encontre o seu advogado online. </h3>
-      </div>
-
-      <!-- Check in -->
-      <div class="col-4 col-md-3 d-flex flex-column justify-content-center">
-        <div class="form-border-bottom form-control-transparent form-fs-lg m-1">
-          <%= form.date_field :date, id: 'datepicker', class: 'form-control', placeholder: 'Choose a date', style: 'background-color: var(--bs-body-bg); border: 1px solid var(--bs-border-color);' %>
-        </div>
-      </div>
-
-
-      <!-- Guest -->
-      <div class="col-4 col-md-3 d-flex flex-column justify-content-center">
-        <div class="form-border-bottom form-control-transparent form-fs-lg m-1">
-          <%= form.select :category, ['Gastronomy', 'Excursion', 'Workshop'], { prompt: 'Select type' }, { class: 'form-select js-choice', data: { search_enabled: 'true' } } %>
-        </div>
-      </div>
-
-      <!-- Button -->
-      <div class='col-4 col-md-3 d-flex flex-column justify-content-center'>
-        <%= form.submit 'Procuar', class: 'btn btn-custom w-100' %>
-      </div>
-
+  <div class="row">
+    <div class="col-3 d-flex flex-column justify-content-center d-none d-md-block">
+      <h3 class="u-text-color-navy hero-heading text-left text-black"> Encontre o seu advogado online. </h3>
     </div>
-  <% end %>
+
+    <!-- Group dropdown -->
+    <div class="col-6 col-md-5 d-flex flex-column justify-content-center">
+      <div class="form-border-bottom form-control-transparent form-fs-lg m-1">
+        <select id="group-select" class="form-control" name="group">
+          <option value="" disabled selected>Tipo de atendimento</option>
+          <option value="Advocacia">Advocacia</option>
+          <option value="Consultoria">Consultoria</option>
+          <option value="Correspondente">Correspondente</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Button -->
+    <%# <div class="col-3 col-md-4 d-flex flex-column justify-content-center">
+      <%= form.submit 'Procuar', class: 'btn btn-custom w-100' %>
+    <%# </div> %>
   </div>
 
+  <% end %>
+  </div>
 
 </div>
 
@@ -233,7 +257,7 @@ About END -->
     <!-- /END THE FEATURETTES -->
 </main>
 
-<script>
+<%# <script>
   $(document).ready(function(){
     $('#datepicker').datepicker({
       format: 'dd/mm/yyyy',
@@ -241,9 +265,9 @@ About END -->
       todayHighlight: true
     });
   });
-</script>
+</script> %>
 
-<script>
+<%# <script>
   // Texto que será "digitado"
   var text = "CONEXÃO\nADVOGADOS";
   var index = 0;
@@ -259,8 +283,8 @@ About END -->
 
   // Chama a função ao carregar a página
   WriteText();
-</script>
-
+</script> %>
+<%#
 <style>
   #dynamic-text {
     font-size: 56px;
@@ -269,4 +293,96 @@ About END -->
     color: #3E769B;
     color: #FFFFFF;
   }
-</style>
+</style> %>
+
+<!--
+<div id="app">
+  <div class="col-4 col-md-3 d-flex flex-column justify-content-center">
+    <label for="group-select">Tipo de atendimento</label>
+    <div class="form-border-bottom form-control-transparent form-fs-lg m-1">
+      <select v-model="selectedGroups" multiple size="3" class="form-control" id="group-select">
+        <option v-for="group in groups" :value="group">{{ group }}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="col-4 col-md-3 d-flex flex-column justify-content-center">
+    <label for="category-select">Especialidade</label>
+    <div class="form-border-bottom form-control-transparent form-fs-lg m-1">
+      <select v-model="selectedCategories" multiple size="5" class="form-control" id="category-select">
+        <option v-for="category in categories" :value="category">{{ category }}</option>
+      </select>
+    </div>
+  </div>
+
+
+Button
+  <div class='col-4 col-md-3 d-flex flex-column justify-content-center'>
+    <button @click="searchLawyers" class='btn btn-custom w-100'>Procurar</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    selectedGroups: [],
+    selectedCategories: [],
+    groups: ["Advocacia", "Consultoria", "Correspondente"],
+    categories: [
+      "Direito de Família e Sucessões", "Direito Administrativo", "Direito Contratual",
+      "Direito Imobiliário", "Direito do Consumidor", "Direito Tributário",
+      "Direito Penal", "Direito Empresarial", "Direito Ambiental",
+      "Direito Desportivo", "Direito Digital", "Direito da Propriedade Intelectual",
+      "Direito Trabalhista e Previdenciário", "Direito Extrajudicial", "Direito Marítimo"
+    ]
+  },
+  methods: {
+    searchLawyers() {
+      const queryParams = {
+        group: this.selectedGroups.join(','),
+        category: this.selectedCategories.join(',')
+      };
+      const queryString = Object.keys(queryParams).map(key => key + '=' + queryParams[key]).join('&');
+      window.location.href = '/lawyers?' + queryString;
+    }
+  }
+});
+</script>
+-->
+
+<!--= form_with url: lawyers_path, method: :get, local: true, class: 'bg-white shadow rounded-3 p-4' do |form| %> -->
+  <div class="row">
+    <div class="col-3 d-flex flex-column justify-content-center d-none d-md-block">
+      <h3 class="u-text-color-navy hero-heading text-left text-black"> Encontre o seu advogado online. </h3>
+    </div>
+
+    <!-- Group dropdown -->
+    <div class="col-6 col-md-5 d-flex flex-column justify-content-center">
+      <div class="form-border-bottom form-control-transparent form-fs-lg m-1">
+        <select id="group-select" class="form-control" name="group">
+          <option value="" disabled selected>Tipo de atendimento</option>
+          <option value="Advocacia">Advocacia</option>
+          <option value="Consultoria">Consultoria</option>
+          <option value="Correspondente">Correspondente</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Button -->
+    <!-- <%# <div class="col-3 col-md-4 d-flex flex-column justify-content-center"> -->
+      <!-- <%#= form.submit 'Procuar', class: 'btn btn-custom w-100' %> -->
+    <!-- <%# </div> %> -->
+  </div>
+
+<!-- <%# end %> -->
+</div>
+
+
+
+<script>
+  document.getElementById('group-select').addEventListener('change', function() {
+    this.form.submit();
+  });
+</script>

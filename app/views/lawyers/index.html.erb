@@ -35,3 +35,35 @@
     </div>
   <% end %>
 </div>
+
+
+<div class="col-4 col-md-3 d-flex flex-column justify-content-center">
+        <div class="form-border-bottom form-control-transparent form-fs-lg m-1">
+          <%= form.select :group, options_for_select(["Advocacia", "Consultoria", "Correspondente"], { include_blank: "Tipo de atendimento" }), { include_blank: false }, { multiple: true, size: 1, class: 'form-control' } %>
+        </div>
+      </div>
+
+      <div class="col-4 col-md-3 d-flex flex-column justify-content-center">
+        <div class="form-border-bottom form-control-transparent form-fs-lg m-1">
+          <%= form.select :category, options_for_select(["Direito de Família e Sucessões",
+                                                          "Direito Administrativo",
+                                                          "Direito Contratual",
+                                                          "Direito Imobiliário",
+                                                          "Direito do Consumidor",
+                                                          "Direito Tributário",
+                                                          "Direito Penal",
+                                                          "Direito Empresarial",
+                                                          "Direito Ambiental",
+                                                          "Direito Desportivo",
+                                                          "Direito Digital",
+                                                          "Direito da Propriedade Intelectual",
+                                                          "Direito Trabalhista e Previdenciário",
+                                                          "Direito Extrajudicial",
+                                                          "Direito Marítimo"], params[:category]), { include_blank: "Especialidade" }, { multiple: true, size: 15, class: 'form-control' } %>
+        </div>
+      </div>
+
+          <!-- Button -->
+      <div class='col-4 col-md-3 d-flex flex-column justify-content-center'>
+        <%= form.submit 'Procuar', class: 'btn btn-custom w-100' %>
+      </div>

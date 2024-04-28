@@ -27,10 +27,10 @@ advogado = Lawyer.new(
     city: "Conexão Advogados",
     UF: "Conexão Advogados",
     OAB: "12345/SP",
-    type: "Advocacia",
-    category: "Direito Administrativo",
+    group: ["Advocacia"],
+    category: ["Direito Administrativo"],
     faculty: "Faculdade de Direito da USP",
-    description: "Advogado especializado em casos de direito civil, com experiência em contratos e responsabilidade civil.",
+    detail: "Advogado especializado em casos de direito civil, com experiência em contratos e responsabilidade civil.",
     status: "Aguardando aprovação")
 
     file = URI.open("https://foodmagazine.com.br/imagens/noticias/butatan_food_park.jpg")
@@ -42,10 +42,10 @@ advogado = Lawyer.new(
     city: "Conexão Advogados",
     UF: "Conexão Advogados",
     OAB: "54321/RJ",
-    type: "Advocacia",
-    category: "Direito Administrativo",
+    group: ["Advocacia"],
+    category: ["Direito Administrativo"],
     faculty: "Faculdade de Direito da USP",
-    description: "Advogado especializado em casos de direito civil, com experiência em contratos e responsabilidade civil.",
+    detail: "Advogado especializado em casos de direito civil, com experiência em contratos e responsabilidade civil.",
     status: "Aguardando aprovação")
 
     file = URI.open("https://foodmagazine.com.br/imagens/noticias/butatan_food_park.jpg")
@@ -57,10 +57,10 @@ advogado = Lawyer.new(
     city: "Conexão Advogados",
     UF: "Conexão Advogados",
     OAB: "67890/MG",
-    type: "Advocacia",
-    category: "Direito Penal",
+    group: ["Advocacia"],
+    category: ["Direito Penal"],
     faculty: "Faculdade de Direito da USP",
-    description: "Advogado especializado em direito penal, com foco em crimes contra a pessoa e crimes contra o patrimônio.",
+    detail: "Advogado especializado em direito penal, com foco em crimes contra a pessoa e crimes contra o patrimônio.",
     status: "Aguardando aprovação")
 
     file = URI.open("https://foodmagazine.com.br/imagens/noticias/butatan_food_park.jpg")
@@ -72,10 +72,10 @@ advogado = Lawyer.new(
     city: "Conexão Advogados",
     UF: "Conexão Advogados",
     OAB: "54321/RS",
-    type: "Advocacia",
-    category: "Direito de Família e Sucessões",
+    group: ["Advocacia"],
+    category: ["Direito de Família e Sucessões"],
     faculty: "Faculdade de Direito da USP",
-    description: "Advogada com experiência em direito de família, atuando em divórcios, pensões alimentícias e guarda de filhos.",
+    detail: "Advogada com experiência em direito de família, atuando em divórcios, pensões alimentícias e guarda de filhos.",
     status: "Aguardando aprovação")
 
     file = URI.open("https://foodmagazine.com.br/imagens/noticias/butatan_food_park.jpg")
@@ -87,10 +87,10 @@ advogado = Lawyer.new(
     city: "Conexão Advogados",
     UF: "Conexão Advogados",
     OAB: "98765/BA",
-    type: "Advocacia",
-    category: "Direito do Consumidor",
+    group: ["Advocacia"],
+    category:["Direito do Consumidor"],
     faculty: "Faculdade de Direito da USP",
-    description: "Advogado especializado em direito do consumidor, com experiência em casos de relação de consumo e direitos básicos do consumidor.",
+    detail: "Advogado especializado em direito do consumidor, com experiência em casos de relação de consumo e direitos básicos do consumidor.",
     status: "Aguardando aprovação")
 
     file = URI.open("https://foodmagazine.com.br/imagens/noticias/butatan_food_park.jpg")
@@ -102,10 +102,10 @@ advogado = Lawyer.new(
     city: "Conexão Advogados",
     UF: "Conexão Advogados",
     OAB: "54321/SC",
-    type: "Advocacia",
-    category: "Direito Tributário",
+    group: ["Advocacia"],
+    category: ["Direito Tributário"],
     faculty: "Faculdade de Direito da USP",
-    description: "Advogada tributarista com conhecimento em legislação fiscal e resolução de questões relacionadas a tributos.",
+    detail: "Advogada tributarista com conhecimento em legislação fiscal e resolução de questões relacionadas a tributos.",
     status: "Aguardando aprovação")
 
     file = URI.open("https://foodmagazine.com.br/imagens/noticias/butatan_food_park.jpg")
@@ -117,10 +117,10 @@ advogado = Lawyer.new(
     city: "Conexão Advogados",
     UF: "Conexão Advogados",
     OAB: "54321/PR",
-    type: "Advocacia",
-    category: "Direito Ambiental",
+    group: ["Advocacia"],
+    category: ["Direito Ambiental"],
     faculty: "Faculdade de Direito da USP",
-    description: "Advogado com experiência em direito ambiental, atuando em casos de licenciamento ambiental e crimes ambientais.",
+    detail: "Advogado com experiência em direito ambiental, atuando em casos de licenciamento ambiental e crimes ambientais.",
     status: "Aguardando aprovação")
 
     file = URI.open("https://foodmagazine.com.br/imagens/noticias/butatan_food_park.jpg")
@@ -132,10 +132,10 @@ advogado = Lawyer.new(
     city: "Conexão Advogados",
     UF: "Conexão Advogados",
     OAB: "54321/PE",
-    type: "Advocacia",
-    category: "Direito Empresarial",
+    group: ["Advocacia"],
+    category: ["Direito Empresarial"],
     faculty: "Faculdade de Direito da USP",
-    description: "Advogada com foco em direito empresarial, atuando em casos de contratos comerciais e consultoria jurídica para empresas.",
+    detail: "Advogada com foco em direito empresarial, atuando em casos de contratos comerciais e consultoria jurídica para empresas.",
     status: "Aguardando aprovação")
 
     file = URI.open("https://foodmagazine.com.br/imagens/noticias/butatan_food_park.jpg")
@@ -147,10 +147,10 @@ advogado = Lawyer.new(
     city: "Conexão Advogados",
     UF: "Conexão Advogados",
     OAB: "54321/ES",
-    type: "Advocacia",
-    category: "Direito Administrativo",
+    group: ["Advocacia"],
+    category: ["Direito Administrativo"],
     faculty: "Faculdade de Direito da USP",
-    description: "Advogado especializado em direito administrativo, com experiência em processos envolvendo órgãos públicos e licitações.",
+    detail: "Advogado especializado em direito administrativo, com experiência em processos envolvendo órgãos públicos e licitações.",
     status: "Aguardando aprovação")
 
     file = URI.open("https://foodmagazine.com.br/imagens/noticias/butatan_food_park.jpg")

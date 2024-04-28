@@ -75,6 +75,6 @@ class ConnectionsController < ApplicationController
   end
 
   def lawyer_params
-    params.require(:connection).permit(:state, :city, :photos, :category, :description, :OAB, :faculty, :type, :photo)
+    params.require(:connection).permit(:UF, :group, :city, :photos, :category, :detail, :OAB, :faculty, :status, :photo)
   end
 end

@@ -63,18 +63,19 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_06_164733) do
   end
 
   create_table "lawyers", force: :cascade do |t|
-    t.string "state"
     t.string "city"
-    t.string "mail"
+    t.string "UF"
     t.string "OAB"
-    t.string "type"
-    t.string "category"
+    t.text "group", array: true
+    t.text "category", array: true
     t.string "faculty"
-    t.string "description"
+    t.string "detail"
     t.bigint "user_id", null: false
+    t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_lawyers_on_user_id"
+    t.check_constraint "status::text = ANY (ARRAY['Aguardando aprovação'::character varying, 'Aprovado'::character varying]::text[])", name: "check_status"
   end
 
   create_table "users", force: :cascade do |t|
