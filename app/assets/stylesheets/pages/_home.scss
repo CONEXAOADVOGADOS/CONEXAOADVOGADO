@@ -9,6 +9,12 @@
 //   box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
 // }
 
+select option {
+  font-size: 18px !important; /* Tamanho do texto */
+  font-weight: bold !important; /* Negrito */
+  color: #3E769B !important; /* Cor do texto */
+}
+
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
@@ -46,7 +52,6 @@
 //   width: 160px;
 //   /* Adicione outros estilos conforme necessário */
 // }
-
 
 .text-white {
   text-wrap: balance;
@@ -104,9 +109,7 @@
   background-color: #3E769B;
   border: 1px solid #01385D;
   border-radius: 4px;
-
 }
-
 
 .bd-mode-toggle {
   z-index: 1500;
@@ -131,7 +134,6 @@
   justify-content: center;
   align-items: center;
 }
-
 
 // .img-fluid {
 //   width: 4;

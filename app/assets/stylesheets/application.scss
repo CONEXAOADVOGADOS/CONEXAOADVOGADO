@@ -26,9 +26,24 @@
 // .row {
 //   margin-top: 40px;
 // }
- ///////////////////////////////////////////////  LOGIN
+ ///////////////////////////////////////////////
+ ///
+ ///
+
+select option[disabled] {
+  font-weight: bold !important;
+}
+
 h1 {
   color: #01385D;
+}
+
+.text-color-white{
+  color: #ffffff;
+}
+
+.text-color-blue{
+  color: #3E769B !important;
 }
 
 h2.login{
@@ -66,7 +81,6 @@ h2.login{
     text-decoration: none;
   }
 }
-
 
 .custom-input {
   border-radius: 4px;
@@ -153,8 +167,6 @@ div .login-form {
 
 }
 
-
-
 div.login-form-user-login {
     background-color: rgba(233, 233, 233, 0.8);
     margin: 200px 30%;
@@ -165,7 +177,6 @@ div.login-form-user-login {
     border-radius: 4px;
     padding: 10px;
 }
-
 
 .login-form {
   // background-color: rgba(233, 233, 233, 0.8);
@@ -282,7 +293,6 @@ body {
     background-color:#3E769B;
     color:#FFFFFF;
 }
-
 
 .buy-event-detail {
   color: #01385D;

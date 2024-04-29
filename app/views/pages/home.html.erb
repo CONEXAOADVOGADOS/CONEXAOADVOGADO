@@ -53,29 +53,25 @@
 
 		<!-- Search START -->
 
-  <%= form_with url: lawyers_path, method: :get, local: true, class: 'bg-white shadow rounded-3 p-4' do |form| %>
-  <div class="row">
-    <div class="col-3 d-flex flex-column justify-content-center d-none d-md-block">
-      <h3 class="u-text-color-navy hero-heading text-left text-black"> Encontre o seu advogado online. </h3>
-    </div>
-
-    <!-- Group dropdown -->
-    <div class="col-6 col-md-5 d-flex flex-column justify-content-center">
-      <div class="form-border-bottom form-control-transparent form-fs-lg m-1">
-        <select id="group-select" class="form-control" name="group">
-          <option value="" disabled selected>Tipo de atendimento</option>
-          <option value="Advocacia">Advocacia</option>
-          <option value="Consultoria">Consultoria</option>
-          <option value="Correspondente">Correspondente</option>
-        </select>
+  <%= form_with url: lawyers_path, method: :get, local: true, class: 'shadow rounded-3 p-4 text-color-blue' do |form| %>
+    <div class="row">
+      <div class="col-12 text-center">
+        <h3 class="text-color-white hero-heading text-left mb-4"> <strong>Encontre o melhor profissional para suas demandas</strong> </h3>
       </div>
     </div>
 
-    <!-- Button -->
-    <%# <div class="col-3 col-md-4 d-flex flex-column justify-content-center">
-      <%= form.submit 'Procuar', class: 'btn btn-custom w-100' %>
-    <%# </div> %>
-  </div>
+    <div class="row">
+      <div class="col-12 bg-transparent p-0 text-center ">
+        <div class="form-border-bottom form-control-transparent form-fs-lg m-1 mb-4">
+          <select id="group-select" class="form-control h-100 text-center text-color-blue" name="group">
+            <option value="" disabled selected id="default-option">Tipo de atendimento</option>
+            <option value="Advocacia" class="option-h5">Advocacia</option>
+            <option value="Consultoria" class="option-h5">Consultoria</option>
+            <option value="Correspondente" class="option-h5">Correspondente</option>
+          </select>
+        </div>
+      </div>
+    </div>
 
   <% end %>
   </div>
@@ -351,15 +347,14 @@ new Vue({
 });
 </script>
 -->
-
-<!--= form_with url: lawyers_path, method: :get, local: true, class: 'bg-white shadow rounded-3 p-4' do |form| %> -->
-  <div class="row">
+<!-- <%#= form_with url: lawyers_path, method: :get, local: true, class: 'bg-white shadow rounded-3 p-4' do |form| %> -->
+  <%# <div class="row">
     <div class="col-3 d-flex flex-column justify-content-center d-none d-md-block">
       <h3 class="u-text-color-navy hero-heading text-left text-black"> Encontre o seu advogado online. </h3>
-    </div>
+    </div> %>
 
     <!-- Group dropdown -->
-    <div class="col-6 col-md-5 d-flex flex-column justify-content-center">
+    <%# <div class="col-6 col-md-5 d-flex flex-column justify-content-center">
       <div class="form-border-bottom form-control-transparent form-fs-lg m-1">
         <select id="group-select" class="form-control" name="group">
           <option value="" disabled selected>Tipo de atendimento</option>
@@ -368,21 +363,65 @@ new Vue({
           <option value="Correspondente">Correspondente</option>
         </select>
       </div>
-    </div>
+    </div> %>
 
     <!-- Button -->
-    <!-- <%# <div class="col-3 col-md-4 d-flex flex-column justify-content-center"> -->
+    <!-- <%#= <div class="col-3 col-md-4 d-flex flex-column justify-content-center"> %> -->
       <!-- <%#= form.submit 'Procuar', class: 'btn btn-custom w-100' %> -->
-    <!-- <%# </div> %> -->
-  </div>
+    <!-- <%#= </div> %> -->
+  <%# </div> %>
 
-<!-- <%# end %> -->
-</div>
-
-
+<!-- <%#= end %> -->
+<%# </div> %>
 
 <script>
+  // document.addEventListener("DOMContentLoaded", function() {
+  //   var select = document.getElementById("group-select");
+  //   var options = select.getElementsByTagName("option");
+
+  //   for (var i = 0; i < options.length; i++) {
+  //       var option = options[i];
+  //       if (!option.disabled) {
+  //           option.innerHTML = "<strong>" + option.innerHTML + "</strong>";
+  //       }
+  //   }
+  // });
+
+  // document.addEventListener("DOMContentLoaded", function() {
+  //   var select = document.getElementById("group-select");
+  //   var options = select.getElementsByTagName("option");
+
+  //   for (var i = 0; i < options.length; i++) {
+  //       var option = options[i];
+  //       if (!option.disabled) {
+  //           option.innerHTML = "<h5>" + option.innerHTML + "</h5>";
+  //       }
+  //   }
+  // });
+  // document.addEventListener('DOMContentLoaded', function() {
+  //   var options = document.querySelectorAll('.option-bold');
+  //   options.forEach(function(option) {
+  //       option.style.fontWeight = 'bold';
+  //   });
+  // });
+
+  // document.addEventListener('DOMContentLoaded', function() {
+  //   var defaultOption = document.querySelector('#group-select option[selected]');
+  //   defaultOption.style.fontWeight = 'bold';
+  //   defaultOption.style.color = 'black';
+  // });
+  
+
   document.getElementById('group-select').addEventListener('change', function() {
     this.form.submit();
   });
 </script>
+
+
+<style>
+  .option-h5 {
+    font-size: 1.25rem; /* tamanho de fonte desejado */
+    font-weight: bold; /* negrito */
+    /* adicione outros estilos conforme necessário */
+  }
+</style>
