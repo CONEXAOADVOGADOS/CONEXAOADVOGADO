@@ -2,9 +2,9 @@
 
 <div class="navbar navbar-expand-lg navbar-light navbar-mw">
   <div class="container-fluid mx-spetial">
-    <div class="links-navbar d-lg-block d-lg-flex justify-content-center align-items-left">
+    <div class="links-navbar d-lg-block d-lg-flex justify-content-center align-items-left m-5">
       <%= link_to root_path, class: "navbar-brand" do %>
-        <%= image_tag "https://res.cloudinary.com/dop9mb8rc/image/upload/v1711326214/cb956f35352489.56f344556f06f_dsghko.jpg" %>
+        <%= image_tag "https://res.cloudinary.com/dop9mb8rc/image/upload/v1714138580/15_jlrivi.png" %>
       <% end %>
     </div>
 
@@ -18,7 +18,7 @@
     <div class="navbar-mb collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <li class="nav-item me-5">
-          <%= link_to "Sobre", sobre_path, class: "nav-link nav-link-custom" %>
+          <%= link_to "<strong>Sobre</strong>".html_safe, sobre_path, class: "nav-link nav-link-custom", style: "font-weight: bold;" %>
         </li>
         <li class="nav-item me-5">
           <%= link_to "Notícias", lawyers_path, class: "nav-link nav-link-custom" %>

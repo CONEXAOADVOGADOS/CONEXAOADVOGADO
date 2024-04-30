@@ -405,15 +405,29 @@ new Vue({
   //   });
   // });
 
-  // document.addEventListener('DOMContentLoaded', function() {
-  //   var defaultOption = document.querySelector('#group-select option[selected]');
-  //   defaultOption.style.fontWeight = 'bold';
-  //   defaultOption.style.color = 'black';
-  // });
-  
+  document.addEventListener('DOMContentLoaded', function() {
+    var defaultOption = document.querySelector('defaultOption');
+    defaultOption.style.fontWeight = 'bold';
+    defaultOption.style.color = 'black';
+  });
 
-  document.getElementById('group-select').addEventListener('change', function() {
-    this.form.submit();
+  document.addEventListener('DOMContentLoaded', function() {
+    var groupSelect = document.getElementById('group-select');
+
+    groupSelect.addEventListener('click', function() {
+      if (this.value !== '') {
+        this.form.submit();
+      }
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var defaultOption = document.getElementById('default-option');
+    var groupSelect = document.getElementById('group-select');
+
+  groupSelect.addEventListener('mousedown', function() {
+      defaultOption.style.display = 'none';
+    });
   });
 </script>
 
