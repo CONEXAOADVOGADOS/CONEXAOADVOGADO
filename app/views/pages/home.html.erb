@@ -21,7 +21,7 @@
       </div>
     </div>
     -->
-<div class="rounded-3 mb-300">
+<div class="rounded-3 mb-256">
   <!-- Banner title -->
   <div class="row min-vh-60">
     <div class="pb-5 mb-0 mb-lg-5">
@@ -36,7 +36,7 @@
             <div style="border-left: 1px solid white; height: 200px;"></div>
           </div>
           <!-- Texto -->
-          <div class="col-6 m-5 d-flex flex-column text-white mt-5 text-justify">
+          <div class="col-6 m-4 d-flex flex-column text-white mt-5 text-justify">
             <div>
               <h4>A PLATAFORMA QUE FALTAVA PARA SEUS</h4>
             </div>
@@ -56,13 +56,13 @@
   <%= form_with url: lawyers_path, method: :get, local: true, class: 'shadow rounded-3 p-4 text-color-blue' do |form| %>
     <div class="row">
       <div class="col-12 text-center">
-        <h3 class="text-color-white hero-heading text-left mb-4"> <strong>Encontre o melhor profissional para suas demandas</strong> </h3>
+        <h3 class="text-color-white hero-heading text-left mb-3"> <strong>Encontre o melhor profissional para suas demandas</strong> </h3>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-12 bg-transparent p-0 text-center ">
-        <div class="form-border-bottom form-control-transparent form-fs-lg m-1 mb-4">
+      <div class="col-12 p-0 text-center ">
+        <div class="form-border-bottom form-fs-lg m-1 mb-3">
           <select id="group-select" class="form-control h-100 text-center text-color-blue" name="group">
             <option value="" disabled selected id="default-option">Tipo de atendimento</option>
             <option value="Advocacia" class="option-h5">Advocacia</option>
@@ -196,8 +196,6 @@
 <!-- =======================
 About END -->
 
-
-
   <div class="mt-5 w-100">
       <!-- Three columns of text below the carousel -->
     <div class="mt-4">
@@ -310,7 +308,6 @@ About END -->
       </select>
     </div>
   </div>
-
 
 Button
   <div class='col-4 col-md-3 d-flex flex-column justify-content-center'>
@@ -430,7 +427,6 @@ new Vue({
     });
   });
 </script>
-
 
 <style>
   .option-h5 {
