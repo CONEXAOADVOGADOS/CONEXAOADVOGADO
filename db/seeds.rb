@@ -6,14 +6,15 @@ Lawyer.destroy_all
 User.destroy_all
 
 # Criar usuário administrador
-User.create!(email: "admin@admin.com", password: "admin123", name: "Admin", CPF: "123.123.123-12", phone_number: "(12)32123-1231")
+User.create!(email: "admin@admin.com", password: "admin123", first_name: "Admin", surname: "123", CPF: "123.123.123-12", phone_number: "(12)32123-1231")
 
 # Criar usuários aleatórios
 10.times do
   User.create!(
     email: Faker::Internet.email,
     password: "password", # Senha padrão para simplificar
-    name: Faker::Name.name,
+    first_name: Faker::Name.first_name,
+    surname: Faker::Name.last_name,
     CPF: Faker::IDNumber.brazilian_citizen_number(formatted: true),
     phone_number: Faker::PhoneNumber.cell_phone
   )

@@ -5,8 +5,8 @@ class User < ApplicationRecord
   has_many :lawyers, dependent: :destroy
   has_many :connections, dependent: :destroy
 
-
-  validates :name, presence: true
+  validates :first_name, presence: true
+  validates :surname, presence: true
   validates :CPF, presence: true, format: { with: /\A\d{3}\.\d{3}\.\d{3}-\d{2}\z/ }
   validates :phone_number, presence: true
   validates :email, presence: true
