@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -12,7 +12,7 @@
 
 <div class="navbar navbar-expand-lg navbar-light navbar-mw">
   <div class="container-fluid mx-special">
-    <div class="links-navbar d-lg-block d-lg-flex justify-content-center align-items-left m-5">
+    <div class="links-navbar d-lg-block d-lg-flex justify-content-center align-items-left m-3">
       <!-- Corrigindo o link para a raiz e a imagem -->
       <%= link_to root_path, class: "navbar-brand" do %>
         <%= image_tag "https://res.cloudinary.com/dop9mb8rc/image/upload/v1714138580/15_jlrivi.png" %>
@@ -28,13 +28,13 @@
     <div class="navbar-mb collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <li class="nav-item me-5">
-          <%= link_to raw("<strong>Sobre</strong>"), sobre_path, class: "nav-link nav-link-custom", style: "font-weight: bold;" %>
+          <%= link_to raw("<strong>Sobre</strong>"), sobre_path, class: "nav-link nav-link-custom poppins-font", style: "font-weight: bold;" %>
         </li>
         <li class="nav-item me-5">
-          <%= link_to raw("<strong>Notícias</strong>"), lawyers_path, class: "nav-link nav-link-custom" %>
+          <%= link_to raw("<strong>Notícias</strong>"), lawyers_path, class: "nav-link nav-link-custom poppins-font" %>
         </li>
         <li class="nav-item me-custom">
-          <%= link_to raw("<strong>Área do Advogado</strong>"), adv_path, class: "nav-link nav-link-custom" %>
+          <%= link_to raw("<strong>Área do Advogado</strong>"), adv_path, class: "nav-link nav-link-custom poppins-font" %>
         </li>
       </ul>
       <ul class="navbar-nav me-auto">
@@ -63,13 +63,13 @@
             <% end %>
           </li>
         <% else %>
-          <li class="nav-item">
-            <%= link_to new_user_session_path, class: "nav-link nav-link-custom" do %>
+          <li class="nav-item me-2">
+            <%= link_to new_user_session_path, class: "nav-link nav-link-custom opens-sans-font" do %>
               <strong>Login</strong>
             <% end %>
           </li>
           <li class="nav-item">
-            <%= link_to new_user_registration_path, class: "nav-link nav-link-custom" do %>
+            <%= link_to new_user_registration_path, class: "nav-link nav-link-custom opens-sans-font" do %>
               <strong>Cadastrar-se</strong>
             <% end %>
           </li>

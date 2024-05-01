@@ -1,9 +1,9 @@
-<style>
+<%# <style>
     @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap');
-</style>
+</style> %>
 
 <section class="pt-0">
-<div class="bg-home">
+<div class="bg-home open-sans-font">
 
 	<div class="container position-relative">
 		<!-- Bg image -->
@@ -21,7 +21,7 @@
       </div>
     </div>
     -->
-<div class="rounded-3 mb-256">
+<div class="rounded-3 mb-350">
   <!-- Banner title -->
   <div class="row min-vh-60">
     <div class="pb-5 mb-0 mb-lg-5">
@@ -36,12 +36,12 @@
             <div style="border-left: 1px solid white; height: 200px;"></div>
           </div>
           <!-- Texto -->
-          <div class="col-6 m-4 d-flex flex-column text-white mt-5 text-justify">
-            <div>
-              <h4>A PLATAFORMA QUE FALTAVA PARA SEUS</h4>
+          <div class="col-6 m-5 d-flex flex-column text-white mt-5">
+            <div class="ml-5 d-inline">
+              <h4 class="font-weight-bold">A PLATAFORMA QUE FALTAVA PARA SEUS</h4>
             </div>
-            <div style="text-color: red">
-              <h4>SERVIÇOS JURÍDICOS</h4>
+            <div class="text-color-yellow">
+              <h4 class="font-weight-bold">SERVIÇOS JURÍDICOS</h4>
             </div>
           </div>
         </div>
@@ -434,4 +434,9 @@ new Vue({
     font-weight: bold; /* negrito */
     /* adicione outros estilos conforme necessário */
   }
+
+  .ml-5 h4, .text-color-yellow h4 {
+      font-family: Alta, sans-serif;
+  }
+
 </style>
