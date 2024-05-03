@@ -1,15 +1,21 @@
 class LawyerPolicy < ApplicationPolicy
+  # class Scope < Scope
+  #   # NOTE: Be explicit about which records you allow access to!
+  #   # def resolve
+  #   #   scope.all
+  #   # end
+  #   def resolve
+  #     scope.all # If users can see all restaurants
+  #     # scope.where(user: user) # If users can only see their restaurants
+  #     # scope.where("name LIKE 't%'") # If users can only see restaurants starting with `t`
+  #     # ...
+  #     # user.admin? ? scope.all : scope.where(user: :user)
+  #   end
+  # end
+
   class Scope < Scope
-    # NOTE: Be explicit about which records you allow access to!
-    # def resolve
-    #   scope.all
-    # end
     def resolve
-      scope.all # If users can see all restaurants
-      # scope.where(user: user) # If users can only see their restaurants
-      # scope.where("name LIKE 't%'") # If users can only see restaurants starting with `t`
-      # ...
-      # user.admin? ? scope.all : scope.where(user: :user)
+      scope.all # Altere isso de acordo com a lógica de escopo que você deseja aplicar
     end
   end
 

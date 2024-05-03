@@ -19,9 +19,9 @@ class Lawyer < ApplicationRecord
 
   include PgSearch::Model
 
-  pg_search_scope :search_by_category_and_local_and_date,
-                  against: %i[category local date],
-                  using: {
-                    tsearch: { prefix: true }
-                  }
+  # pg_search_scope :search_by_category_and_local_and_date,
+  #                 against: %i[category local date],
+  #                 using: {
+  #                   tsearch: { prefix: true }
+  #                 }
 end

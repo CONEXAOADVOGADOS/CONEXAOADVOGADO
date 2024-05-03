@@ -1,69 +1,43 @@
+<% if @lawyers.present? %>
+  <ul>
+    <% @lawyers.each do |lawyer| %>
+      <li><%= lawyer.user.first_name %> - <%= lawyer.group.join(", ") %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Nenhum advogado encontrado.</p>
+<% end %>
 
-<div class="container my-5  container-lawyers">
-  <%# <h1 class="h1-lawyers">Lawyers</h1> %>
-  <% if params[:show_only].blank? || ( params[:show_only].present? && params[:show_only] == 'trabalhista') %>
-    <h2 id="excursions" class= "<%= 'd-none' unless @lawyers.where("category ILIKE ?", "excursions").any? %>">Trabalhista</h2>
-    <div class="row">
-      <% @lawyers.where("category ILIKE ?", "excursions").each do |lawyer| %>
-        <%= render "lawyer", lawyer: lawyer %>
-      <% end %>
-      <%= link_to "See All Lawyers", lawyers_path, class: "d-flex justify-content-center see-all-lawyers mt-2"%>
+<% if false %>
+<div class="row">
+  <div class="col-4 col-md-3 d-flex flex-column justify-content-center">
+    <div class="form-border-bottom form-control-transparent form-fs-lg m-1">
+      <%= form.select :group, options_for_select(["Advocacia", "Consultoria", "Correspondente"], { include_blank: "Tipo de atendimento" }), { include_blank: false }, { multiple: true, size: 1, class: 'form-control' } %>
     </div>
-  <% end %>
+  </div>
 
-  <% if params[:show_only].blank? || ( params[:show_only].present? && params[:show_only] == 'gastronomy')  %>
-
-    <h2 id="gastronomy" class= "<%= 'd-none' unless @lawyers.where("category ILIKE ?", "gastronomy").any? %>">Gastronomy<a href="#lawyers" class="back-to-top-link"></a></h2>
-    <div class="row">
-      <% @lawyers.where("category ILIKE ?", "gastronomy").each do |lawyer| %>
-        <%= render "lawyer", lawyer: lawyer %>
-      <% end %>
-      <%= link_to "See All Lawyers", lawyers_path, class: "d-flex justify-content-center see-all-lawyers mt-2"%>
+  <div class="col-4 col-md-3 d-flex flex-column justify-content-center">
+    <div class="form-border-bottom form-control-transparent form-fs-lg m-1">
+      <%= form.select :category, options_for_select(["Direito de Família e Sucessões",
+                                                      "Direito Administrativo",
+                                                      "Direito Contratual",
+                                                      "Direito Imobiliário",
+                                                      "Direito do Consumidor",
+                                                      "Direito Tributário",
+                                                      "Direito Penal",
+                                                      "Direito Empresarial",
+                                                      "Direito Ambiental",
+                                                      "Direito Desportivo",
+                                                      "Direito Digital",
+                                                      "Direito da Propriedade Intelectual",
+                                                      "Direito Trabalhista e Previdenciário",
+                                                      "Direito Extrajudicial",
+                                                      "Direito Marítimo"], params[:category]), { include_blank: "Especialidade" }, { multiple: true, size: 15, class: 'form-control' } %>
     </div>
+  </div>
 
-  <% end %>
-
-  <% if params[:show_only].blank? || ( params[:show_only].present? && params[:show_only] == 'workshops')  %>
-
-
-    <h2 id="workshops" class= "<%= 'd-none' unless @lawyers.where("category ILIKE ?", "workshops").any? %>">Workshops</h2>
-    <div class="row">
-      <% @lawyers.where("category ILIKE ?", "workshops").each do |lawyer| %>
-        <%= render "lawyer", lawyer: lawyer %>
-      <% end %>
-      <%= link_to "See All Lawyers", lawyers_path, class: "d-flex justify-content-center see-all-lawyers mt-2"%>
-    </div>
-  <% end %>
+  <div class='col-4 col-md-3 d-flex flex-column justify-content-center'>
+    <%= form.submit 'Procurar', class: 'btn btn-custom w-100' %>
+  </div>
 </div>
-
-
-<div class="col-4 col-md-3 d-flex flex-column justify-content-center">
-        <div class="form-border-bottom form-control-transparent form-fs-lg m-1">
-          <%= form.select :group, options_for_select(["Advocacia", "Consultoria", "Correspondente"], { include_blank: "Tipo de atendimento" }), { include_blank: false }, { multiple: true, size: 1, class: 'form-control' } %>
-        </div>
-      </div>
-
-      <div class="col-4 col-md-3 d-flex flex-column justify-content-center">
-        <div class="form-border-bottom form-control-transparent form-fs-lg m-1">
-          <%= form.select :category, options_for_select(["Direito de Família e Sucessões",
-                                                          "Direito Administrativo",
-                                                          "Direito Contratual",
-                                                          "Direito Imobiliário",
-                                                          "Direito do Consumidor",
-                                                          "Direito Tributário",
-                                                          "Direito Penal",
-                                                          "Direito Empresarial",
-                                                          "Direito Ambiental",
-                                                          "Direito Desportivo",
-                                                          "Direito Digital",
-                                                          "Direito da Propriedade Intelectual",
-                                                          "Direito Trabalhista e Previdenciário",
-                                                          "Direito Extrajudicial",
-                                                          "Direito Marítimo"], params[:category]), { include_blank: "Especialidade" }, { multiple: true, size: 15, class: 'form-control' } %>
-        </div>
-      </div>
-
-          <!-- Button -->
-      <div class='col-4 col-md-3 d-flex flex-column justify-content-center'>
-        <%= form.submit 'Procuar', class: 'btn btn-custom w-100' %>
-      </div>
+<% end %>

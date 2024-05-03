@@ -1,14 +1,10 @@
 class LawyersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
 
-  # def index
-  #   @lawyers = policy_scope(Lawyer)
-  #   filters = {}
-  #   filters[:category] = "%#{params[:category]}%" if params[:category].present?
-  #   filters[:date] = Date.parse(params[:date]) if params[:date].present?
-  #   filters[:local] = "%#{params[:location]}%" if params[:location].present?
-  #   apply_filters(@lawyers, filters)
-  # end
+  def index
+    @lawyers = policy_scope(Lawyer)
+    @lawyers = @lawyers.where("? = ANY(\"group\")", params[:group]) if params[:group].present?
+  end
 
   def show
     @lawyer = Lawyer.find(params[:id])
@@ -61,24 +57,25 @@ class LawyersController < ApplicationController
 
   private
 
-  def apply_filters(scope, filters)
-    filter_mapping = {
-      category: ->(value) { scope.where("category ILIKE ?", value) },
-      date: ->(value) { scope.where(date: value) },
-      local: ->(value) { scope.where("local ILIKE ?", value) }
-    }
+  # def apply_filters(scope, filters)
+  #   filters ||= {}
 
-    filters.each { |key, value| scope = filter_mapping[key]&.call(value) || scope }
+  #   filter_mapping = {
+  #     group: ->(value) { scope.where("CAST(\"group\"->>'name' AS TEXT) ILIKE ?", "%#{value}%") },
+  #     # Adicione outros filtros aqui, se necessário
+  #   }
 
-    @lawyers = scope
-  end
+  #   filters.each { |key, value| scope = filter_mapping[key]&.call(value) || scope }
+
+  #   @lawyers = scope
+  # end
 
   def lawyer_params
     params.require(:lawyer).permit(:UF, :status, :city, :photos, :category, :detail, :OAB, :faculty, :group, :photo)
   end
 
-  def search
-    @lawyers = Lawyer.where("category LIKE ?", "%#{params[:q]}%")
-    render :index
-  end
+  # def search
+  #   @lawyers = Lawyer.where("group LIKE ?", "%#{params[:q]}%")
+  #   render :index
+  # end
 end

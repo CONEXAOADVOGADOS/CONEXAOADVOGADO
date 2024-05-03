@@ -67,7 +67,7 @@ class UsersController < ApplicationController
   end
 
   def search
-    @lawyers = Lawyer.where("category LIKE ?", "%#{params[:q]}%")
+    @lawyers = Lawyer.where("group LIKE ?", "%#{params[:q]}%")
     render :index
   end
 end
