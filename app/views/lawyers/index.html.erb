@@ -1,12 +1,33 @@
-<% if @lawyers.present? %>
-  <ul>
-    <% @lawyers.each do |lawyer| %>
-      <li><%= lawyer.user.first_name %> - <%= lawyer.group.join(", ") %></li>
-    <% end %>
-  </ul>
-<% else %>
-  <p>Nenhum advogado encontrado.</p>
-<% end %>
+<div class="container my-5 container-experiences">
+  <% if params[:group].blank? || params[:group] == 'Advocacia' %>
+    <div class="row">
+      <% @lawyers.where("? = ANY(\"group\")", params[:group]).each do |lawyer| %>
+        <%= render "lawyer", lawyer: lawyer %>
+      <% end %>
+      <%= link_to "See All Experiences", lawyers_path, class: "d-flex justify-content-center see-all-lawyers mt-2"%>
+    </div>
+  <% end %>
+
+  <% if params[:group].blank? || params[:group] == 'Correspondente' %>
+    <!-- <h2 id="Correspondente" class="<%= 'd-none' unless @lawyers.where("? = ANY(group)", params[:group]).any? %>">Correspondente</h2> -->
+    <div class="row">
+      <% @lawyers.where("? = ANY(group)", params[:group]).each do |lawyer| %>
+        <%= render "lawyer", lawyer: lawyer %>
+      <% end %>
+      <%= link_to "See All Experiences", lawyers_path, class: "d-flex justify-content-center see-all-lawyers mt-2"%>
+    </div>
+  <% end %>
+
+  <% if params[:group].blank? || params[:group] == 'Consultoria' %>
+    <!-- <h2 id="Consultoria" class="<%= 'd-none' unless @lawyers.where("? = ANY(group)", params[:group]).any? %>">Consultoria</h2> -->
+    <div class="row">
+      <% @lawyers.where("? = ANY(group)", params[:group]).each do |lawyer| %>
+        <%= render "lawyer", lawyer: lawyer %>
+      <% end %>
+      <%= link_to "See All Experiences", lawyers_path, class: "d-flex justify-content-center see-all-lawyers mt-2"%>
+    </div>
+  <% end %>
+</div>
 
 <% if false %>
 <div class="row">
@@ -41,3 +62,120 @@
   </div>
 </div>
 <% end %>
+
+                    <div class="headshot">
+                        <a class="gtm-profile-link" data-gtm-tracking="{&quot;contact_type&quot;:&quot;view profile&quot;}" data-gtm-link-text="Lawyer Photo" data-professional-id="4267032" href="https://www.avvo.com/attorneys/50266-ia-grant-gangestad-4267032.html">
+                            <picture>
+                                <source media="(min-width: 320px)" srcset="https://images.avvo.com/avvo/ugc/images/head_shot/standard/lawyer_grant_gangestad_4267032_1709930321.jpg" width="112" height="149" loading="lazy"/>
+                                <img src="https://images.avvo.com/avvo/ugc/images/head_shot/standard/lawyer_grant_gangestad_4267032_1709930321.jpg" alt="headshot" width="88" height="117" loading="lazy">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="details">
+                        <h3 style="margin: 0" class="profile-name">
+                            <a class="gtm-profile-link search-result-lawyer-name" data-gtm-tracking="{&quot;contact_type&quot;:&quot;view profile&quot;}" data-professional-id="4267032" title="Grant Christopher Gangestad, IA DUI &amp; DWI Lawyer" href="https://www.avvo.com/attorneys/50266-ia-grant-gangestad-4267032.html">Grant Christopher Gangestad</a>
+                        </h3>
+                        <div class="flex-row business-labels">
+                            <span class="v-show-tooltip icon-check-circle-before-green icon-info-circle-after-blue">
+                                Open for Business
+
+                                <span class="v-tooltip">
+                                    <strong>Open for business</strong>
+                                    <p>
+                                        Attorneys that have confirmed to Avvo that they are open during this time are marked<strong>"Open for business"</strong>
+                                        on their profile. We recommend that you contact the attorney directly to determine hours and availability.
+                                    </p>
+                                </span>
+                            </span>
+                            <span class="v-show-tooltip icon-check-circle-before-green icon-info-circle-after-blue">
+                                Virtual Consultation
+
+                                <span class="v-tooltip">
+                                    <strong>Virtual Consultation</strong>
+                                    <p>
+                                        Attorneys that have confirmed to Avvo that they are available for a phone or video consultation have<strong>"Virtual Consultation"</strong>
+                                        on their profile. We recommend that you contact the attorney directly to determine hours and availability.
+                                    </p>
+                                </span>
+                            </span>
+                        </div>
+                        <div class="flex-row address">
+                            <div class="text-muted" style="width: 80%;">Iowa DUI &amp;DWI Attorney
+</div>
+                            <div class="save-card">
+                                <a href="https://www.avvo.com/saved_content/toggle_save_lawyer?lawyer_id=4267032" class="save-lawyer-link" data-lawyer-id="4267032" data-method="post" data-remote="true" rel="nofollow">
+                                    <i class="icon-bookmark-open"></i>
+                                    <span class="save-text">Save</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex-row rating small">
+                            <a class="gtm-profile-link" data-gtm-tracking="{&quot;contact_type&quot;:&quot;view profile&quot;}" href="https://www.avvo.com/attorneys/50266-ia-grant-gangestad-4267032.html#reviews">
+                                <span class="text-nowrap">
+                                    <i class="icon-star-yellow"></i>
+                                    <i class="icon-star-yellow"></i>
+                                    <i class="icon-star-yellow"></i>
+                                    <i class="icon-star-yellow"></i>
+                                    <i class="icon-star-yellow"></i>
+                                </span>
+                                <span class="text-nowrap">39 reviews</span>
+                            </a>
+                            <span>
+                                <span>
+                                    Avvo Rating: <b>10.0</b>
+                                </span>
+                                <span class="text-nowrap avvo-rating-modal-info" data-sanction-disclaimer="true" data-rating="10.0" data-year-sanctioned>
+                                    <span aria-hidden="true" class="icon-info-circle-after-blue"></span>
+                                </span>
+                            </span>
+                            <div class="text-muted">DUI &amp;DWI Lawyer Licensed for 11 years </div>
+                        </div>
+                    </div>
+                    <div class="body-content">
+                        <div class="small">Expert OWI defense attorney. Mr. Gangestad has wins in courtrooms across the state, as well as the Iowa Supreme Court and Court of Appeals.</div>
+                        <div class="flex-row additional-info small">
+                            <div>
+                                <b class="label">Practice area</b>
+                                <span>
+                                    <b>70%</b>
+                                    DUI & DWI, <b>20%</b>
+                                    Criminal Defense, <b>5%</b>
+                                    Personal Injury and more
+                                </span>
+                            </div>
+                            <div>
+                                <b class="label">Cost</b>
+                                <span>Free Consultation</span>
+                                <span class="v-show-tooltip icon-info-circle-after-blue">
+                                    <span class="v-tooltip">Some lawyers offer a free consultation to help determine whether their services are right for your legal needs</span>
+                                </span>
+                                <strong>30 minutes</strong>
+                            </div>
+                            <div>
+                                <b class="label">License</b>
+                                <span>IA, Active since 2012</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ctas ctas-3">
+                        <span>
+                            <a target="_self" id="ph-4267032-rp" class="gtm-tracking-cta v-cta-organic-mobile-phone overridable-lawyer-phone-link" data-gtm-tracking="{&quot;contact_type&quot;:&quot;initiate mobile phone&quot;}" href="tel:5155125367">
+                                <i class="icon-phone-before-blue"></i>
+                                <span class="visible-xs-inline">Call</span>
+                                <span class="hidden-xs-inline overridable-lawyer-phone-copy">(515) 512-5367</span>
+                            </a>
+                        </span>
+                        <span>
+                            <a target="_blank" rel="nofollow noopener" class="gtm-tracking-cta v-cta-organic-mobile-message" data-gtm-tracking="{&quot;contact_type&quot;:&quot;initiate message&quot;}" data-professional-id="4267032" href="https://www.avvo.com/messages/1407686?practice_area=56">
+                                <i class="icon-message-before-blue"></i>
+                                <span>Message</span>
+                            </a>
+                        </span>
+                        <span>
+                            <a target="_blank" class="gtm-tracking-cta v-cta-organic-mobile-website" onclick="this.href=&#39;https://www.avvo.com/attorney-website/50266-ia-grant-gangestad-4267032/website.html&#39;;return true;" data-gtm-tracking="{&quot;contact_type&quot;:&quot;contact website&quot;}" data-professional-id="4267032" rel="nofollow noopener" href="http://www.grllaw.com">
+                                <i class="icon-external-link-before-blue"></i>
+                                <span>Website</span>
+                            </a>
+                        </span>
+                    </div>
+                </div>
