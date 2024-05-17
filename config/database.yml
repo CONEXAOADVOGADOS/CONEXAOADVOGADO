@@ -79,6 +79,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postresql
+  encoding: unicode
+  pool: 5
   database: conexaoadvogado_production
   username: conexaoadvogado
   password: <%= ENV["CONEXAOADVOGADO_DATABASE_PASSWORD"] %>
