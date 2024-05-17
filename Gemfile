@@ -79,9 +79,6 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
-  gem "selenium-webdriver"
-  gem "pd"
-  gem 'rails_12factor'
 end
 
 gem "pgreset"
