@@ -82,7 +82,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "pd"
-  gem 'puma'
+  gem 'puma', '~> 5.0'
   gem 'rails_12factor'
 end
 
