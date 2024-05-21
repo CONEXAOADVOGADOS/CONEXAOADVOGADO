@@ -3,7 +3,8 @@
   // background:#31404B;
   // background-color: #f8f9fa;
   background-color: #01385D;
-  height: 90px;
+  height: 120px;
+  padding: 0 20px;
 }
 
 .navbar-mb {
@@ -18,12 +19,26 @@
   color: #FFFFFF !important;
 }
 
+.bi-search::before {
+  content: "\f52a";
+  font-size: 20px;
+}
+
 .fixed-nav {
   position: fixed;
   top: 0;
   margin-bottom: 65px;
   width: 100%;
-  z-index: 1000;
+  z-index: 1;
+  transition: transform 0.3s;
+}
+
+.hidden {
+  transform: translateY(-100%);
+}
+
+.hide {
+  display: none;
 }
 
 .messages-d-none{
@@ -52,24 +67,6 @@
   }
 
 }
-
-// .links-navbar .navbar-light .navbar-nav .nav-link a:hover,
-// .links-navbar .navbar-light .navbar-nav .nav-link a:focus {
-//   text-decoration: none;
-//   color: #F9BA3D !important;
-//  /* Add hover and focus styles here */
-// }
-
-// .links-navbar  a {
-//   color: rgba(0,0,0,0.3);
-//   display: flex;
-//   flex-wrap: wrap;
-// }
-
-// .navbar-light .navbar-nav .nav-link  {
-//   color: rgba(0,0,0,0.3);
-// }
-
 
 .links-navbar a:nth-child(1) {
   margin-right: 20px;
@@ -117,24 +114,6 @@ a .avatar {
   margin: 80px;
 }
 
-// .links-navbar {
-//   display: flex;
-//   flex-wrap: wrap;
-// }
-
-// .links-navbar a {
-//   margin-right: 20px;
-//   margin-bottom: 10px; /* Espaçamento entre os links */
-// }
-
-// @media (max-width: 576px) {
-//   .links-navbar a {
-//     margin-right: 0;
-//     margin-bottom: 10px; /* Espaçamento entre os links */
-//     width: 100%;
-//   }
-// }
-
 /* Adiciona mais margem ao redor do link de login */
 .login-link {
   margin: 10px;
@@ -160,114 +139,61 @@ a .avatar {
   font-size: 1.2em; /* 1.2 vezes o tamanho padrão da fonte */
 }
 
-@media (min-width: 1100px) {
+// Alterações específicas Felipe
+
+.colapso {
+  display: none;
+}
+
+.nav-link-custom {
+  color: #FFFFFF !important;
+  font-size: 18px !important;
+}
+
+.navbar > .container-fluid, .navbar > .container-sm, .navbar > .container-md, .navbar > .container-lg, .navbar > .container-xl, .navbar > .container-xxl {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hamburger {
+  color: #fff;
+  background: transparent;
+  border: 0;
+  font-size: 20px;
+}
+
+@media (min-width: 1200px) {
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .colapso {
+    display: flex;
+  }
+
   .me-custom {
     margin-right: 182px;
   }
-}
 
-// Define a cor de fonte cinza escuro para os links
-.nav-link-custom {
-  color: #FFFFFF !important; // ou outra cor cinza escuro de sua preferência
-}
-
-// Define o estilo de hover dos links
-.nav-link-custom:hover {
-  color: #0d6efd !important; // Azul padrão do Bootstrap
-}
-
-// Aumenta a fonte dos links na navbar
-.navbar-nav .nav-link-custom {
-  font-size: 18px; // ou outro tamanho de fonte de sua preferência
-}
-
-// Define o fundo dos itens do menu hambúrguer
-.navbar-collapse {
-  background-color: #FFFFFF; // ou outra cor de fundo de sua preferência
-  padding: 10px; // Espaçamento interno para os itens do menu
-  border-radius: 5px; // Borda arredondada
-  margin-top: 10px; // Espaçamento superior
-}
-
-// Adiciona espaçamento entre os itens do menu hambúrguer
-.navbar-collapse .navbar-nav .nav-link {
-  margin-bottom: 5px; // Espaçamento entre os itens
-}
-
-@media (max-width: 991.98px) {
-  // Mantém a classe navbar-nav com flex-direction: row; quando o menu hambúrguer é clicado
-  .navbar-toggler:focus + .collapse .navbar-nav,
-  .navbar-toggler:active + .collapse .navbar-nav {
-    display: flex;
-    flex-direction: row; // Altera a direção para linha
-    align-items: center;
-  }
-}
-
-// .links-navbar a:hover,
-// .links-navbar a:focus {
-//   /* Add hover and focus styles here */
-// }
-// .links-navbar  a {
-//   color: white;
-//   text-decoration: none;
-// }
-
-// .links-navbar a:nth-child(1) {
-//   margin-right: 20px;
-// }
-// .links-navbar a:nth-child(2) {
-//   margin-right: 20px;
-// }
-// a .avatar {
-//   border: 1px solid  #763FE2;
-//   height: 60px;
-//   width: 60px;
-// }
-// .navbar-nav {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// Define a cor de fonte cinza escuro para os links
-.nav-link-custom {
-  color: #01385D; // ou outra cor cinza escuro de sua preferência
-}
-
-// Define o estilo de hover dos links
-.nav-link-custom:hover {
-  color: #DFB72E !important; // Azul padrão do Bootstrap
-}
-
-// Aumenta a fonte dos links na navbar
-.navbar-nav {
+  /* Define a cor de fonte branca para os links */
   .nav-link-custom {
-    font-size: 18px; // ou outro tamanho de fonte de sua preferência
+    color: #FFFFFF !important;
   }
-}
 
-// Define o fundo dos itens do menu hambúrguer
-.navbar-toggler + .collapse {
-  background-color: #01385D; // ou outra cor de fundo de sua preferência
-  padding: 10px; // Espaçamento interno para os itens do menu
-  border-radius: 5px; // Borda arredondada
-  margin-top: 10px; // Espaçamento superior
-}
-
-// Adiciona espaçamento entre os itens do menu hambúrguer
-.navbar-toggler + .collapse .navbar-nav {
-  .nav-link {
-    margin-bottom: 5px; // Espaçamento entre os itens
+  /* Define o estilo de hover dos links */
+  .nav-link-custom:hover {
+    color: #0d6efd !important; /* Azul padrão do Bootstrap */
   }
-}
 
-@media (max-width: 991.98px) {
-  // Mantém a classe navbar-nav com flex-direction: row; quando o menu hambúrguer é clicado
-  .navbar-toggler:focus + .collapse .navbar-nav,
-  .navbar-toggler:active + .collapse .navbar-nav {
-    display: flex;
-    flex-direction: row; // Altera a direção para linha
-    align-items: center;
+  /* Aumenta a fonte dos links na navbar */
+  .navbar-nav .nav-link-custom {
+    font-size: 18px; /* ou outro tamanho de fonte de sua preferência */
   }
+
+
 }

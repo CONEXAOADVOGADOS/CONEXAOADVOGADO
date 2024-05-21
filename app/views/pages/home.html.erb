@@ -85,7 +85,7 @@
 			<div class="col-lg-4 position-relative p-5">
 				<h2>We find the perfect experience for your travel.</h2>
 				<p>Book your experience with us. We are here to help you enjoy your adventure.</p>
-				<img src="assets/images/about/09.jpg" class="rounded-3" alt="">
+
 				<!-- Svg decoration -->
 				<figure class="position-absolute bottom-0 end-0 me-lg-n5 mb-n3">
 
@@ -101,15 +101,7 @@
 				</figure> %>
 				<!-- Image -->
 				<div class="position-relative mb-5">
-					<!-- Image -->
-					<img src="assets/images/about/10.jpg" class="rounded-3" alt="">
-					<!-- Manager -->
-					<%# <div class="position-absolute bottom-0 start-0 ms-n3 ms-lg-n6 mb-2 z-index-1 p-5">
-						<div class="bg-mode shadow d-inline-block text-center rounded-3 position-relative p-4">
-							<span class="h3 text-primary mb-2">10M+</span>
-							<h6 class="fw-normal">Total Booking</h6>
-						</div>
-					</div> %>
+
 				</div>
 				<!-- Features START -->
 				<div class="row g-4 g-md-5">
@@ -229,184 +221,10 @@ About END -->
   </div><!-- /.container -->
 </div>
 
-    <!-- START THE FEATURETTES    MAPA-->
-
-    <%# <hr class="featurette-divider">
-
-    <div class="row featurette pt-5">
-      <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">Why choosing MyWelcome? <span class="text-body-secondary"></span></h2>
-        <p class="lead">At MyWelcome we offer unique experiences worldwide. We are a community of locals and travelers who share a passion for travel and a desire to connect with each other. We are a certified company and we are committed to sustainable tourism.</p>
-      </div>
-      <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-      </div>
-    </div> %>
-
-    <!-- /END THE FEATURETTES -->
 </main>
 
-<%# <script>
-  $(document).ready(function(){
-    $('#datepicker').datepicker({
-      format: 'dd/mm/yyyy',
-      autoclose: true,
-      todayHighlight: true
-    });
-  });
-</script> %>
-
-<%# <script>
-  // Texto que será "digitado"
-  var text = "CONEXÃO\nADVOGADOS";
-  var index = 0;
-
-  function WriteText() {
-    if (index < text.length) {
-      var textPartial = text.substring(0, index + 1).replace(/\n/g, "<br>").trim();
-      document.getElementById("dynamic-text").innerHTML = textPartial;
-      index++;
-      setTimeout(WriteText, 200); // Tempo entre cada letra (200ms)
-    }
-  }
-
-  // Chama a função ao carregar a página
-  WriteText();
-</script> %>
-<%#
-<style>
-  #dynamic-text {
-    font-size: 56px;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-    color: #3E769B;
-    color: #FFFFFF;
-  }
-</style> %>
-
-<!--
-<div id="app">
-  <div class="col-4 col-md-3 d-flex flex-column justify-content-center">
-    <label for="group-select">Tipo de atendimento</label>
-    <div class="form-border-bottom form-control-transparent form-fs-lg m-1">
-      <select v-model="selectedGroups" multiple size="3" class="form-control" id="group-select">
-        <option v-for="group in groups" :value="group">{{ group }}</option>
-      </select>
-    </div>
-  </div>
-
-  <div class="col-4 col-md-3 d-flex flex-column justify-content-center">
-    <label for="category-select">Especialidade</label>
-    <div class="form-border-bottom form-control-transparent form-fs-lg m-1">
-      <select v-model="selectedCategories" multiple size="5" class="form-control" id="category-select">
-        <option v-for="category in categories" :value="category">{{ category }}</option>
-      </select>
-    </div>
-  </div>
-
-Button
-  <div class='col-4 col-md-3 d-flex flex-column justify-content-center'>
-    <button @click="searchLawyers" class='btn btn-custom w-100'>Procurar</button>
-  </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
-<script>
-new Vue({
-  el: '#app',
-  data: {
-    selectedGroups: [],
-    selectedCategories: [],
-    groups: ["Advocacia", "Consultoria", "Correspondente"],
-    categories: [
-      "Direito de Família e Sucessões", "Direito Administrativo", "Direito Contratual",
-      "Direito Imobiliário", "Direito do Consumidor", "Direito Tributário",
-      "Direito Penal", "Direito Empresarial", "Direito Ambiental",
-      "Direito Desportivo", "Direito Digital", "Direito da Propriedade Intelectual",
-      "Direito Trabalhista e Previdenciário", "Direito Extrajudicial", "Direito Marítimo"
-    ]
-  },
-  methods: {
-    searchLawyers() {
-      const queryParams = {
-        group: this.selectedGroups.join(','),
-        category: this.selectedCategories.join(',')
-      };
-      const queryString = Object.keys(queryParams).map(key => key + '=' + queryParams[key]).join('&');
-      window.location.href = '/lawyers?' + queryString;
-    }
-  }
-});
-</script>
--->
-<!-- <%#= form_with url: lawyers_path, method: :get, local: true, class: 'bg-white shadow rounded-3 p-4' do |form| %> -->
-  <%# <div class="row">
-    <div class="col-3 d-flex flex-column justify-content-center d-none d-md-block">
-      <h3 class="u-text-color-navy hero-heading text-left text-black"> Encontre o seu advogado online. </h3>
-    </div> %>
-
-    <!-- Group dropdown -->
-    <%# <div class="col-6 col-md-5 d-flex flex-column justify-content-center">
-      <div class="form-border-bottom form-control-transparent form-fs-lg m-1">
-        <select id="group-select" class="form-control" name="group">
-          <option value="" disabled selected>Tipo de atendimento</option>
-          <option value="Advocacia">Advocacia</option>
-          <option value="Consultoria">Consultoria</option>
-          <option value="Correspondente">Correspondente</option>
-        </select>
-      </div>
-    </div> %>
-
-    <!-- Button -->
-    <!-- <%#= <div class="col-3 col-md-4 d-flex flex-column justify-content-center"> %> -->
-      <!-- <%#= form.submit 'Procuar', class: 'btn btn-custom w-100' %> -->
-    <!-- <%#= </div> %> -->
-  <%# </div> %>
-
-<!-- <%#= end %> -->
-<%# </div> %>
 
 <script>
-  // document.addEventListener("DOMContentLoaded", function() {
-  //   var select = document.getElementById("group-select");
-  //   var options = select.getElementsByTagName("option");
-
-  //   for (var i = 0; i < options.length; i++) {
-  //       var option = options[i];
-  //       if (!option.disabled) {
-  //           option.innerHTML = "<strong>" + option.innerHTML + "</strong>";
-  //       }
-  //   }
-  // });
-
-  // document.addEventListener("DOMContentLoaded", function() {
-  //   var select = document.getElementById("group-select");
-  //   var options = select.getElementsByTagName("option");
-
-  //   for (var i = 0; i < options.length; i++) {
-  //       var option = options[i];
-  //       if (!option.disabled) {
-  //           option.innerHTML = "<h5>" + option.innerHTML + "</h5>";
-  //       }
-  //   }
-  // });
-  // document.addEventListener('DOMContentLoaded', function() {
-  //   var options = document.querySelectorAll('.option-bold');
-  //   options.forEach(function(option) {
-  //       option.style.fontWeight = 'bold';
-  //   });
-  // });
-
-  document.addEventListener('DOMContentLoaded', function() {
-    var defaultOption = document.querySelector('defaultOption');
-    defaultOption.style.fontWeight = 'bold';
-    defaultOption.style.color = 'black';
-  });
 
   document.addEventListener('DOMContentLoaded', function() {
     var groupSelect = document.getElementById('group-select');
