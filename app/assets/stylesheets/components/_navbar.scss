@@ -141,9 +141,7 @@ a .avatar {
 
 // Alterações específicas Felipe
 
-.colapso {
-  display: none;
-}
+
 
 .nav-link-custom {
   color: #FFFFFF !important;
@@ -158,10 +156,21 @@ a .avatar {
 }
 
 .hamburger {
-  color: #fff;
+  color: #fffffff1;
   background: transparent;
   border: 0;
   font-size: 20px;
+}
+
+.menu-off {
+  display: none;
+}
+
+.menu-on {
+  background-color: #01385d;
+  position: absolute;
+  right: 0;
+  top: 120px;
 }
 
 @media (min-width: 1200px) {
