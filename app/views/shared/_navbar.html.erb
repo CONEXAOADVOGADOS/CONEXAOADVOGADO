@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seu Título Aqui</title>
+  <title>Conexão Advogados</title>
   <!-- Corrigindo o link para os ícones do Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <!-- Adicione outros estilos ou scripts que você precise -->
@@ -20,12 +20,12 @@
     </div>
 
     <!-- Botão do menu hambúrguer para telas menores que 'lg' -->
-    <button class="navbar-toggler text-color" data-navbar-target="navcontent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="fas fa-bars hamburger fechado" id="hamburger">
     </button>
 
     <!-- Área de colapso para os links do menu -->
-    <div class="navbar-mb collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="menu menu-off">
+
       <ul class="navbar-nav me-auto">
         <li class="nav-item me-5">
           <%= link_to raw("<strong>Sobre</strong>"), sobre_path, class: "nav-link nav-link-custom poppins-font", style: "font-weight: bold;" %>
@@ -37,6 +37,7 @@
           <%= link_to raw("<strong>Área do Advogado</strong>"), adv_path, class: "nav-link nav-link-custom poppins-font" %>
         </li>
       </ul>
+
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
           <div class="d-flex justify-content-center align-items-center flex-row">
@@ -75,6 +76,7 @@
           </li>
         <% end %>
       </ul>
+
     </div>
   </div>
 </div>
