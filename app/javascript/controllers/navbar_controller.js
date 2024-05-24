@@ -1,95 +1,127 @@
-import { Controller } from "@hotwired/stimulus"
+import { Controller } from "@hotwired/stimulus";
 
 // Connects to data-controller="navbar"
 export default class extends Controller {
-
   static targets = ["navbar", "navcontent", "burgerbutton"];
   static values = {
-      lastScrollTop: Number,
-      timer: Number
-  }
+    lastScrollTop: Number,
+    timer: Number,
+  };
 
   connect() {
-
-    console.log("oi")
+    console.log("oi");
     this.lastScrollTopValue = 0;
     this.timerValue = null;
-    let burgerButton = document.querySelector("#hamburger")
+    let burgerButton = document.querySelector("#hamburger");
 
-    window.addEventListener('scroll', this.handleScroll.bind(this));
-    window.addEventListener('mousemove', this.handleMousemove.bind(this));
-    burgerButton.addEventListener('click', this.clickBurger.bind(this.burgerButton));
+
+    window.addEventListener("scroll", this.handleScroll.bind(this));
+    window.addEventListener("mousemove", this.handleMousemove.bind(this));
+    window.addEventListener('resize', this.initialMenu.bind(this));
+    burgerButton.addEventListener("click", this.clickBurger.bind(this.burgerButton)
+    );
+
   }
 
   handleScroll() {
     const currentScroll = window.scrollY || document.documentElement.scrollTop;
 
     if (currentScroll > this.lastScrollTopValue) {
-        // Scroll down
-        this.navbarTarget.classList.add('hidden');
-        this.navcontentTarget.classList.add('hidden');
+      // Scroll down
+      this.navbarTarget.classList.add("hidden");
+      this.navcontentTarget.classList.add("hidden");
     } else {
-        // Scroll up
-        this.navbarTarget.classList.remove('hidden');
-        this.navcontentTarget.classList.remove('hidden');
+      // Scroll up
+      this.navbarTarget.classList.remove("hidden");
+      this.navcontentTarget.classList.remove("hidden");
     }
 
     if (this.timerValue) {
-        clearTimeout(this.timerValue);
+      clearTimeout(this.timerValue);
     }
 
     this.timerValue = setTimeout(() => {
-        if (window.scrollY > 50) {
-            this.navbarTarget.classList.add('hidden');
-            this.navcontentTarget.classList.add('hidden');
-        }
+      if (window.scrollY > 50) {
+        this.navbarTarget.classList.add("hidden");
+        this.navcontentTarget.classList.add("hidden");
+      }
     }, 2500);
-
-
   }
 
   handleMousemove(e) {
     if (e.clientY <= 100) {
-        this.navbarTarget.classList.remove('hidden');
-        this.navcontentTarget.classList.remove('hidden');
+      this.navbarTarget.classList.remove("hidden");
+      this.navcontentTarget.classList.remove("hidden");
     }
   }
 
   // comportamento do menu hamburger
 
   clickBurger() {
-
     const maxWidth = 1200;
     const mediaQueryList = window.matchMedia(`(max-width: ${maxWidth}px)`);
 
-    let burgerButton = document.querySelector("#hamburger")
-    let menuColapso = document.querySelector(".menu")
+
+    let burgerButton = document.querySelector("#hamburger");
+    let menuColapso = document.querySelector(".menu");
 
     if (mediaQueryList.matches) {
 
+
+      if (burgerButton && menuColapso.classList.contains("menu-entrance")) {
+        menuColapso.classList.add("menu-exit")
+        menuColapso.classList.remove("menu-entrance")
+
+      } else {
+        menuColapso.classList.remove("menu-exit")
+        menuColapso.classList.add("menu-entrance")
+
+      }
+
       if (burgerButton.classList.contains("fechado")) {
 
-        burgerButton.classList.remove("fechado")
-        burgerButton.classList.add("aberto")
+        burgerButton.classList.remove("fechado");
+        burgerButton.classList.add("aberto");
 
         menuColapso.classList.remove("menu-off")
         menuColapso.classList.add("menu-on")
 
+        if (menuColapso.classList.contains("menu-on")) {
+
+          // menuColapso.classList.add("menu-entrance")
+        }
+
       } else {
 
-        burgerButton.classList.remove("aberto")
-        burgerButton.classList.add("fechado")
+        burgerButton.classList.remove("aberto");
+        burgerButton.classList.add("fechado");
 
-        menuColapso.classList.remove("menu-on")
-        menuColapso.classList.add("menu-off")
+        // menuColapso.classList.add("menu-off")
+        // menuColapso.classList.remove("menu-on")
 
       }
-
     }
 
+  }
 
+  initialMenu() {
 
+    let menuColapso = document.querySelector(".menu");
 
+    const minWidth = 1200;
+    const mediaQueryList = window.matchMedia(`(min-width: ${minWidth}px)`);
+
+    if (mediaQueryList.matches) {
+
+      menuColapso.classList.remove("menu-on")
+      // menuColapso.classList.remove("menu-off")
+      menuColapso.classList.add("menu-initial")
+      menuColapso.classList.remove("menu-entrance")
+    } else {
+      menuColapso.classList.add("menu-on")
+      menuColapso.classList.remove("menu-initial")
+
+    }
   }
 
 }

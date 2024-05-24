@@ -24,13 +24,13 @@
     </button>
 
     <!-- Área de colapso para os links do menu -->
-    <div class="menu menu-off">
+    <div class="menu menu-off" data-navbar-target="navbar navcontent">
 
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item me-5">
+      <ul class="navbar-nav item-colapse">
+        <li class="nav-item">
           <%= link_to raw("<strong>Sobre</strong>"), sobre_path, class: "nav-link nav-link-custom poppins-font", style: "font-weight: bold;" %>
         </li>
-        <li class="nav-item me-5">
+        <li class="nav-item">
           <%= link_to raw("<strong>Notícias</strong>"), lawyers_path, class: "nav-link nav-link-custom poppins-font" %>
         </li>
         <li class="nav-item me-custom">
@@ -38,11 +38,11 @@
         </li>
       </ul>
 
-      <ul class="navbar-nav me-auto">
+      <ul class="navbar-nav item-colapse">
         <li class="nav-item">
           <div class="d-flex justify-content-center align-items-center flex-row">
             <span class="navbar-nav bg-none border-1 me-2"><i class="bi bi-search text-white"></i></span>
-            <input class="border-1 bg-white me-5" type="search" placeholder=" Buscar..." aria-label="Buscar">
+            <input class="busca border-1 bg-white" type="search" placeholder=" Buscar..." aria-label="Buscar">
           </div>
         </li>
         <!-- Corrigindo a verificação do login do usuário -->
