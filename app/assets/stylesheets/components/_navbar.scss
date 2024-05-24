@@ -1,24 +1,19 @@
 .navbar-mw {
-  // justify-content: space-between;
-  // background:#31404B;
-  // background-color: #f8f9fa;
-  background-color: #01385D;
+  background-color: #01385d;
   height: 120px;
   padding: 0 20px;
 }
 
-
-
 .navbar-mb {
-  background-color:#01385D !important;
+  background-color: #01385d !important;
 }
 
 .poppins-font {
-  font-family: 'Poppins', sans-serif; /* Aplica a fonte Poppins */
+  font-family: "Poppins", sans-serif; /* Aplica a fonte Poppins */
 }
 
 .text-color {
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 
 .bi-search::before {
@@ -37,14 +32,14 @@
 }
 
 .hidden {
-  transform: translateY(-100%);
+  transform: translateY(-350%);
 }
 
 .hide {
   display: none;
 }
 
-.messages-d-none{
+.messages-d-none {
   display: none;
 }
 
@@ -65,10 +60,9 @@
   // gap: 2em;
   // margin-left: 33px;
 
-  a{
+  a {
     text-decoration: none;
   }
-
 }
 
 .links-navbar a:nth-child(1) {
@@ -83,11 +77,10 @@
   margin-right: 16px;
   width: 40px;
   border-radius: 50%;
-
 }
 
 a .avatar {
-  border: 1px solid #DFB72E;
+  border: 1px solid #dfb72e;
   height: 60px;
   width: 60px;
 }
@@ -100,8 +93,6 @@ a .avatar {
   margin: 0 0 10px 0;
 }
 
-
-
 .busca {
   width: 139px;
   margin: 0 0 5px 0;
@@ -113,7 +104,7 @@ a .avatar {
 }
 
 .custom-search input[type="search"] {
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   background-color: none;
   width: 80%;
 }
@@ -138,7 +129,7 @@ a .avatar {
 
 /* Altera a cor do texto do link de login */
 .login-link {
-  color: #FFFFFF; /* Cor preta */
+  color: #ffffff; /* Cor preta */
 }
 
 /* Adiciona margem ao redor do link de login */
@@ -154,11 +145,16 @@ a .avatar {
 // Alterações específicas Felipe
 
 .nav-link-custom {
-  color: #FFFFFF !important;
+  color: #ffffff !important;
   font-size: 18px !important;
 }
 
-.navbar > .container-fluid, .navbar > .container-sm, .navbar > .container-md, .navbar > .container-lg, .navbar > .container-xl, .navbar > .container-xxl {
+.navbar > .container-fluid,
+.navbar > .container-sm,
+.navbar > .container-md,
+.navbar > .container-lg,
+.navbar > .container-xl,
+.navbar > .container-xxl {
   display: flex;
   flex-wrap: inherit;
   align-items: center;
@@ -203,13 +199,14 @@ a .avatar {
 }
 
 .menu-entrance {
-  animation: bounceright .8s cubic-bezier(0.68, -0.6, 0.32, 1.6) 0s 1 normal forwards;
+  animation: bounceright 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6) 0s 1 normal
+    forwards;
 }
 
 .menu-exit {
-  animation: bounceleft .8s cubic-bezier(0.68, -0.6, 0.32, 1.6) 0s 1 reverse forwards;
+  animation: bounceleft 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6) 0s 1 reverse
+    forwards;
 }
-
 
 .menu ul {
   display: flex;
@@ -221,22 +218,19 @@ a .avatar {
 }
 
 .menu-on {
-
   background-color: #01385d;
   position: absolute;
-  right: 0;
+  right: -30px;
   top: 120px;
-  padding: 0 40px 0 40px;
+  padding: 15px 70px 15px 40px;
+  border-top: 1px solid white;
 }
 
 .menu-initial {
-
   display: flex;
-
 }
 
 @media (min-width: 1200px) {
-
   .busca {
     width: auto;
   }
@@ -277,7 +271,7 @@ a .avatar {
 
   .navbar-expand-lg .navbar-nav {
     flex-direction: row;
-}
+  }
 
   .hamburger {
     display: none;
@@ -295,7 +289,7 @@ a .avatar {
 
   /* Define a cor de fonte branca para os links */
   .nav-link-custom {
-    color: #FFFFFF !important;
+    color: #ffffff !important;
   }
 
   /* Define o estilo de hover dos links */
@@ -307,5 +301,4 @@ a .avatar {
   .navbar-nav .nav-link-custom {
     font-size: 18px; /* ou outro tamanho de fonte de sua preferência */
   }
-
 }
