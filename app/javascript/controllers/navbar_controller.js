@@ -66,7 +66,7 @@ export default class extends Controller {
     let menuColapso = document.querySelector(".menu");
 
     if (mediaQueryList.matches) {
-      if (burgerButton && menuColapso.classList.contains("menu-entrance")) {
+      if (menuColapso.classList.contains("menu-entrance")) {
         menuColapso.classList.add("menu-exit");
         menuColapso.classList.remove("menu-entrance");
       } else {
@@ -83,12 +83,16 @@ export default class extends Controller {
       } else {
         burgerButton.classList.remove("aberto");
         burgerButton.classList.add("fechado");
+
+
       }
     }
   }
 
   initialMenu() {
     let menuColapso = document.querySelector(".menu");
+    let menuOn = document.querySelector(".menu-on");
+
 
     const minWidth = 1200;
     const mediaQueryList = window.matchMedia(`(min-width: ${minWidth}px)`);
@@ -100,6 +104,12 @@ export default class extends Controller {
     } else {
       menuColapso.classList.add("menu-on");
       menuColapso.classList.remove("menu-initial");
+      menuColapso.classList.remove("menu-entrance");
+      menuColapso.classList.remove("menu-exit");
+      menuOn.style.opacity("1")
+
+
+
     }
   }
 }

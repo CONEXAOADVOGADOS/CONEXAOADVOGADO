@@ -1,7 +1,6 @@
 .navbar-mw {
   background-color: #01385d;
   height: 120px;
-  padding: 0 20px;
 }
 
 .navbar-mb {
@@ -22,6 +21,20 @@
   margin-top: 3px;
 }
 
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+.icon-container {
+  position: absolute;
+  top: 47%;
+  left: 10px;
+  transform: translateY(-50%) rotate(90deg);
+  pointer-events: none;
+  font-size: 28px;
+}
+
 .fixed-nav {
   position: fixed;
   top: 0;
@@ -29,6 +42,7 @@
   width: 100%;
   z-index: 1;
   transition: transform 0.3s;
+  display: flex;
 }
 
 .hidden {
@@ -50,27 +64,31 @@
 .navbar-mw .navbar-brand img {
   width: 80px;
   height: 80px;
-  // border-radius: 50%;
 }
 
-.links-navbar {
-  font-size: 20px;
-  // justify-content: space-between;
-  align-items: center;
-  // gap: 2em;
-  // margin-left: 33px;
+// .links-navbar {
+//   font-size: 20px;
+//   align-items: center;
+//   a {
+//     text-decoration: none;
+//   }
+// }
 
-  a {
-    text-decoration: none;
-  }
+// .links-navbar a:nth-child(1) {
+//   margin-right: 120px;
+// }
+
+// .links-navbar a:nth-child(2) {
+//   margin-right: 20px;
+// }
+
+.navbar-brand {
+margin: 0;
 }
 
-.links-navbar a:nth-child(1) {
-  margin-right: 20px;
-}
-
-.links-navbar a:nth-child(2) {
-  margin-right: 20px;
+.navbar-end {
+  display: flex;
+  justify-content: end;
 }
 
 .avatar {
@@ -94,8 +112,12 @@ a .avatar {
 }
 
 .busca {
-  width: 139px;
-  margin: 0 0 5px 0;
+  padding-left: 40px;
+  border: 1px solid #ccc;
+  padding-top: 5px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  height: 36px;
 }
 
 .custom-search {
@@ -156,8 +178,7 @@ a .avatar {
 .navbar > .container-xl,
 .navbar > .container-xxl {
   display: flex;
-  flex-wrap: inherit;
-  align-items: center;
+  width: 100vw;
   justify-content: space-between;
 }
 
@@ -166,12 +187,15 @@ a .avatar {
   background: transparent;
   border: 0;
   font-size: 20px;
+  margin: 0 40px;
 }
 
 .menu {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 20px;
+  justify-content: space-between;
+  width: 100%;
 }
 
 @keyframes bounceright {
@@ -224,16 +248,31 @@ a .avatar {
   top: 120px;
   padding: 15px 70px 15px 40px;
   border-top: 1px solid white;
+  opacity: 0;
 }
 
 .menu-initial {
   display: flex;
 }
 
+
+
+
 @media (min-width: 1200px) {
   .busca {
     width: auto;
   }
+
+  .navbar > .container-fluid,
+.navbar > .container-sm,
+.navbar > .container-md,
+.navbar > .container-lg,
+.navbar > .container-xl,
+.navbar > .container-xxl {
+  display: flex;
+  width: 100vw;
+  justify-content: space-evenly;
+}
 
   @keyframes bounceright {
     0% {
@@ -263,6 +302,10 @@ a .avatar {
     animation: none;
   }
 
+    .menu-exit {
+    animation: none;
+  }
+
   .menu {
     display: flex;
     flex-direction: row;
@@ -271,6 +314,7 @@ a .avatar {
 
   .navbar-expand-lg .navbar-nav {
     flex-direction: row;
+    margin-right: 20px;
   }
 
   .hamburger {
@@ -294,11 +338,56 @@ a .avatar {
 
   /* Define o estilo de hover dos links */
   .nav-link-custom:hover {
-    color: #0d6efd !important; /* Azul padrão do Bootstrap */
+    color: #dfb731 !important; /* Azul padrão do Bootstrap */
   }
 
   /* Aumenta a fonte dos links na navbar */
   .navbar-nav .nav-link-custom {
     font-size: 18px; /* ou outro tamanho de fonte de sua preferência */
   }
+
+  .nav-item a {
+    margin-right: 20px;
+
+  }
+}
+
+
+@media (max-width: 1200px) {
+
+  .menu {
+    position: relative;
+  }
+
+  .menu-line {
+    position: absolute;
+    right: -11px;
+    top: -2px;
+    height: 2px;
+    background: wheat;
+    width: 103vw;
+}
+
+  .menu-on {
+    background-color: #01385d;
+    position: absolute;
+    right: 0px;
+    top: 120px;
+    padding: 15px 70px 15px 40px;
+    border-top: 1px solid white;
+    flex-direction: column;
+    width: 300px;
+}
+
+.navbar-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.busca {
+  width: 200px;
+}
+
+
 }
