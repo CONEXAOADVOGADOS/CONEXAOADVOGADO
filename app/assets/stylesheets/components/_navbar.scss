@@ -21,6 +21,10 @@
   margin-top: 3px;
 }
 
+.nav-1 {
+  margin-right: 10px;
+}
+
 .search-container {
   position: relative;
   display: inline-block;
@@ -350,10 +354,15 @@ a .avatar {
     margin-right: 20px;
 
   }
+
+  .menu-line {
+    display: none;
+  }
+
 }
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
 
   .menu {
     position: relative;
@@ -361,17 +370,17 @@ a .avatar {
 
   .menu-line {
     position: absolute;
-    right: -11px;
+    right: -24px;
     top: -2px;
     height: 2px;
     background: wheat;
-    width: 103vw;
+    width: 120vw;
 }
 
   .menu-on {
     background-color: #01385d;
     position: absolute;
-    right: 0px;
+    right: -34px;
     top: 120px;
     padding: 15px 70px 15px 40px;
     border-top: 1px solid white;

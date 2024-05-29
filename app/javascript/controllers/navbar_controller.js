@@ -106,7 +106,7 @@ export default class extends Controller {
       menuColapso.classList.remove("menu-initial");
       menuColapso.classList.remove("menu-entrance");
       menuColapso.classList.remove("menu-exit");
-      menuOn.style.opacity("1")
+      menuOn.style.opacity("0")
 
 
 
