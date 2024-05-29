@@ -1,10 +1,20 @@
 .navbar-mw {
   background-color: #01385d;
   height: 120px;
+  width: 100%;
 }
 
 .navbar-mb {
   background-color: #01385d !important;
+}
+
+.bg-home {
+  width: 100%;
+}
+
+.banner-end {
+  display: flex;
+  justify-content: center;
 }
 
 .poppins-font {
@@ -69,22 +79,6 @@
   width: 80px;
   height: 80px;
 }
-
-// .links-navbar {
-//   font-size: 20px;
-//   align-items: center;
-//   a {
-//     text-decoration: none;
-//   }
-// }
-
-// .links-navbar a:nth-child(1) {
-//   margin-right: 120px;
-// }
-
-// .links-navbar a:nth-child(2) {
-//   margin-right: 20px;
-// }
 
 .navbar-brand {
 margin: 0;
@@ -368,6 +362,10 @@ a .avatar {
     position: relative;
   }
 
+  .banner-full {
+    flex-direction: column;
+  }
+
   .menu-line {
     position: absolute;
     right: -24px;
@@ -376,6 +374,14 @@ a .avatar {
     background: wheat;
     width: 120vw;
 }
+
+  .vertical-line {
+    transform: rotate(90deg);
+    border-left: 1px solid white;
+    height: 200px;
+    margin: -96px;
+    margin-bottom: -62px;
+  }
 
   .menu-on {
     background-color: #01385d;
